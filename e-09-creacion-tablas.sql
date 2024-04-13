@@ -117,3 +117,23 @@ CREATE TABLE cliente (
     ocupacion_cliente VARCHAR2(15),
     nivel_educativo_cliente VARCHAR2(10)
 );
+
+CREATE TABLE temporada(
+    temporada_id NUMBER PRIMARY KEY,
+    descripcion VARCHAR2(20)
+);
+
+CREATE TABLE actividad(
+    actividad_id NUMBER PRIMARY KEY,
+    clave_actividad NUMBER,
+    descripcion_actividad VARCHAR(30),
+    costo_actividad NUMBER(6),
+    --empleado_id_rid NUMBER
+);
+
+CREATE TABLE centro_actividad(
+    centro_actividad_id NUMBER PRIMARY KEY,
+    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id),
+    FOREIGN KEY(temporarda_id) REFERENCES temporada(temporada_id),
+    FOREIGN KEY(centro_id) REFERENCES centro(centro_id)
+);
