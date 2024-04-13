@@ -137,3 +137,17 @@ CREATE TABLE centro_actividad(
     FOREIGN KEY(temporarda_id) REFERENCES temporada(temporada_id),
     FOREIGN KEY(centro_id) REFERENCES centro(centro_id)
 );
+
+CREATE TABLE campamento(
+    actividad_id NUMBER PRIMARY KEY,
+    nombre_campamento VARCHAR(20),
+    duracion_campamento NUMBER(3),
+    latitud_campamento VARCHAR(15),
+    longitud_campamento VARCHAR(15),
+    delegacion_campamento VARCHAR(20),
+    numero_campamento NUMBER(3),
+    calle_campamento NUMBER(5),
+    colonia_campamento VARCHAR(20),
+    estado_campamento VARCHAR(20)
+    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+);
