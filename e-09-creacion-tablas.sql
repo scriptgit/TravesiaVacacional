@@ -138,6 +138,12 @@ CREATE TABLE centro_actividad(
     FOREIGN KEY(centro_id) REFERENCES centro(centro_id)
 );
 
+CREATE TABLE actividad_imagen(
+    imagen_actividad_id NUMBER PRIMARY KEY,
+    imagen IMAGE,
+    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+);
+
 CREATE TABLE campamento(
     actividad_id NUMBER PRIMARY KEY,
     nombre_campamento VARCHAR(20),
@@ -149,5 +155,41 @@ CREATE TABLE campamento(
     calle_campamento NUMBER(5),
     colonia_campamento VARCHAR(20),
     estado_campamento VARCHAR(20)
+    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+);
+
+CREATE TABLE tipo_deporte(
+    tipo_deporte_id NUMBER PRIMARY KEY,
+    clave_tipo_deporte NUMBER,
+    descripcion_tipo_deporte VARCHAR(30)
+);
+
+CREATE TABLE deporte(
+    actividad_id NUMBER PRIMARY KEY,
+    horas_entrenamiento NUMBER(3),
+    nombre_deporte VARCHAR(15),
+    FOREIGN KEY(tipo_deporte_id) REFERENCES tipo_deporte(tipo_deporte_id), 
+    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+);
+
+CREATE TABLE accesorios(
+    accesorio_id NUMBER PRIMARY KEY,
+    nombre_accesorio VARCHAR(18),
+    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+);
+
+CREATE TABLE tipo_juego(
+    tipo_juego_id NUMBER PRIMARY KEY,
+    clave_tipo_juego NUMBER,
+    descripcion_tipo_juego VARCHAR(30),
+    nombre_tipo_juego VARCHAR(15)
+);
+
+CREATE TABLE juego(
+    actividad_id NUMBER PRIMARY KEY,
+    nombre_juego VARCHAR(20),
+    num_participantes NUMBER(2),
+    descripcion_juego VARCHAR(30),
+    FOREIGN KEY(tipo_juego_id) REFERENCES tipo_juego(tipo_juego_id),
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
 );
