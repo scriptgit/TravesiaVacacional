@@ -47,9 +47,9 @@ alter session set container = &pdb2_container;
 
 create tablespace NEGOCIO_CLIENTE_TBS
     datafile 
-        '/travesia/disk_3/travesia/negocio_cliente_tbs_01.dbf' size 1G,
-        '/travesia/disk_4/travesia/negocio_cliente_tbs_02.dbf' size 1G,
-        '/travesia/disk_5/travesia/negocio_cliente_tbs_03.dbf' size 1G
+        '/travesia/disk_4/travesia/negocio_cliente_tbs_01.dbf' size 1G,
+        '/travesia/disk_5/travesia/negocio_cliente_tbs_02.dbf' size 1G,
+        '/travesia/disk_6/travesia/negocio_cliente_tbs_03.dbf' size 1G
     extent management local
     autoallocate
     segment space management auto
@@ -57,7 +57,7 @@ create tablespace NEGOCIO_CLIENTE_TBS
 
 create tablespace NEGOCIO_MEMBRESIA_TBS
     datafile 
-        '/travesia/disk_3/travesia/negocio_membresia_tbs_01.dbf' size 1G,
+        '/travesia/disk_4/travesia/negocio_membresia_tbs_01.dbf' size 1G,
         '/travesia/disk_5/travesia/negocio_membresia_tbs_02.dbf' size 1G
     extent management local
     autoallocate
@@ -66,7 +66,7 @@ create tablespace NEGOCIO_MEMBRESIA_TBS
 
 create tablespace NEGOCIO_ACTIVIDAD_TBS
     datafile 
-        '/travesia/disk_2/travesia/negocio_actividad_tbs_01.dbf' size 1G
+        '/travesia/disk_6/travesia/negocio_actividad_tbs_01.dbf' size 1G
     extent management local
     autoallocate
     segment space management auto
@@ -74,7 +74,7 @@ create tablespace NEGOCIO_ACTIVIDAD_TBS
 
 create tablespace NEGOCIO_MEDIA_TBS
     datafile 
-        '/travesia/disk_6/travesia/negocio_media_tbs_01.dbf' size 20G
+        '/travesia/disk_8/travesia/negocio_media_tbs_01.dbf' size 10G
     extent management local
     autoallocate
     segment space management auto

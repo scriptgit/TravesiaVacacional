@@ -79,10 +79,11 @@ if [[ -d "${raiz}/${pMontaje1}/${redoData}" ||  -d "${raiz}/${pMontaje2}/${redoD
   cd ${raiz}/${pMontaje2}
   rm -f ${redoData}/*.log
 
-
+  
 fi;
 
 echo "Creando carpetas de redo logs"
+cd ${raiz}
 mkdir -p ${pMontaje1}/${redoData}
 mkdir -p ${pMontaje2}/${redoData}
 

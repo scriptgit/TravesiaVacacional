@@ -3,7 +3,8 @@
 -- Ulises Eduardo Antonio García
 --@Fecha creación: 
 --@Descripción:
-
+!echo "mostrando valor de ORACLE_SID: ${ORACLE_SID}"
+pause ¿Es correcto?  Enter para continuar 
 
 define syslogon='sys/systemproy as sysdba'
 --define t_user='userproy'

@@ -19,19 +19,13 @@ create database travdip1
     user sys identified by systemproy
     user system identified by systemproy
     logfile group 1 (
-        '/travesia/disk-07/fast-recovery-area/redo01a.log',
-        '/travesia/disk-02/app/oracle/oradata/TRAVDIP1/redo01b.log',
-        '/travesia/disk-03/app/oracle/oradata/TRAVDIP1/redo01c.log'
+        'redo01a.log'
       ) size 50m blocksize 512,
     group 2 (
-        '/travesia/disk-07/fast-recovery-area/redo02a.log',
-        '/travesia/disk-02/app/oracle/oradata/TRAVDIP1/redo02b.log',
-        '/travesia/disk-03/app/oracle/oradata/TRAVDIP1/redo02c.log'
+        'redo02a.log'
       ) size 50m blocksize 512,
     group 3 (
-        '/travesia/disk-07/fast-recovery-area/redo03a.log',
-        '/travesia/disk-02/app/oracle/oradata/TRAVDIP1/redo03b.log',
-        '/travesia/disk-03/app/oracle/oradata/TRAVDIP1/redo03c.log'
+        'redo03a.log'
       ) size 50m blocksize 512
     maxloghistory 1
     maxlogfiles 16

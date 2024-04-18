@@ -49,6 +49,9 @@ MODULO
     TABLESPACE
         DATAFILE
 
+FRA
+        disk_7
+
 ADMINISTRACIÓN
     ADMIN_TBS:
         disk_1
@@ -72,6 +75,6 @@ NEGOCIO
         disk_6
 
     NEGOCIO_MEDIA_TBS
-        disk_7
+        disk_8
 
-        
+      
