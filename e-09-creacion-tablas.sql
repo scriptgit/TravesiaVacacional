@@ -48,7 +48,7 @@ CREATE TABLE asociacion (
     estado_asociacion VARCHAR2(20),
     delegacion_asociacion VARCHAR2(20),
     telefono_asociacion NUMBER(13)
-);
+) tablespace ADMIN_TBS;
 
 CREATE TABLE certificacion (
     certificacion_id NUMBER PRIMARY KEY,
@@ -56,7 +56,7 @@ CREATE TABLE certificacion (
     nombre_certificacion VARCHAR2(20),
     asociacion_id NUMBER,
     FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id)
-);
+)tablespace ADMIN_TBS;
 
 CREATE TABLE empleado (
     empleado_id NUMBER PRIMARY KEY,
@@ -69,14 +69,14 @@ CREATE TABLE empleado (
     asociacion_id NUMBER,
     FOREIGN KEY (encargado_id) REFERENCES empleado(empleado_id),
     FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id)
-);
+) tablespace ADMIN_EMPLEADO_TBS;
 
 CREATE TABLE lider (
     empleado_id NUMBER PRIMARY KEY,
     FOREIGN KEY (empleado_id) REFERENCES empleado(empleado_id),
     clave_lider NUMBER,
     anios_experiencia NUMBER(2)
-);
+) tablespace ADMIN_EMPLEADO_TBS;
 
 CREATE TABLE lider_centro (
     empleado_id NUMBER,
@@ -84,24 +84,13 @@ CREATE TABLE lider_centro (
     PRIMARY KEY (empleado_id, centro_id),
     FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id),
     FOREIGN KEY (centro_id) REFERENCES centro(centro_id)
-);
+) tablespace ADMIN_EMPLEADO_TBS;
 
-
+--#####################FALTA TABLAS VERSION Y VERSION_LIDER ####################################
 
 
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
-
-CREATE TABLE visita (
-    visita_id NUMBER PRIMARY KEY,
-    fecha DATE,
-    hora_llegada TIMESTAMP,
-    hora_salida TIMESTAMP,
-    centro_id NUMBER,
-    cliente_id NUMBER,
-    FOREIGN KEY (centro_id) REFERENCES centro(centro_id),
-    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
-);
 
 CREATE TABLE cliente (
     cliente_id NUMBER PRIMARY KEY,
@@ -116,12 +105,25 @@ CREATE TABLE cliente (
     telefono_cliente NUMBER(13),
     ocupacion_cliente VARCHAR2(15),
     nivel_educativo_cliente VARCHAR2(10)
-);
+) tablespace NEGOCIO_CLIENTE_TBS;
+
+CREATE TABLE visita (
+    visita_id NUMBER PRIMARY KEY,
+    fecha DATE,
+    hora_llegada TIMESTAMP,
+    hora_salida TIMESTAMP,
+    centro_id NUMBER,
+    cliente_id NUMBER,
+    FOREIGN KEY (centro_id) REFERENCES centro(centro_id),
+    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
+) tablespace NEGOCIO_CLIENTE_TBS;
+
+--######################FALTA TABLAS ACOMPAÑANTE Y AUTO################################
 
 CREATE TABLE temporada(
     temporada_id NUMBER PRIMARY KEY,
     descripcion VARCHAR2(20)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE actividad(
     actividad_id NUMBER PRIMARY KEY,
@@ -129,20 +131,20 @@ CREATE TABLE actividad(
     descripcion_actividad VARCHAR(30),
     costo_actividad NUMBER(6),
     --empleado_id_rid NUMBER
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE centro_actividad(
     centro_actividad_id NUMBER PRIMARY KEY,
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id),
     FOREIGN KEY(temporarda_id) REFERENCES temporada(temporada_id),
     FOREIGN KEY(centro_id) REFERENCES centro(centro_id)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE actividad_imagen(
     imagen_actividad_id NUMBER PRIMARY KEY,
     imagen IMAGE,
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
-);
+) tablespace NEGOCIO_MEDIA_TBS;
 
 CREATE TABLE campamento(
     actividad_id NUMBER PRIMARY KEY,
@@ -156,13 +158,13 @@ CREATE TABLE campamento(
     colonia_campamento VARCHAR(20),
     estado_campamento VARCHAR(20)
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE tipo_deporte(
     tipo_deporte_id NUMBER PRIMARY KEY,
     clave_tipo_deporte NUMBER,
     descripcion_tipo_deporte VARCHAR(30)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE deporte(
     actividad_id NUMBER PRIMARY KEY,
@@ -170,20 +172,20 @@ CREATE TABLE deporte(
     nombre_deporte VARCHAR(15),
     FOREIGN KEY(tipo_deporte_id) REFERENCES tipo_deporte(tipo_deporte_id), 
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS; 
 
 CREATE TABLE accesorios(
     accesorio_id NUMBER PRIMARY KEY,
     nombre_accesorio VARCHAR(18),
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE tipo_juego(
     tipo_juego_id NUMBER PRIMARY KEY,
     clave_tipo_juego NUMBER,
     descripcion_tipo_juego VARCHAR(30),
     nombre_tipo_juego VARCHAR(15)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE juego(
     actividad_id NUMBER PRIMARY KEY,
@@ -192,4 +194,7 @@ CREATE TABLE juego(
     descripcion_juego VARCHAR(30),
     FOREIGN KEY(tipo_juego_id) REFERENCES tipo_juego(tipo_juego_id),
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
-);
+) tablespace NEGOCIO_ACTIVIDAD_TBS;
+
+
+--######################FALTA TABLAS MEMBRESIA, HISTORICO_ESTATUS_MEMBRESIA Y ESTATUS_MEMBRESIA ################################

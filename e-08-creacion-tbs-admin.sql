@@ -25,7 +25,7 @@ alter session set container = &pdb1_container;
 create tablespace ADMIN_TBS
     datafile 
         '/travesia/disk_1/travesia/admin_tbs_01.dbf' size 1G
-    extent management local
+    autoextend on next 10M maxsize 10G
     autoallocate
     segment space management auto
 ;
@@ -35,7 +35,7 @@ create tablespace ADMIN_EMPLEADO_TBS
         '/travesia/disk_1/travesia/admin_empleado_tbs_01.dbf' size 1G,
         '/travesia/disk_2/travesia/admin_empleado_tbs_02.dbf' size 1G,
         '/travesia/disk_3/travesia/admin_empleado_tbs_03.dbf' size 1G
-    extent management local
+    autoextend on next 30M maxsize 30G
     autoallocate
     segment space management auto
 ;
@@ -50,7 +50,7 @@ create tablespace NEGOCIO_CLIENTE_TBS
         '/travesia/disk_4/travesia/negocio_cliente_tbs_01.dbf' size 1G,
         '/travesia/disk_5/travesia/negocio_cliente_tbs_02.dbf' size 1G,
         '/travesia/disk_6/travesia/negocio_cliente_tbs_03.dbf' size 1G
-    extent management local
+    autoextend on next 30M maxsize 30G
     autoallocate
     segment space management auto
 ;
@@ -59,7 +59,7 @@ create tablespace NEGOCIO_MEMBRESIA_TBS
     datafile 
         '/travesia/disk_4/travesia/negocio_membresia_tbs_01.dbf' size 1G,
         '/travesia/disk_5/travesia/negocio_membresia_tbs_02.dbf' size 1G
-    extent management local
+    autoextend on next 30M maxsize 30G
     autoallocate
     segment space management auto
 ;
@@ -67,15 +67,16 @@ create tablespace NEGOCIO_MEMBRESIA_TBS
 create tablespace NEGOCIO_ACTIVIDAD_TBS
     datafile 
         '/travesia/disk_6/travesia/negocio_actividad_tbs_01.dbf' size 1G
-    extent management local
+    autoextend on next 10M maxsize 15G
     autoallocate
     segment space management auto
 ;
 
-create tablespace NEGOCIO_MEDIA_TBS
+create bigfile tablespace NEGOCIO_MEDIA_TBS
     datafile 
         '/travesia/disk_8/travesia/negocio_media_tbs_01.dbf' size 10G
-    extent management local
+    autoextend on next 1g maxsize 20G
     autoallocate
     segment space management auto
+    NOLOGGING
 ;
