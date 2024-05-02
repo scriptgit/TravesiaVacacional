@@ -36,6 +36,13 @@ if [ -d "${raiz}" ]; then
   ls -l ${raiz}
   read -p "Enter para borrar, ctrl C - cancelar"
   rm -f ${raiz}
+# En caso de que al momento de intentar abrir la base no se pueda, con el script e-05
+#  cd ${raiz}/disk01
+#  rm -r *
+#  cd ${raiz}/disk02
+#  rm -r *
+#  cd ${raiz}/disk07
+#  rm -r *
 fi;
 
 mkdir -p ${raiz}
@@ -47,7 +54,7 @@ cd /
 chmod -R 777 travesia
 
 #directorios que simulan los discos
-echo "Crear direcotoriso que simularan puntos de montaje"
+echo "Crear directorios que simularan puntos de montaje"
 
 pMontaje1="disk-01"
 pMontaje2="disk-02"
