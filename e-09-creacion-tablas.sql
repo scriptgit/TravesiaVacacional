@@ -87,7 +87,26 @@ CREATE TABLE lider_centro (
 ) tablespace ADMIN_EMPLEADO_TBS;
 
 
---TODO:  FALTA TABLAS VERSION Y VERSION_LIDER 
+CREATE TABLE version (
+    version_id NUMBER PRIMARY KEY,
+    numero_version NUMBER,
+    objetivos VARCHAR2(30),
+    temario VARCHAR2(50),
+    nivel_version VARCHAR2(10),
+    certificacion_id NUMBER,
+    CONSTRAINT fk_certificacion_id FOREIGN KEY (certificacion_id) REFERENCES certificacion(certificacion_id)
+);
+
+CREATE TABLE version_lider (
+    version_lider_id NUMBER PRIMARY KEY,
+    version_id NUMBER,
+    empleado_id NUMBER,
+    fecha_obtencion DATE,
+    CONSTRAINT fk_version_id FOREIGN KEY (version_id) REFERENCES version(version_id),
+    CONSTRAINT fk_empleado_id FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id)
+);
+
+
 
 
 Prompt Cambiando sesión a &pdb2_container
@@ -119,7 +138,25 @@ CREATE TABLE visita (
     FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
---TODO: FALTA TABLAS ACOMPAÑANTE Y AUTO
+CREATE TABLE acompaniante (
+    visita_id NUMBER PRIMARY KEY,
+    nombre VARCHAR2(20),
+    ap_paterno VARCHAR2(20),
+    ap_materno VARCHAR2(20),
+    parentesco VARCHAR2(15),
+    edad NUMBER(3),
+    ocupacion VARCHAR2(15),
+    CONSTRAINT fk_visita_id FOREIGN KEY (visita_id) REFERENCES visita(visita_id)
+);
+
+CREATE TABLE auto (
+    placas VARCHAR2(10) PRIMARY KEY,
+    modelo VARCHAR2(20),
+    marca VARCHAR2(20),
+    cliente_id NUMBER,
+    CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
+);
+
 
 CREATE TABLE temporada(
     temporada_id NUMBER PRIMARY KEY,
@@ -197,5 +234,33 @@ CREATE TABLE juego(
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
+CREATE TABLE membresia (
+    membresia_id NUMBER PRIMARY KEY,
+    numero_membresia NUMBER,
+    fecha_registro DATE,
+    numero_tarjeta NUMBER,
+    tipo_tarjeta VARCHAR2(15),
+    anio_expiracion NUMBER(4),
+    mes_expiracion NUMBER(2),
+    num_max_invitados NUMBER(1),
+    costo_mensual NUMBER(5),
+    cliente_id NUMBER,
+    estatus_membresia_id NUMBER,
+    CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id),
+    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id)
+);
 
---TODO: FALTA TABLAS MEMBRESIA, HISTORICO_ESTATUS_MEMBRESIA Y ESTATUS_MEMBRESIA 
+CREATE TABLE estatus_membresia (
+    estatus_membresia_id NUMBER PRIMARY KEY,
+    estatus_nombre VARCHAR2(10)
+);
+
+CREATE TABLE historico_estatus_membresia (
+    historico_estatus_membresia_id NUMBER PRIMARY KEY,
+    estatus_membresia_id NUMBER,
+    membresia_id NUMBER,
+    fecha_cambio DATE,
+    motivo_cancelacion VARCHAR2(20),
+    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id),
+    CONSTRAINT fk_membresia_id FOREIGN KEY (membresia_id) REFERENCES membresia(membresia_id)
+);
