@@ -157,7 +157,8 @@ CREATE TABLE acompaniante (
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE auto (
-    placas VARCHAR2(10) PRIMARY KEY,
+    auto_id NUMBER PRIMARY KEY,
+    placas VARCHAR2(10) ,
     modelo VARCHAR2(20),
     marca VARCHAR2(20),
     cliente_id NUMBER,
