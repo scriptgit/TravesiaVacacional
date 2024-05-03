@@ -30,24 +30,28 @@ CREATE TABLE centro (
     numero_centro NUMBER(5),
     estado_centro VARCHAR2(20),
     asociacion_id_rid NUMBER,
-    FOREIGN KEY (asociacion_id_rid) REFERENCES asociacion(asociacion_id)
+    FOREIGN KEY (asociacion_id_rid) REFERENCES asociacion(asociacion_id),
+    CONSTRAINT centro_clave_centro_UK UNIQUE (clave_centro)
 );
+
 
 
 
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
 
+PROMPT creando tablas 
 
 CREATE TABLE asociacion (
     asociacion_id NUMBER PRIMARY KEY,
-    clave_asociacion NUMBER,
+    clave_asociacion NUMBER ,
     calle_asociacion VARCHAR2(20),
     colonia_asociacion VARCHAR2(20),
     numero_asociacion NUMBER(5),
     estado_asociacion VARCHAR2(20),
     delegacion_asociacion VARCHAR2(20),
-    telefono_asociacion NUMBER(13)
+    telefono_asociacion NUMBER(13),
+    CONSTRAINT asociacion_clave_asociacion_UK UNIQUE (clave_asociacion)
 ) tablespace ADMIN_TBS;
 
 CREATE TABLE certificacion (
@@ -55,7 +59,8 @@ CREATE TABLE certificacion (
     clave_certificacion NUMBER,
     nombre_certificacion VARCHAR2(20),
     asociacion_id NUMBER,
-    FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id)
+    FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
+    CONSTRAINT certificacion_clave_certificacion_UK UNIQUE (clave_certificacion)
 )tablespace ADMIN_TBS;
 
 CREATE TABLE empleado (
@@ -68,7 +73,8 @@ CREATE TABLE empleado (
     encargado_id NUMBER,
     asociacion_id NUMBER,
     FOREIGN KEY (encargado_id) REFERENCES empleado(empleado_id),
-    FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id)
+    FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
+    CONSTRAINT empleado_clave_empleado_UK UNIQUE (clave_empleado)
 ) tablespace ADMIN_EMPLEADO_TBS;
 
 CREATE TABLE lider (
@@ -95,7 +101,7 @@ CREATE TABLE version (
     nivel_version VARCHAR2(10),
     certificacion_id NUMBER,
     CONSTRAINT fk_certificacion_id FOREIGN KEY (certificacion_id) REFERENCES certificacion(certificacion_id)
-);
+) tablespace ADMIN_TBS;
 
 CREATE TABLE version_lider (
     version_lider_id NUMBER PRIMARY KEY,
@@ -103,9 +109,9 @@ CREATE TABLE version_lider (
     empleado_id NUMBER,
     fecha_obtencion DATE,
     CONSTRAINT fk_version_id FOREIGN KEY (version_id) REFERENCES version(version_id),
-    CONSTRAINT fk_empleado_id FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id)
-);
-
+    CONSTRAINT fk_empleado_id FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id),
+    CONSTRAINT version_lider_version_id_empleado_id_UK UNIQUE (version_id, empleado_id)
+) tablespace ADMIN_TBS;
 
 
 
@@ -124,7 +130,8 @@ CREATE TABLE cliente (
     estado_civil_cliente VARCHAR2(15),
     telefono_cliente NUMBER(13),
     ocupacion_cliente VARCHAR2(15),
-    nivel_educativo_cliente VARCHAR2(10)
+    nivel_educativo_cliente VARCHAR2(10),
+    CONSTRAINT cliente_clave_cliente_UK UNIQUE (clave_cliente)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE visita (
@@ -147,7 +154,7 @@ CREATE TABLE acompaniante (
     edad NUMBER(3),
     ocupacion VARCHAR2(15),
     CONSTRAINT fk_visita_id FOREIGN KEY (visita_id) REFERENCES visita(visita_id)
-);
+) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE auto (
     placas VARCHAR2(10) PRIMARY KEY,
@@ -155,7 +162,7 @@ CREATE TABLE auto (
     marca VARCHAR2(20),
     cliente_id NUMBER,
     CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
-);
+) tablespace NEGOCIO_CLIENTE_TBS;
 
 
 CREATE TABLE temporada(
@@ -169,13 +176,18 @@ CREATE TABLE actividad(
     descripcion_actividad VARCHAR(30),
     costo_actividad NUMBER(6),
     --empleado_id_rid NUMBER
+    CONSTRAINT actividad_clave_actividad_UK UNIQUE (clave_actividad)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE centro_actividad(
     centro_actividad_id NUMBER PRIMARY KEY,
+    actividad_id NUMBER,
+    temporada_id NUMBER,
+    centro_id NUMBER,
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id),
-    FOREIGN KEY(temporarda_id) REFERENCES temporada(temporada_id),
-    FOREIGN KEY(centro_id) REFERENCES centro(centro_id)
+    FOREIGN KEY(temporada_id) REFERENCES temporada(temporada_id),
+    FOREIGN KEY(centro_id) REFERENCES centro(centro_id),
+    CONSTRAINT centro_actividad_actividad_id_centro_id_UK UNIQUE (actividad_id, temporada_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE actividad_imagen(
@@ -201,7 +213,8 @@ CREATE TABLE campamento(
 CREATE TABLE tipo_deporte(
     tipo_deporte_id NUMBER PRIMARY KEY,
     clave_tipo_deporte NUMBER,
-    descripcion_tipo_deporte VARCHAR(30)
+    descripcion_tipo_deporte VARCHAR(30),
+    CONSTRAINT tipo_deporte_clave_tipo_deporte_UK UNIQUE (clave_tipo_deporte)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE deporte(
@@ -222,7 +235,8 @@ CREATE TABLE tipo_juego(
     tipo_juego_id NUMBER PRIMARY KEY,
     clave_tipo_juego NUMBER,
     descripcion_tipo_juego VARCHAR(30),
-    nombre_tipo_juego VARCHAR(15)
+    nombre_tipo_juego VARCHAR(15),
+    CONSTRAINT tipo_juego_clave_tipo_juego_UK UNIQUE (clave_tipo_juego)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE juego(
@@ -247,13 +261,14 @@ CREATE TABLE membresia (
     cliente_id NUMBER,
     estatus_membresia_id NUMBER,
     CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id),
-    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id)
-);
+    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id),
+    CONSTRAINT membresia_numero_membresia_UK UNIQUE (numero_membresia)
+) tablespace NEGOCIO_MEMBRESIA_TBS;
 
 CREATE TABLE estatus_membresia (
     estatus_membresia_id NUMBER PRIMARY KEY,
     estatus_nombre VARCHAR2(10)
-);
+)tablespace NEGOCIO_MEMBRESIA_TBS;
 
 CREATE TABLE historico_estatus_membresia (
     historico_estatus_membresia_id NUMBER PRIMARY KEY,
@@ -263,4 +278,4 @@ CREATE TABLE historico_estatus_membresia (
     motivo_cancelacion VARCHAR2(20),
     CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id),
     CONSTRAINT fk_membresia_id FOREIGN KEY (membresia_id) REFERENCES membresia(membresia_id)
-);
+)tablespace NEGOCIO_MEMBRESIA_TBS;
