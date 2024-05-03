@@ -42,8 +42,8 @@ create tablespace ADMIN_EMPLEADO_TBS
 
 create tablespace ADMIN_INDICES_TBS
     datafile 
-        '/travesia/disk_5/travesia/admin_indices_tbs_01.dbf' size 1G,
-        '/travesia/disk_6/travesia/admin_indices_tbs_02.dbf' size 1G
+        '/travesia/disk_2/travesia/admin_indices_tbs_01.dbf' size 1G,
+        '/travesia/disk_3/travesia/admin_indices_tbs_02.dbf' size 1G
     autoextend on next 30M maxsize 15G
     autoallocate
     segment space management auto
@@ -92,8 +92,8 @@ create bigfile tablespace NEGOCIO_MEDIA_TBS
 
 create tablespace NEGOCIO_INDICES_TBS
     datafile 
-        '/travesia/disk_7/travesia/negocio_indices_tbs_01.dbf' size 1G,
-        '/travesia/disk_8/travesia/negocio_indices_tbs_02.dbf' size 1G
+        '/travesia/disk_4/travesia/negocio_indices_tbs_01.dbf' size 1G,
+        '/travesia/disk_5/travesia/negocio_indices_tbs_02.dbf' size 1G
     autoextend on next 30M maxsize 15G
     autoallocate
     segment space management auto
