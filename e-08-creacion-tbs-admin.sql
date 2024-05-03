@@ -17,7 +17,7 @@ define pdb1_container='administracion_con'
 define pdb2_admin='admin_negocios_con'
 define pdb2_container='negocio_con'
 
-
+--TODO: añadir TBs de los indices
 
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;

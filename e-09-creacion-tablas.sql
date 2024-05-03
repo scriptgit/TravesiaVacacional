@@ -86,7 +86,8 @@ CREATE TABLE lider_centro (
     FOREIGN KEY (centro_id) REFERENCES centro(centro_id)
 ) tablespace ADMIN_EMPLEADO_TBS;
 
---#####################FALTA TABLAS VERSION Y VERSION_LIDER ####################################
+
+--TODO:  FALTA TABLAS VERSION Y VERSION_LIDER 
 
 
 Prompt Cambiando sesión a &pdb2_container
@@ -118,7 +119,7 @@ CREATE TABLE visita (
     FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
---######################FALTA TABLAS ACOMPAÑANTE Y AUTO################################
+--TODO: FALTA TABLAS ACOMPAÑANTE Y AUTO
 
 CREATE TABLE temporada(
     temporada_id NUMBER PRIMARY KEY,
@@ -197,4 +198,4 @@ CREATE TABLE juego(
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 
---######################FALTA TABLAS MEMBRESIA, HISTORICO_ESTATUS_MEMBRESIA Y ESTATUS_MEMBRESIA ################################
+--TODO: FALTA TABLAS MEMBRESIA, HISTORICO_ESTATUS_MEMBRESIA Y ESTATUS_MEMBRESIA 
