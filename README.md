@@ -82,6 +82,6 @@ NEGOCIO
 ```
 
 ## Integrantes
-Jorge Octavio Barcenas Avelar
-Angel Eduardo Oropeza Castañeda
-Ulises Eduardo Antonio García
+- Jorge Octavio Barcenas Avelar
+- Angel Eduardo Oropeza Castañeda
+- Ulises Eduardo Antonio García
