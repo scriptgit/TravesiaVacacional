@@ -17,14 +17,14 @@ mkdir -p ${diskLoop}
 echo "Creando archivos binarios"
 cd ${diskLoop}
 
-dd if=/dev/zero of=disk-01.img bs=100M count=10
-dd if=/dev/zero of=disk-02.img bs=100M count=10
-dd if=/dev/zero of=disk-03.img bs=100M count=10
-dd if=/dev/zero of=disk-04.img bs=100M count=10
-dd if=/dev/zero of=disk-05.img bs=100M count=10
-dd if=/dev/zero of=disk-06.img bs=100M count=10
-dd if=/dev/zero of=disk-07.img bs=100M count=10
-dd if=/dev/zero of=disk-08.img bs=100M count=10
+dd if=/dev/zero of=disk-01.img bs=100M count=20
+dd if=/dev/zero of=disk-02.img bs=100M count=20
+dd if=/dev/zero of=disk-03.img bs=100M count=20
+dd if=/dev/zero of=disk-04.img bs=100M count=20
+dd if=/dev/zero of=disk-05.img bs=100M count=20
+dd if=/dev/zero of=disk-06.img bs=100M count=20
+dd if=/dev/zero of=disk-07.img bs=100M count=20
+dd if=/dev/zero of=disk-08.img bs=100M count=20
 
 echo "comprobando la creación"
 du -sh disk*.img
