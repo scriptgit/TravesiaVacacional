@@ -46,9 +46,12 @@ NEGOCIO
 
 ### Organización de discos
 ```
+NOTACIÓN: 
 MODULO
 └── TABLESPACE
     └── DATAFILE
+
+----------------------
 FRA
 └── disk_7
 ADMINISTRACIÓN
