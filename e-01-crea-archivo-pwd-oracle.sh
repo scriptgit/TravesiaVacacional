@@ -2,7 +2,7 @@
 
 echo "creando archivo de passwords"
 
-echo "asignando el valor a ORACLE_SID: "travdip1"
+echo "asignando el valor a ORACLE_SID: travdip1"
 export ORACLE_SID=travdip1
 
 echo "ORACLE_SID: ${ORACLE_SID}"
