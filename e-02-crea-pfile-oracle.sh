@@ -15,6 +15,7 @@ db_domain=fi.unam
 db_recovery_file_dest_size=20G
 db_recovery_file_dest='/travesia/disk-07/fast-recovery-area'
 db_flashback_retention_target=1440
+enable_pluggable_database=true
 " > ${pfile}
 
 echo "comprobando creación"
