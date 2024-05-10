@@ -36,13 +36,13 @@ if [ -d "${raiz}" ]; then
   ls -l ${raiz}
   read -p "Enter para borrar, ctrl C - cancelar"
   rm -f ${raiz}
-# En caso de que al momento de intentar abrir la base no se pueda, con el script e-05
-#  cd ${raiz}/disk01
+#  En caso de que al momento de intentar abrir la base no se pueda, con el script e-05 debido a que quedaron datos residuales
+#  proceder a eliminar las carpetas disk-* con el usuario root manualmente en caso de que no funcione el borrado por script
+#  cd ${raiz}
+#  borrar todas las carpetas disk con:
 #  rm -r *
-#  cd ${raiz}/disk02
-#  rm -r *
-#  cd ${raiz}/disk07
-#  rm -r *
+#  o solo las que poseen datos:
+#  rm -r disk-01 disk-02 disk-07
 fi;
 
 mkdir -p ${raiz}
