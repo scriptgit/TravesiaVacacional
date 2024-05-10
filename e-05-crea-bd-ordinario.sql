@@ -10,9 +10,16 @@ pause ¿Es correcto?  Enter para continuar
 prompt conectando como sys
 connect sys/Hola1234* as sysdba
 
+prompt Apagando instancia en caso de estar iniciada previamente
+shutdown immediate
+    
 prompt inicando instancia en modo nomount
 startup nomount
 
+prompt habilitando la creacion de una cdb database cambiando el parametro enable_plugabble_database=true en caso de no estarlo
+alter system SET enable_pluggable_database=TRUE scope=spfile;
+commit;
+    
 prompt creando una nueva BD: TRAVDIP1
 
 create database travdip1
@@ -47,7 +54,6 @@ create database travdip1
     undo tablespace undotbs1
         datafile '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/undotbs01.dbf'
         size 200m reuse autoextend on next 5120k maxsize unlimited
-        
     enable pluggable database;
 
 Prompt Homologando passwords
