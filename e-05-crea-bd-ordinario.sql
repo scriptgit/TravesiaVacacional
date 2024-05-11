@@ -25,15 +25,9 @@ prompt creando una nueva BD: TRAVDIP1
 create database travdip1
     user sys identified by systemproy
     user system identified by systemproy
-    logfile group 1 (
-        'redo01a.log'
-      ) size 50m blocksize 512,
-    group 2 (
-        'redo02a.log'
-      ) size 50m blocksize 512,
-    group 3 (
-        'redo03a.log'
-      ) size 50m blocksize 512
+    logfile group 1 ,
+    group 2 ,
+    group 3 
     maxloghistory 1
     maxlogfiles 16
     maxlogmembers 3
@@ -54,7 +48,8 @@ create database travdip1
     undo tablespace undotbs1
         datafile '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/undotbs01.dbf'
         size 200m reuse autoextend on next 5120k maxsize unlimited
-    enable pluggable database; --seed file_name_convert=('/travesia/disk-01/app/oracle/oradata/TRAVDIP1/','/travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED/');
+    enable pluggable database
+    seed file_name_convert=('/travesia/disk-01/app/oracle/oradata/TRAVDIP1/','/travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED/');
 
 Prompt Homologando passwords
 pause Enter para confirmar cambio de passwords!
