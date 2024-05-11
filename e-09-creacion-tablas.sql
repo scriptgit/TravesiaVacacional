@@ -56,11 +56,11 @@ CREATE TABLE asociacion (
 
 CREATE TABLE certificacion (
     certificacion_id NUMBER PRIMARY KEY,
-    clave_certificacion NUMBER,
-    nombre_certificacion VARCHAR2(20),
+    clave NUMBER,
+    nombre VARCHAR2(20),
     asociacion_id NUMBER,
     FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
-    CONSTRAINT certificacion_clave_certificacion_UK UNIQUE (clave_certificacion)
+    CONSTRAINT certificacion_clave_UK UNIQUE (clave)
 )tablespace ADMIN_TBS;
 
 CREATE TABLE empleado (
