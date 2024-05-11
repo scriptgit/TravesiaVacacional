@@ -17,6 +17,10 @@ CREATE INDEX ix_asociacion_clave
 ON asociacion(clave)
 TABLESPACE admin_indices_tbs;
 
+-- TABLA: CERTIFICACION
+CREATE INDEX ix_certificacion_clave
+ON certificacion(clave)
+TABLESPACE admin_indices_tbs;
 
 
 -- M Ó D U L O:  N E G O C I O --
@@ -34,4 +38,14 @@ TABLESPACE negocio_indices_tbs;
 -- TABLA: MEMBRESIA
 CREATE INDEX ix_membresia_cliente_numero_membresia
 ON membresia(numero_membresia)
+TABLESPACE negocio_indices_tbs;
+
+-- TABLA: HISTORICO_ESTATUS_MEMBRESIA
+CREATE INDEX ix_historico_estatus_membresia_membresia_id
+ON historico_estatus_membresia(membresia_id)
+TABLESPACE negocio_indices_tbs;
+
+-- TABLA: ACTIVIDAD
+CREATE INDEX ix_actividad_clave
+ON actividad(clave)
 TABLESPACE negocio_indices_tbs;
