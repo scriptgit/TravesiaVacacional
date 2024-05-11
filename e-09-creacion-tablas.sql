@@ -44,14 +44,14 @@ PROMPT creando tablas
 
 CREATE TABLE asociacion (
     asociacion_id NUMBER PRIMARY KEY,
-    clave_asociacion NUMBER ,
-    calle_asociacion VARCHAR2(20),
-    colonia_asociacion VARCHAR2(20),
-    numero_asociacion NUMBER(5),
-    estado_asociacion VARCHAR2(20),
-    delegacion_asociacion VARCHAR2(20),
-    telefono_asociacion NUMBER(13),
-    CONSTRAINT asociacion_clave_asociacion_UK UNIQUE (clave_asociacion)
+    clave NUMBER ,
+    calle VARCHAR2(20),
+    colonia VARCHAR2(20),
+    numero NUMBER(5),
+    estado VARCHAR2(20),
+    delegacion VARCHAR2(20),
+    telefono NUMBER(13),
+    CONSTRAINT asociacion_clave_UK UNIQUE (clave)
 ) tablespace ADMIN_TBS;
 
 CREATE TABLE certificacion (
@@ -65,16 +65,16 @@ CREATE TABLE certificacion (
 
 CREATE TABLE empleado (
     empleado_id NUMBER PRIMARY KEY,
-    clave_empleado NUMBER,
-    nombre_empleado VARCHAR2(20),
-    ap_pat_empleado VARCHAR2(20),
-    ap_mat_empleado VARCHAR2(20),
-    telefono_empleado NUMBER(13),
+    clave NUMBER,
+    nombre VARCHAR2(20),
+    ap_pat VARCHAR2(20),
+    ap_mat VARCHAR2(20),
+    telefono NUMBER(13),
     encargado_id NUMBER,
     asociacion_id NUMBER,
     FOREIGN KEY (encargado_id) REFERENCES empleado(empleado_id),
     FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
-    CONSTRAINT empleado_clave_empleado_UK UNIQUE (clave_empleado)
+    CONSTRAINT empleado_clave_UK UNIQUE (clave)
 ) tablespace ADMIN_EMPLEADO_TBS;
 
 CREATE TABLE lider (
@@ -120,18 +120,19 @@ alter session set container = &pdb2_container;
 
 CREATE TABLE cliente (
     cliente_id NUMBER PRIMARY KEY,
-    clave_cliente NUMBER,
-    nombre_cliente VARCHAR2(20),
+    clave NUMBER,
+    nombre VARCHAR2(20),
     ap_paterno VARCHAR2(20),
     ap_materno VARCHAR2(20),
     fecha_nacimiento DATE,
-    edad_cliente NUMBER(3),
-    curp_cliente VARCHAR2(18),
-    estado_civil_cliente VARCHAR2(15),
-    telefono_cliente NUMBER(13),
-    ocupacion_cliente VARCHAR2(15),
-    nivel_educativo_cliente VARCHAR2(10),
-    CONSTRAINT cliente_clave_cliente_UK UNIQUE (clave_cliente)
+    edad NUMBER(3),
+    curp VARCHAR2(18),
+    estado_civil VARCHAR2(15),
+    telefono NUMBER(13),
+    ocupacion VARCHAR2(15),
+    nivel_educativo VARCHAR2(10),
+    CONSTRAINT cliente_clave_UK UNIQUE (clave),
+    CONSTRAINT cliente_curp_UK UNIQUE (curp)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE visita (
