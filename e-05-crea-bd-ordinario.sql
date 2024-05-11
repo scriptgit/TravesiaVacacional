@@ -54,7 +54,7 @@ create database travdip1
     undo tablespace undotbs1
         datafile '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/undotbs01.dbf'
         size 200m reuse autoextend on next 5120k maxsize unlimited
-    enable pluggable database; --seed file_name_convert=('/u01/app/oracle/oradata/TRAVDIP1/','/u01/app/oracle/oradata/TRAVDIP1/PDBSEED/');
+    enable pluggable database; --seed file_name_convert=('/travesia/disk-01/app/oracle/oradata/TRAVDIP1/','/travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED/');
 
 Prompt Homologando passwords
 pause Enter para confirmar cambio de passwords!
