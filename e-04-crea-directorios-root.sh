@@ -91,8 +91,8 @@ fi;
 
 echo "Creando carpetas de redo logs"
 cd ${raiz}
-#posible solución mkdir -p ${pMontaje1}/${redoData}/PDBSEED
-mkdir -p ${pMontaje1}/${redoData}
+mkdir -p ${pMontaje1}/${redoData}/PDBSEED
+#mkdir -p ${pMontaje1}/${redoData}
 mkdir -p ${pMontaje2}/${redoData}
 
 
