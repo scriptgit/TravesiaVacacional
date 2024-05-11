@@ -91,12 +91,14 @@ fi;
 
 echo "Creando carpetas de redo logs"
 cd ${raiz}
+#posible solución mkdir -p ${pMontaje1}/${redoData}/PDBSEED
 mkdir -p ${pMontaje1}/${redoData}
 mkdir -p ${pMontaje2}/${redoData}
 
 
 
 echo "Creando carpetas de FRA"
+#posible solución fra=/fast-recovery-area/TRAVDIP1/controlfile
 fra=/fast-recovery-area
 mkdir -p ${raiz}/${pMontaje7}/${fra}
 
