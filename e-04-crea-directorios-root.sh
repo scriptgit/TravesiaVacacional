@@ -89,6 +89,8 @@ if [[ -d "${raiz}/${pMontaje1}/${redoData}" ||  -d "${raiz}/${pMontaje2}/${redoD
   
 fi;
 
+mkdir -p /travesia/disk-04/app/oracle/oradata/TRAVDIP1/
+
 echo "Creando carpetas de redo logs"
 cd ${raiz}
 mkdir -p ${pMontaje1}/${redoData}/PDBSEED
