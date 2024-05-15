@@ -27,7 +27,9 @@ alter session set container = cdb$root;
 
 Prompt Creando el aplication container
 CREATE PLUGGABLE DATABASE &app_container as application container
-  ADMIN USER &app_admin IDENTIFIED BY &app_admin;
+  ADMIN USER &app_admin IDENTIFIED BY &app_admin
+  FILE_NAME_CONVERT=('/travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED/',
+  '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/APP-CONTAINER');
   
 Prompt Apertura del app container
 alter pluggable database &app_container open;
@@ -38,9 +40,13 @@ alter session set container = &app_container;
 
 create pluggable database &pdb1_container admin user &pdb1_admin identified by &pdb1_admin
   FILE_NAME_CONVERT=('/travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED/',
-  '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/');
+  '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/administracion_con');
 
   
-create pluggable database &pdb2_container admin user &pdb2_admin identified by &pd2_admin
+create pluggable database &pdb2_container admin user &pdb2_admin identified by &pdb2_admin
   FILE_NAME_CONVERT=('/travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED/',
-  '/travesia/disk-04/app/oracle/oradata/TRAVDIP1/');
+  '/travesia/disk-04/app/oracle/oradata/TRAVDIP1/negocio_con');
+
+show pdbs
+prompt listo!!
+exit
