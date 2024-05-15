@@ -25,6 +25,11 @@ connect system/systemproy
 prompt pupbld
 @?/sqlplus/admin/pupbld.sql
 
+prompt Apagando instancia en caso de estar iniciada previamente
+shutdown immediate
+    
+prompt inicando instancia en modo nomount
+startup
 
 prompt Agregando miembros a grupos de redo logs
 alter database add logfile member 
