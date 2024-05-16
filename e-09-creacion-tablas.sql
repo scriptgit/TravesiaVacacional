@@ -231,6 +231,7 @@ CREATE TABLE deporte(
 CREATE TABLE accesorios(
     accesorio_id NUMBER PRIMARY KEY,
     nombre_accesorio VARCHAR(18),
+    actividad_id NUMBER,
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
