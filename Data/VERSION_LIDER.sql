@@ -1,10 +1,10 @@
-﻿CREATE TABLE VERSION_LIDER 
+/*﻿CREATE TABLE VERSION_LIDER 
 (
     version_lider_id	INT,
     version_id	INT,
     empleado_id	INT,
     fecha_obtencion	VARCHAR(512)
-);
+);*/
 
 INSERT INTO VERSION_LIDER (version_lider_id, version_id, empleado_id, fecha_obtencion) VALUES ('1', '82', '828', '06/03/2017');
 INSERT INTO VERSION_LIDER (version_lider_id, version_id, empleado_id, fecha_obtencion) VALUES ('2', '26', '425', '29/08/2022');
