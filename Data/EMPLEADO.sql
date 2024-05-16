@@ -1,4 +1,4 @@
-CREATE TABLE EMPLEADO 
+/*CREATE TABLE EMPLEADO 
 (
     empleado_id	INT,
     clave	INT,
@@ -8,7 +8,7 @@ CREATE TABLE EMPLEADO
     telefono	INT,
     encargado_id	INT,
     asociacion_id	INT
-);
+);*/
 
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('1', '11875', 'Kain', 'Milkeham', 'Goddard', '18284760', '65', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('2', '42803', 'Patricia', 'Hercock', 'Brinicombe', '37393455', '53', '5');
