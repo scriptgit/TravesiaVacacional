@@ -138,8 +138,8 @@ CREATE TABLE cliente (
 CREATE TABLE visita (
     visita_id NUMBER PRIMARY KEY,
     fecha DATE,
-    hora_llegada TIMESTAMP,
-    hora_salida TIMESTAMP,
+    hora_llegada VARCHAR(12),
+    hora_salida	VARCHAR(12),
     centro_id NUMBER,
     cliente_id NUMBER,
     FOREIGN KEY (centro_id) REFERENCES centro(centro_id),
