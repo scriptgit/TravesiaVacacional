@@ -57,7 +57,7 @@ CREATE TABLE asociacion (
 CREATE TABLE certificacion (
     certificacion_id NUMBER PRIMARY KEY,
     clave NUMBER,
-    nombre VARCHAR2(20),
+    nombre VARCHAR2(50),
     asociacion_id NUMBER,
     FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
     CONSTRAINT certificacion_clave_UK UNIQUE (clave)
@@ -175,7 +175,7 @@ CREATE TABLE temporada(
 CREATE TABLE actividad(
     actividad_id NUMBER PRIMARY KEY,
     clave_actividad NUMBER,
-    descripcion_actividad VARCHAR(30),
+    descripcion_actividad VARCHAR(50),
     costo_actividad NUMBER(6),
     --empleado_id_rid NUMBER
     CONSTRAINT actividad_clave_actividad_UK UNIQUE (clave_actividad)
