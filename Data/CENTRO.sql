@@ -1,4 +1,4 @@
-﻿CREATE TABLE CENTRO 
+/*﻿CREATE TABLE CENTRO 
 (
     centro_id	INT,
     clave_centro	INT,
@@ -7,7 +7,7 @@
     numero_centro	VARCHAR(512),
     estado_centro	VARCHAR(512),
     asociacion_id_rid	INT
-);
+);*/
 
 INSERT INTO CENTRO (centro_id, clave_centro, calle_centro, colonia_centro, numero_centro, estado_centro, asociacion_id_rid) VALUES ('1', '15672', 'Cambridge', 'Cottonwood', '1', 'Ontario', '10');
 INSERT INTO CENTRO (centro_id, clave_centro, calle_centro, colonia_centro, numero_centro, estado_centro, asociacion_id_rid) VALUES ('2', '60118', 'Cody', 'Paget', '1', 'Quebec', '6');
