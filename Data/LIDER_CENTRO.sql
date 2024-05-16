@@ -1,8 +1,8 @@
-﻿CREATE TABLE LIDER_CENTRO 
+/*﻿CREATE TABLE LIDER_CENTRO 
 (
     empleado_id	INT,
     centro_id	INT
-);
+);*/
 
 INSERT INTO LIDER_CENTRO (empleado_id, centro_id) VALUES ('828', '1');
 INSERT INTO LIDER_CENTRO (empleado_id, centro_id) VALUES ('425', '2');
