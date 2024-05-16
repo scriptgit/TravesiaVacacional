@@ -1,11 +1,11 @@
-CREATE TABLE CERTIFICACION 
+/*CREATE TABLE CERTIFICACION 
 (
     certificacion_id	INT,
     clave	INT,
     nombre	VARCHAR(512),
     asociacion_id	INT
 );
-
+*/
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('1', '2435', 'Campamento de verano', '9');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('2', '5035', 'Campamento de invierno', '1');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('3', '1265', 'Campamento primavera', '8');
