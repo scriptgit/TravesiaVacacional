@@ -20,7 +20,7 @@ INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUE
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('12', '9663', 'Natacion', '6');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('13', '3147', 'Beisbol', '7');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('14', '8518', 'Danza', '5');
-INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('15', '6197', 'Cocina', '2');
+INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('15', '6197', 'Boxeo', '2');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('16', '7212', 'Campamento de verano', '10');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('17', '2014', 'Campamento de invierno', '10');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('18', '5510', 'Campamento primavera', '8');
@@ -35,7 +35,7 @@ INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUE
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('27', '4290', 'Natacion', '5');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('28', '7783', 'Beisbol', '9');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('29', '1675', 'Danza', '5');
-INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('30', '3171', 'Cocina', '6');
+INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('30', '3171', 'Boxeo', '6');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('31', '3218', 'Campamento de verano', '3');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('32', '4680', 'Campamento de invierno', '1');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('33', '8774', 'Campamento primavera', '7');
@@ -50,7 +50,7 @@ INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUE
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('42', '6440', 'Natacion', '8');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('43', '3806', 'Beisbol', '1');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('44', '4591', 'Danza', '2');
-INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('45', '8838', 'Cocina', '6');
+INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('45', '8838', 'Boxeo', '6');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('46', '6087', 'Basketball', '7');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('47', '3213', 'Esqui', '2');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('48', '7444', 'Supervivencia a la intemperie', '5');
@@ -84,8 +84,8 @@ INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUE
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('76', '8594', 'Beisbol', '7');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('77', '9000', 'Danza', '6');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('78', '3620', 'Esqui', '3');
-INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('79', '1910', 'Cocina', '6');
-INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('80', '8268', 'Cocina', '7');
+INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('79', '1910', 'Boxeo', '6');
+INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('80', '8268', 'Boxeo', '7');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('81', '7105', 'Campamento al aire libre', '6');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('82', '5176', 'Campamento de verano', '2');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('83', '5460', 'Tiro con arco', '7');
@@ -95,7 +95,7 @@ INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUE
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('87', '8504', 'Realidad virtual', '3');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('88', '1616', 'Danza', '8');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('89', '7234', 'Realidad virtual', '4');
-INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('90', '8521', 'Cocina', '2');
+INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('90', '8521', 'Boxeo', '2');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('91', '1949', 'Campamento de verano', '8');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('92', '1206', 'Campamento de invierno', '3');
 INSERT INTO CERTIFICACION (certificacion_id, clave, nombre, asociacion_id) VALUES ('93', '8730', 'Campamento primavera', '10');
