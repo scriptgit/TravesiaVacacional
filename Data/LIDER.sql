@@ -1,10 +1,10 @@
-﻿CREATE TABLE LIDER 
+/*﻿CREATE TABLE LIDER 
 (
     empleado_id	INT,
     clave_lider	INT,
     anios_experiencia	INT
 );
-
+*/
 INSERT INTO LIDER (empleado_id, clave_lider, anios_experiencia) VALUES ('828', '90402', '6');
 INSERT INTO LIDER (empleado_id, clave_lider, anios_experiencia) VALUES ('425', '78268', '5');
 INSERT INTO LIDER (empleado_id, clave_lider, anios_experiencia) VALUES ('356', '97980', '5');
