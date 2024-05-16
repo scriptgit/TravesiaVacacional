@@ -223,6 +223,7 @@ CREATE TABLE deporte(
     actividad_id NUMBER PRIMARY KEY,
     horas_entrenamiento NUMBER(3),
     nombre_deporte VARCHAR(15),
+    tipo_deporte_id NUMBER(2) NOT NULL,
     FOREIGN KEY(tipo_deporte_id) REFERENCES tipo_deporte(tipo_deporte_id), 
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS; 
@@ -246,6 +247,7 @@ CREATE TABLE juego(
     nombre_juego VARCHAR(20),
     num_participantes NUMBER(2),
     descripcion_juego VARCHAR(30),
+    tipo_juego_id NUMBER(2),
     FOREIGN KEY(tipo_juego_id) REFERENCES tipo_juego(tipo_juego_id),
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
