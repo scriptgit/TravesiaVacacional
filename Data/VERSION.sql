@@ -1,4 +1,4 @@
-﻿CREATE TABLE VERSION 
+/*﻿CREATE TABLE VERSION 
 (
     version_id	INT,
     numero_version	INT,
@@ -6,7 +6,7 @@
     temario	VARCHAR(512),
     nivel_version	INT,
     certificacion_id	INT
-);
+);*/
 
 INSERT INTO VERSION (version_id, numero_version, objetivos, temario, nivel_version, certificacion_id) VALUES ('1', '2001', '"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus. Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis."', 'Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi. Cras non velit nec nisi vulputate nonummy.', '1', '85');
 INSERT INTO VERSION (version_id, numero_version, objetivos, temario, nivel_version, certificacion_id) VALUES ('2', '2000', '"Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros. Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat. In congue. Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst."', 'Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.', '1', '75');
