@@ -54,7 +54,7 @@ INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco,
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('280', 'Wally', 'Fulstow', 'Khomishin', 'NINGUNO', '55', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('294', 'Evangeline', 'Anstead', 'Legon', 'NINGUNO', '41', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('304', 'Con', 'Baudinelli', 'Matthewman', 'NINGUNO', '10', 'ESTUDIANTE');
-INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('307', 'Dane', 'Akam', 'O\' Reagan', 'FAMILIAR', '49', 'EMPLEADO');
+INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('307', 'Dane', 'Akam', 'O Reagan', 'FAMILIAR', '49', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('308', 'Jessey', 'Potell', 'Ulrik', 'FAMILIAR', '65', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('309', 'Alfi', 'Lieber', 'Laughlan', 'NINGUNO', '36', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('311', 'Nata', 'Cherm', 'Petras', 'FAMILIAR', '38', 'EMPLEADO');
@@ -195,7 +195,7 @@ INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco,
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('925', 'Jerry', 'Flemmich', 'Lorie', 'FAMILIAR', '35', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('929', 'Demetria', 'Styan', 'Revie', 'NINGUNO', '43', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('930', 'Kirsteni', 'Domenget', 'Killbey', 'NINGUNO', '62', 'EMPLEADO');
-INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('933', 'Aindrea', 'L\'Hommeau', 'Winders', 'FAMILIAR', '56', 'EMPLEADO');
+INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('933', 'Aindrea', 'LHommeau', 'Winders', 'FAMILIAR', '56', 'EMPLEADO');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('933', 'Olia', 'Bakes', 'Tinkham', 'NINGUNO', '88', 'SIN ESPECIFICAR');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('940', 'Mary', 'Playden', 'Mosdell', 'NINGUNO', '13', 'ESTUDIANTE');
 INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES ('944', 'Ola', 'Woolard', 'Dwerryhouse', 'FAMILIAR', '83', 'SIN ESPECIFICAR');
