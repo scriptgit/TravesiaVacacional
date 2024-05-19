@@ -15,10 +15,10 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('3', '52417', 'Bo', 'Steere', 'Stonary', '48589123', '5', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('4', '3138', 'Myrlene', 'Henrichs', 'Franzettoini', '53036043', '75', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('5', '72154', 'Gradey', 'Grandisson', 'Tomala', '29339924', '42', '7');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('6', '86252', 'Lucias', 'D\'Adamo', 'Chanders', '40956922', '63', '5');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('6', '86252', 'Lucias', 'D\Adamo', 'Chanders', '40956922', '63', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('7', '47237', 'Lisle', 'Saddleton', 'Matfield', '31324586', '34', '9');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('8', '27693', 'Hilly', 'Colgan', 'Romanet', '30225201', '36', '5');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('9', '19489', 'Korella', 'Choke', 'O\'Hingerty', '21816680', '36', '2');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('9', '19489', 'Korella', 'Choke', 'OHingerty', '21816680', '36', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('10', '6728', 'Dyann', 'Chate', 'Adin', '53983139', '41', '4');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('11', '59945', 'Karry', 'Kleinstub', 'Dauby', '30073165', '73', '4');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('12', '31785', 'Eilis', 'Gussie', 'Jasik', '24514181', '51', '1');
@@ -274,7 +274,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('262', '76912', 'Ynez', 'Killby', 'Yarrall', '21809760', '7', '4');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('263', '50255', 'Kimberley', 'Feldhorn', 'MacAulay', '52817300', '11', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('264', '38044', 'Alf', 'Stilling', 'Fulstow', '52494893', '40', '2');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('265', '85357', 'Harley', 'Borel', 'O\'Rowane', '40989340', '95', '7');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('265', '85357', 'Harley', 'Borel', 'ORowane', '40989340', '95', '7');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('266', '58712', 'Rockwell', 'Wintour', 'Ludy', '55012578', '13', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('267', '22302', 'Korney', 'Nanson', 'Lucio', '35127148', '48', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('268', '62796', 'Jourdan', 'Duffitt', 'Leivesley', '28687460', '62', '9');
@@ -430,7 +430,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('418', '36726', 'Renelle', 'Richen', 'Bullman', '48896435', '65', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('419', '26720', 'Esteban', 'Cullon', 'Byrcher', '42962091', '20', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('420', '23802', 'Philomena', 'Anster', 'Mottini', '52687087', '86', '1');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('421', '80875', 'Willy', 'O\'Fallowne', 'Coughan', '44053614', '73', '3');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('421', '80875', 'Willy', 'OFallowne', 'Coughan', '44053614', '73', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('422', '61632', 'Corabelle', 'Yoxall', 'Crunkhurn', '52531019', '76', '9');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('423', '51593', 'Abbey', 'Damarell', 'Hadeke', '31196760', '14', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('424', '2276', 'Valdemar', 'Humpatch', 'Ivanchov', '51743484', '21', '5');
@@ -454,7 +454,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('442', '81746', 'Darci', 'Alecock', 'Dow', '36729552', '91', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('443', '37609', 'Filmore', 'Leavold', 'Gherardini', '37100113', '82', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('444', '62751', 'Gil', 'Doxsey', 'Calcutt', '47480388', '29', '1');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('445', '17241', 'Harrie', 'Dennington', 'O\'Growgane', '40149224', '49', '4');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('445', '17241', 'Harrie', 'Dennington', 'OGrowgane', '40149224', '49', '4');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('446', '39696', 'Frazer', 'Baume', 'Danilewicz', '27646686', '52', '7');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('447', '85303', 'Yvor', 'Heaviside', 'Silkston', '47832949', '20', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('448', '41250', 'Nisse', 'Fumagalli', 'Verring', '23282432', '80', '9');
@@ -487,7 +487,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('475', '4573', 'Ronni', 'Clackers', 'Ligertwood', '20380392', '28', '1');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('476', '31692', 'Wally', 'Steane', 'Churcher', '16160091', '93', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('477', '3621', 'Rolfe', 'Pardie', 'Paddefield', '25282190', '61', '5');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('478', '81448', 'Markus', 'D\'eathe', 'Gullam', '35313990', '47', '10');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('478', '81448', 'Markus', 'Deathe', 'Gullam', '35313990', '47', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('479', '43708', 'Pamela', 'Haburne', 'Rangle', '42443738', '78', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('480', '2154', 'Tally', 'Rozet', 'Willingham', '39605540', '36', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('481', '69446', 'Francois', 'Martyntsev', 'Clery', '40040883', '68', '7');
@@ -607,7 +607,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('595', '32525', 'Deerdre', 'Dando', 'Radnage', '41556587', '70', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('596', '68066', 'Sharona', 'Babbidge', 'Lyness', '31143803', '19', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('597', '14471', 'Eveleen', 'Knowlton', 'Dell Casa', '25847091', '70', '3');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('598', '96622', 'Herc', 'D\'Almeida', 'Guerro', '24624901', '47', '4');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('598', '96622', 'Herc', 'DAlmeida', 'Guerro', '24624901', '47', '4');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('599', '91401', 'Paxon', 'Thomton', 'Lockier', '32236354', '98', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('600', '53262', 'Eugine', 'Nunnerley', 'Aldersea', '18786328', '65', '7');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('601', '5308', 'Shelley', 'Stoad', 'Crocetto', '27061213', '6', '8');
@@ -651,7 +651,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('639', '13326', 'Kippy', 'Garden', 'Ambrosio', '44318336', '85', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('640', '95857', 'Bess', 'Giovannetti', 'Rosellini', '46478084', '36', '7');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('641', '46170', 'Carlynne', 'Dine-Hart', 'Korneichik', '29564053', '18', '2');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('642', '98453', 'Elston', 'Langsdon', 'O\'Hogertie', '17830810', '9', '2');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('642', '98453', 'Elston', 'Langsdon', 'OHogertie', '17830810', '9', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('643', '34163', 'Natale', 'Stockall', 'Caret', '22415842', '43', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('644', '35794', 'Alexei', 'Manis', 'Tuison', '21203144', '73', '7');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('645', '54480', 'Claire', 'Tommaseo', 'Shoveller', '48868755', '39', '8');
@@ -661,7 +661,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('649', '37537', 'Danyette', 'Buff', 'Weaben', '27395979', '20', '1');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('650', '67364', 'Egan', 'Elleton', 'Radnedge', '15538465', '9', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('651', '96184', 'Dorian', 'Fried', 'Crosse', '43084245', '65', '8');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('652', '49075', 'Marwin', 'Horsefield', 'O\' Mulderrig', '42690153', '33', '4');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('652', '49075', 'Marwin', 'Horsefield', 'O Mulderrig', '42690153', '33', '4');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('653', '76587', 'Eunice', 'Penburton', 'Chamberlin', '44967972', '50', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('654', '86007', 'Lesley', 'Bertie', 'Sansbury', '45849540', '14', '9');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('655', '17367', 'Zarah', 'Pierse', 'Fitch', '37152320', '45', '5');
@@ -706,7 +706,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('694', '53724', 'Norah', 'Greenley', 'Menichillo', '55164960', '62', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('695', '41674', 'Janela', 'Craythorn', 'Dhenin', '27936368', '48', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('696', '28222', 'Erika', 'Bellwood', 'Dagnan', '53485912', '13', '1');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('697', '37729', 'Marcel', 'O\'Geaney', 'Linforth', '26766125', '85', '3');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('697', '37729', 'Marcel', 'OGeaney', 'Linforth', '26766125', '85', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('698', '67693', 'Martita', 'Briat', 'Shaddick', '48370460', '44', '9');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('699', '98844', 'Merrile', 'Akett', 'Tattoo', '26014377', '64', '9');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('700', '29847', 'Nelson', 'Gelly', 'Glennon', '36620763', '20', '3');
@@ -767,7 +767,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('755', '50201', 'Goran', 'Delle', 'Fritche', '51562926', '45', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('756', '97970', 'Prentiss', 'Reeders', 'Fullbrook', '41506850', '84', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('757', '26898', 'Minna', 'Russe', 'Iacobetto', '20805067', '84', '3');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('758', '90885', 'Humphrey', 'A\'field', 'Fandrich', '15281916', '80', '8');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('758', '90885', 'Humphrey', 'Afield', 'Fandrich', '15281916', '80', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('759', '98913', 'Des', 'Barrie', 'Dukelow', '15097857', '10', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('760', '95884', 'Isiahi', 'Mayor', 'Bendley', '51283664', '81', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('761', '95601', 'Norbie', 'Foot', 'Screach', '23179448', '20', '4');
@@ -814,7 +814,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('802', '50874', 'Anabella', 'Killimister', 'Hebden', '47245384', '21', '1');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('803', '11681', 'Thom', 'Winney', 'Derham', '43453973', '19', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('804', '78763', 'Ed', 'Paget', 'Inggall', '27664926', '32', '10');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('805', '42427', 'Sidonnie', 'Barthelme', 'O\'Cannavan', '50580372', '23', '2');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('805', '42427', 'Sidonnie', 'Barthelme', 'OCannavan', '50580372', '23', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('806', '19927', 'Chrystal', 'Castan', 'Mazonowicz', '41943170', '31', '7');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('807', '73029', 'Gusty', 'MacCoughan', 'Rusted', '32667817', '85', '9');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('808', '27320', 'Ring', 'Carless', 'Pylkynyton', '34256072', '5', '6');
@@ -902,7 +902,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('890', '4410', 'Noel', 'Childers', 'Esposita', '25548340', '49', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('891', '67044', 'Shea', 'Blaske', 'Le Gallo', '42632472', '72', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('892', '34817', 'Bob', 'Eberlein', 'Gallimore', '52601105', '1', '5');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('893', '6704', 'Lauren', 'Benardette', 'L\'Hommeau', '52421694', '89', '2');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('893', '6704', 'Lauren', 'Benardette', 'LHommeau', '52421694', '89', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('894', '51192', 'Germayne', 'Knewstub', 'Cherry', '31096432', '19', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('895', '57386', 'Thorsten', 'Irce', 'McGenn', '44227600', '4', '2');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('896', '64083', 'Wat', 'Harkes', 'Snawdon', '43427892', '92', '8');
@@ -985,7 +985,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('973', '61028', 'Marketa', 'Rennenbach', 'Leipelt', '52733526', '91', '1');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('974', '93993', 'Glen', 'Swanston', 'Stickens', '45511601', '38', '8');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('975', '93961', 'Harley', 'Sellar', 'Chaise', '45297641', '90', '6');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('976', '32334', 'Latrena', 'D\'Aubney', 'Garwill', '19501645', '42', '3');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('976', '32334', 'Latrena', 'DAubney', 'Garwill', '19501645', '42', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('977', '5059', 'Haslett', 'Dessaur', 'Nucci', '36568605', '29', '10');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('978', '22731', 'Collette', 'Worsnup', 'Vassbender', '41628020', '94', '5');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('979', '67140', 'Arther', 'Coye', 'Lamprecht', '54663590', '60', '5');
@@ -1001,7 +1001,7 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('989', '34671', 'Anne-marie', 'Dallicoat', 'Knowlys', '44992414', '76', '6');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('990', '24778', 'Cyndia', 'Loughnan', 'Kondratovich', '25665622', '39', '1');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('991', '19065', 'Shir', 'Flinders', 'Renbold', '26528516', '64', '6');
-INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('992', '98806', 'Yelena', 'O\'Reilly', 'Hurcombe', '31296081', '11', '1');
+INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('992', '98806', 'Yelena', 'OReilly', 'Hurcombe', '31296081', '11', '1');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('993', '81212', 'Carmelle', 'Sessions', 'Stobbes', '45950291', '48', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('994', '82970', 'Maurie', 'Sked', 'Audrey', '48184672', '62', '3');
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES ('995', '40600', 'Alanson', 'Rany', 'Veevers', '27912216', '29', '8');
