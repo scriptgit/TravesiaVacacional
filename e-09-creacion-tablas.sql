@@ -1,7 +1,7 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
 -- Ulises Eduardo Antonio García
---@Fecha creación: 
+--@Fecha creación: 24 05 2024
 --@Descripción:
 
 
