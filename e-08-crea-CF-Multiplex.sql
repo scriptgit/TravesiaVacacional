@@ -22,6 +22,8 @@ set linesize window
 PROMPT mostrando nombre y ubicación de CONTROLFILE
 SELECT name FROM v$controlfile;
 
+Pause [Enter] para continuar
+
 --show parameter control_files
 ALTER SYSTEM SET CONTROL_FILES='/travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/o1_mf_m3xn99nd_.ctl',
     '/travesia/disk-02/app/oracle/oradata/TRAVDIP1/control02.ctl',
@@ -36,8 +38,9 @@ SHUTDOWN IMMEDIATE
 -- mv /travesia/disk-02/app/oracle/oradata/TRAVDIP1/o1_mf_m3xn99nd_.ctl /travesia/disk-02/app/oracle/oradata/TRAVDIP1/control02.ctl
 
 -- cp /travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/o1_mf_m3xn99nd_.ctl /travesia/disk-03/app/oracle/oradata/TRAVDIP1/
+-- mkdir -p /travesia/disk-03/app/oracle/oradata/TRAVDIP1
 -- mv /travesia/disk-03/app/oracle/oradata/TRAVDIP1/o1_mf_m3xn99nd_.ctl /travesia/disk-03/app/oracle/oradata/TRAVDIP1/control03.ctl
-
+Pause [Enter] para continuar
 STARTUP
 
 PROMPT mostrando nombre y ubicación de los CONTROLFILE
