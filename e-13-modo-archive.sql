@@ -30,10 +30,10 @@ alter system set log_archive_dest_1='LOCATION=/travesia/disk-07/fast-recovery-ar
 alter system set log_archive_dest_2='LOCATION=/travesia/disk-05' scope=spfile;
 alter system set log_archive_dest_3='LOCATION=/travesia/disk-06' scope=spfile;
 
---formato del archivo
+PROMPT Configurando formato del archivo
 alter system set log_archive_format='arch_Trav_%t_%s_%r.arc' scope=spfile;
 
---copias mínimas  para considerar el proceso como exitoso.
+PROMPT Configurando copias mínimas  para considerar el proceso como exitoso (1).
 alter system set log_archive_min_succeed_dest=1 scope=spfile;
 
 Prompt Mostrando parámetros antes de continuar.
@@ -48,17 +48,22 @@ Pause Revisar configuracion, [enter] para reiniciar instancia en modo mount
 
 shutdown immediate
 
-Prompt 3 iniciando en modo mount
+PROMPT Iniciando en modo mount
 startup mount
 
-Prompt habilitar el modo archive
+PROMPT Habilitando el modo archive
 alter database archivelog;
 
-Prompt 4 abrir la BD  para comprobar configuración
+PROMPT Abriendo la BD  para comprobar configuración
 alter database open;
 
-Prompt comprobando resultados
+PROMPT Comprobando resultados
 archive log list
+/*
+Esperamos ver las siguientes líneas:
 
+Database log mode              Archive Mode
+Automatic archival             Enabled
+*/
 Prompt Listo.
 exit
