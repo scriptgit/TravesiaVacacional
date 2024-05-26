@@ -65,5 +65,5 @@ Esperamos ver las siguientes líneas:
 Database log mode              Archive Mode
 Automatic archival             Enabled
 */
-Prompt Listo.
+PROMPT Listo.
 exit
