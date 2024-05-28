@@ -93,6 +93,7 @@ mkdir -p /travesia/disk-04/app/oracle/oradata/TRAVDIP1/
 mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/APP-CONTAINER
 mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/administracion_con
 mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/negocio_con
+echo "Creando carpeta en disk-03 para los controlfiles"
 mkdir -p /travesia/disk-03/app/oracle/oradata/TRAVDIP1
 
 echo "Creando carpetas de redo logs"
@@ -110,7 +111,6 @@ mkdir -p ${raiz}/${pMontaje7}/${fra}
 
 echo "cambiando permisos a la carpeta de redo logs"
 echo ""
-
 
 cd /travesia
 chown -R oracle:oinstall disk-*
