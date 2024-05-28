@@ -21,6 +21,7 @@ define pdb2_container='negocio_con'
 
 Prompt Cambiando sesión a &app_container
 alter session set container = &app_container;
+alter pluggable database &app_container open;
 
 CREATE TABLE centro (
     centro_id NUMBER PRIMARY KEY,
