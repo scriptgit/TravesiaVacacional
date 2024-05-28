@@ -95,6 +95,10 @@ mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/administracion_con
 mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/negocio_con
 echo "Creando carpeta en disk-03 para los controlfiles"
 mkdir -p /travesia/disk-03/app/oracle/oradata/TRAVDIP1
+echo "Directorios para los tablespaces"
+mkdir -p /travesia/disk-05/app/oracle/oradata/TRAVDIP1
+mkdir -p /travesia/disk-06/app/oracle/oradata/TRAVDIP1
+mkdir -p /travesia/disk-08/app/oracle/oradata/TRAVDIP1
 
 echo "Creando carpetas de redo logs"
 cd ${raiz}
