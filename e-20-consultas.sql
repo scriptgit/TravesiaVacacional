@@ -35,7 +35,11 @@ PROMPT Consulta que muestre las ubicaciones de los grupos de Redo Logs
 
 
 PROMPT Consulta que muestre las ubicaciones de los archive Redo logs
-
+col name format a70
+select recid,name,dest_id,sequence#,
+  to_char(first_time,'dd/mm/yyyy hh24:mi:ss') first_time,
+  status,to_char(completion_time,'dd/mm/yyyy hh24:mi:ss') completion_time
+from v$archived_log;
 
 
 PROMPT consulta que muestre la configuración y uso de la FRA
