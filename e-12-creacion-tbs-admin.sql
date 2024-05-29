@@ -31,13 +31,12 @@ Prompt mkdir -p /travesia/disk-06/app/oracle/oradata/TRAVDIP1
 Prompt mkdir -p /travesia/disk-08/app/oracle/oradata/TRAVDIP1
 Pause [Enter] para continuar
 
-
-Prompt Cambiando sesión a &pdb1_container
-alter session set container = &pdb1_container;
-
 Prompt Apertura de las pdbs
 alter pluggable database &pdb1_container open;
 alter pluggable database &pdb2_container open;
+
+Prompt Cambiando sesión a &pdb1_container
+alter session set container = &pdb1_container;
 
 create tablespace ADMIN_TBS
     datafile 
