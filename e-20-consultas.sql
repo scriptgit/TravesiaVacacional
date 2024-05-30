@@ -21,21 +21,25 @@ connect &syslogon
 set linesize window
 
 PROMPT Consulta que muestre la distribución de todos sus datafiles
-col file_name format a20
-select file_name, file_id, relative_fno, tablespace_name,
-  bytes/(1024*1024) bytes_mb,
-  status, autoextensible, increment_by, 
-  user_bytes/(1024*1024) user_bytes_mb,
-  (bytes-user_bytes)/1024 header_kb,
-  online_status
-from dba_data_files;
+COLUMN container FORMAT A30
+COLUMN datafile FORMAT A80
+
+SELECT c.NAME CONTAINER, c.CON_ID, 
+v.name DATAFILE, v.bytes/(1024*1024) bytes_mb 
+FROM V$CONTAINERS c, v$datafile v 
+where c.con_id = v.con_id  
+and c.CON_ID > 2
+order by c.CON_ID;
 
 PROMPT Consulta que muestre las ubicaciones de los grupos de Redo Logs
+COLUMN member FORMAT A80
 
-
+SELECT GROUP#, STATUS, MEMBER FROM V$LOGFILE order by GROUP#;
 
 PROMPT Consulta que muestre las ubicaciones de los archive Redo logs
+--REVISAR
 col name format a70
+
 select recid,name,dest_id,sequence#,
   to_char(first_time,'dd/mm/yyyy hh24:mi:ss') first_time,
   status,to_char(completion_time,'dd/mm/yyyy hh24:mi:ss') completion_time
@@ -43,7 +47,11 @@ from v$archived_log;
 
 
 PROMPT consulta que muestre la configuración y uso de la FRA
+COLUMN name FORMAT A50
 
+select NAME, SPACE_LIMIT/(1024*1024) SPACE_LIMIT_mb, SPACE_USED/(1024*1024) SPACE_USED_mb,
+SPACE_RECLAIMABLE/(1024*1024) SPACE_RECLAIMABLE_mb, NUMBER_OF_FILES, CON_ID
+from v$recovery_file_dest;
 
 PROMPT consulta que muestre un resumen simple de los backups realizados
 

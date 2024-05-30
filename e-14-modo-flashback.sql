@@ -46,13 +46,12 @@ YES
 
 Pause Revisar configuracion, [enter] para continuar
 
-prompt Mostrando tiempo de retención de datos undo y modicando a 30 mins
-show parameter undo_ret;
+prompt Modicando tiempo de retención  a 30 mins
 
+ALTER SESSION SET CONTAINER = CDB$ROOT;
 alter system set undo_retention = 1800 scope=spfile;
+show parameter undo_retention;
 
-prompt Mostrando nuevamente tiempo de retención de datos undo
-show parameter undo_ret;
 
 PROMPT Listo.
 exit

@@ -41,6 +41,7 @@ Prompt Mostrando parámetros antes de continuar.
 show spparameter log_archive_max_processes
 show spparameter log_archive_dest_1
 show spparameter log_archive_dest_2
+show spparameter log_archive_dest_3
 show spparameter log_archive_format
 show spparameter log_archive_min_succeed_dest
 
