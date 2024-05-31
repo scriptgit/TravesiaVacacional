@@ -8,6 +8,8 @@
 define syslogon='sys/systemproy as sysdba'
 --define t_user='userproy'
 --define userlogon='&t_user/&t_user'
+define common_user='common_user'
+define common_user_logon='c##&common_user/&common_user'
 define app_admin='app_admin'
 define app_container='app_container'
 define pdb1_admin='admin_administracion_con'
@@ -18,270 +20,285 @@ define pdb2_admin='admin_negocios_con'
 define pdb2_container='negocio_con'
 
 
-
-Prompt Cambiando sesión a &app_container
-alter session set container = &app_container;
+conn &syslogon
+alter session set container = cdb$root;
+Prompt Abriendo contenedores 
 alter pluggable database &app_container open;
-
-CREATE TABLE centro (
-    centro_id NUMBER PRIMARY KEY,
-    clave_centro NUMBER,
-    calle_centro VARCHAR2(20),
-    colonia_centro VARCHAR2(20),
-    numero_centro NUMBER(5),
-    estado_centro VARCHAR2(20),
-    asociacion_id_rid NUMBER,
-    FOREIGN KEY (asociacion_id_rid) REFERENCES asociacion(asociacion_id),
-    CONSTRAINT centro_clave_centro_UK UNIQUE (clave_centro)
-);
-
-
-
+alter pluggable database &pdb1_container open;
+alter pluggable database &pdb2_container open;
 
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
+Prompt conectando como common_user
+conn &common_user_logon
 
 PROMPT creando tablas 
 
 CREATE TABLE asociacion (
-    asociacion_id NUMBER PRIMARY KEY,
-    clave NUMBER ,
-    calle VARCHAR2(20),
-    colonia VARCHAR2(20),
+    asociacion_id NUMBER NOT NULL PRIMARY KEY,
+    clave NUMBER NOT NULL,
+    calle VARCHAR2(50) DEFAULT 'UNKNOWN',
+    colonia VARCHAR2(50) DEFAULT 'UNKNOWN',
     numero NUMBER(5),
-    estado VARCHAR2(20),
-    delegacion VARCHAR2(20),
+    estado VARCHAR2(50) DEFAULT 'UNKNOWN',
+    delegacion VARCHAR2(50) DEFAULT 'UNKNOWN',
     telefono NUMBER(13),
     CONSTRAINT asociacion_clave_UK UNIQUE (clave)
 ) tablespace ADMIN_TBS;
 
+Pause Terminar el programa aqui [Enter] Para continuar
+
+conn &syslogon
+Prompt Cambiando sesión a &app_container
+alter session set container = &app_container;
+Prompt conectando como common_user
+conn &common_user_logon
+
+CREATE TABLE centro (
+    centro_id NUMBER NOT NULL PRIMARY KEY,
+    clave_centro NUMBER NOT NULL,
+    calle_centro VARCHAR2(20) DEFAULT 'UNKNOWN',
+    colonia_centro VARCHAR2(20) DEFAULT 'UNKNOWN',
+    numero_centro NUMBER(5) NOT NULL,
+    estado_centro VARCHAR2(20) DEFAULT 'UNKNOWN',
+    asociacion_id_rid NUMBER,
+    CONSTRAINT centro_clave_centro_UK UNIQUE (clave_centro),
+    CONSTRAINT fk_asociacion_id_rid FOREIGN KEY (asociacion_id_rid) REFERENCES c##common_user.asociacion(asociacion_id) ENABLE
+);
+
+conn &syslogon
+Prompt Cambiando sesión a &pdb1_container
+alter session set container = &pdb1_container;
+Prompt conectando como common_user
+conn &common_user_logon
+
 CREATE TABLE certificacion (
-    certificacion_id NUMBER PRIMARY KEY,
-    clave NUMBER,
-    nombre VARCHAR2(50),
-    asociacion_id NUMBER,
-    FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
+    certificacion_id NUMBER NOT NULL PRIMARY KEY,
+    clave NUMBER NOT NULL,
+    nombre VARCHAR2(50) NOT NULL,
+    asociacion_id NUMBER NOT NULL,
+    FOREIGN KEY (asociacion_id) REFERENCES c##common_user.asociacion(asociacion_id),
     CONSTRAINT certificacion_clave_UK UNIQUE (clave)
 )tablespace ADMIN_TBS;
 
+CREATE TABLE version (
+    version_id NUMBER NOT NULL PRIMARY KEY,
+    numero_version NUMBER NOT NULL,
+    objetivos VARCHAR2(30) DEFAULT 'EMPTY',
+    temario VARCHAR2(50) DEFAULT 'EMPTY',
+    nivel_version NUMBER(5) NOT NULL,
+    certificacion_id NUMBER NOT NULL,
+    CONSTRAINT fk_certificacion_id FOREIGN KEY (certificacion_id) REFERENCES c##common_user.certificacion(certificacion_id)
+) tablespace ADMIN_TBS;
+
 CREATE TABLE empleado (
-    empleado_id NUMBER PRIMARY KEY,
-    clave NUMBER,
-    nombre VARCHAR2(20),
-    ap_pat VARCHAR2(20),
-    ap_mat VARCHAR2(20),
+    empleado_id NUMBER NOT NULL PRIMARY KEY,
+    clave NUMBER NOT NULL,
+    nombre VARCHAR2(30) NOT NULL,
+    ap_pat VARCHAR2(30) NOT NULL,
+    ap_mat VARCHAR2(30) NOT NULL,
     telefono NUMBER(13),
-    encargado_id NUMBER,
-    asociacion_id NUMBER,
-    FOREIGN KEY (encargado_id) REFERENCES empleado(empleado_id),
-    FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
+    encargado_id NUMBER NOT NULL,
+    asociacion_id NUMBER NOT NULL,
+    FOREIGN KEY (encargado_id) REFERENCES c##common_user.empleado(empleado_id),
+    FOREIGN KEY (asociacion_id) REFERENCES c##common_user.asociacion(asociacion_id),
     CONSTRAINT empleado_clave_UK UNIQUE (clave)
 ) tablespace ADMIN_EMPLEADO_TBS;
 
 CREATE TABLE lider (
-    empleado_id NUMBER PRIMARY KEY,
-    FOREIGN KEY (empleado_id) REFERENCES empleado(empleado_id),
-    clave_lider NUMBER,
-    anios_experiencia NUMBER(2)
+    empleado_id NUMBER NOT NULL PRIMARY KEY,
+    FOREIGN KEY (empleado_id) REFERENCES c##common_user.empleado(empleado_id),
+    clave_lider NUMBER NOT NULL,
+    anios_experiencia NUMBER(2) NOT NULL
 ) tablespace ADMIN_EMPLEADO_TBS;
 
 CREATE TABLE lider_centro (
-    empleado_id NUMBER,
-    centro_id NUMBER,
+    empleado_id NUMBER NOT NULL,
+    centro_id NUMBER NOT NULL,
     PRIMARY KEY (empleado_id, centro_id),
-    FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id),
-    FOREIGN KEY (centro_id) REFERENCES centro(centro_id)
+    FOREIGN KEY (empleado_id) REFERENCES c##common_user.lider(empleado_id),
+    FOREIGN KEY (centro_id) REFERENCES c##common_user.centro(centro_id)
 ) tablespace ADMIN_EMPLEADO_TBS;
 
-
-CREATE TABLE version (
-    version_id NUMBER PRIMARY KEY,
-    numero_version NUMBER,
-    objetivos VARCHAR2(30),
-    temario VARCHAR2(50),
-    nivel_version VARCHAR2(10),
-    certificacion_id NUMBER,
-    CONSTRAINT fk_certificacion_id FOREIGN KEY (certificacion_id) REFERENCES certificacion(certificacion_id)
-) tablespace ADMIN_TBS;
-
 CREATE TABLE version_lider (
-    version_lider_id NUMBER PRIMARY KEY,
-    version_id NUMBER,
-    empleado_id NUMBER,
+    version_lider_id NUMBER NOT NULL PRIMARY KEY,
+    version_id NUMBER NOT NULL,
+    empleado_id NUMBER NOT NULL,
     fecha_obtencion DATE,
-    CONSTRAINT fk_version_id FOREIGN KEY (version_id) REFERENCES version(version_id),
-    CONSTRAINT fk_empleado_id FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id),
+    CONSTRAINT fk_version_id FOREIGN KEY (version_id) REFERENCES c##common_user.version(version_id),
+    CONSTRAINT fk_empleado_id FOREIGN KEY (empleado_id) REFERENCES c##common_user.lider(empleado_id),
     CONSTRAINT version_lider_version_id_empleado_id_UK UNIQUE (version_id, empleado_id)
 ) tablespace ADMIN_TBS;
 
-
-
+conn &syslogon
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
+Prompt conectando como common_user
+conn &common_user_logon
 
 CREATE TABLE cliente (
-    cliente_id NUMBER PRIMARY KEY,
-    clave NUMBER,
-    nombre VARCHAR2(20),
-    ap_paterno VARCHAR2(20),
-    ap_materno VARCHAR2(20),
+    cliente_id NUMBER NOT NULL PRIMARY KEY,
+    clave NUMBER NOT NULL,
+    nombre VARCHAR2(30) NOT NULL,
+    ap_paterno VARCHAR2(30) NOT NULL,
+    ap_materno VARCHAR2(30) NOT NULL,
     fecha_nacimiento DATE,
-    edad NUMBER(3),
-    curp VARCHAR2(18),
-    estado_civil VARCHAR2(15),
+    edad NUMBER(3) NOT NULL,
+    curp VARCHAR2(20) NOT NULL,
+    estado_civil VARCHAR2(15) DEFAULT 'UNKNOWN',
     telefono NUMBER(13),
-    ocupacion VARCHAR2(15),
-    nivel_educativo VARCHAR2(10),
+    ocupacion VARCHAR2(15) DEFAULT 'UNKNOWN',
+    nivel_educativo VARCHAR2(10) DEFAULT 'UNKNOWN',
     CONSTRAINT cliente_clave_UK UNIQUE (clave),
     CONSTRAINT cliente_curp_UK UNIQUE (curp)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE visita (
-    visita_id NUMBER PRIMARY KEY,
+    visita_id NUMBER NOT NULL PRIMARY KEY,
     fecha DATE,
     hora_llegada VARCHAR(12),
     hora_salida	VARCHAR(12),
-    centro_id NUMBER,
-    cliente_id NUMBER,
-    FOREIGN KEY (centro_id) REFERENCES centro(centro_id),
-    FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
+    centro_id NUMBER NOT NULL,
+    cliente_id NUMBER NOT NULL,
+    FOREIGN KEY (centro_id) REFERENCES c##common_user.centro(centro_id),
+    FOREIGN KEY (cliente_id) REFERENCES c##common_user.cliente(cliente_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE acompaniante (
-    visita_id NUMBER PRIMARY KEY,
-    nombre VARCHAR2(20),
-    ap_paterno VARCHAR2(20),
-    ap_materno VARCHAR2(20),
-    parentesco VARCHAR2(15),
-    edad NUMBER(3),
-    ocupacion VARCHAR2(15),
-    CONSTRAINT fk_visita_id FOREIGN KEY (visita_id) REFERENCES visita(visita_id)
+    visita_id NUMBER NOT NULL PRIMARY KEY,
+    nombre VARCHAR2(30) NOT NULL,
+    ap_paterno VARCHAR2(30) NOT NULL,
+    ap_materno VARCHAR2(30) NOT NULL,
+    parentesco VARCHAR2(15) DEFAULT 'UNKNOWN',
+    edad NUMBER(3) NOT NULL,
+    ocupacion VARCHAR2(15) DEFAULT 'UNKNOWN',
+    CONSTRAINT fk_visita_id FOREIGN KEY (visita_id) REFERENCES c##common_user.visita(visita_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE auto (
-    auto_id NUMBER PRIMARY KEY,
-    placas VARCHAR2(10) ,
-    modelo VARCHAR2(20),
-    marca VARCHAR2(20),
-    cliente_id NUMBER,
-    CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
+    auto_id NUMBER NOT NULL PRIMARY KEY,
+    placas VARCHAR2(10) NOT NULL,
+    modelo VARCHAR2(20) NOT NULL,
+    marca VARCHAR2(20) NOT NULL,
+    cliente_id NUMBER NOT NULL,
+    CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES c##common_user.cliente(cliente_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
-
 CREATE TABLE temporada(
-    temporada_id NUMBER PRIMARY KEY,
-    descripcion VARCHAR2(20)
+    temporada_id NUMBER NOT NULL PRIMARY KEY,
+    descripcion VARCHAR2(20) DEFAULT 'UNKNOWN'
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE actividad(
-    actividad_id NUMBER PRIMARY KEY,
-    clave_actividad NUMBER,
-    descripcion_actividad VARCHAR(50),
-    costo_actividad NUMBER(6),
+    actividad_id NUMBER NOT NULL PRIMARY KEY,
+    clave_actividad_id NUMBER NOT NULL,
+    descripcion_actividad VARCHAR(50) DEFAULT 'UNKNOWN',
+    costo_actividad NUMBER(6) NOT NULL,
     --empleado_id_rid NUMBER
-    CONSTRAINT actividad_clave_actividad_UK UNIQUE (clave_actividad)
+    CONSTRAINT actividad_clave_actividad_UK UNIQUE (clave_actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE centro_actividad(
-    centro_actividad_id NUMBER PRIMARY KEY,
-    actividad_id NUMBER,
-    temporada_id NUMBER,
-    centro_id NUMBER,
-    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id),
-    FOREIGN KEY(temporada_id) REFERENCES temporada(temporada_id),
-    FOREIGN KEY(centro_id) REFERENCES centro(centro_id),
+    centro_actividad_id NUMBER NOT NULL PRIMARY KEY,
+    actividad_id NUMBER NOT NULL,
+    temporada_id NUMBER NOT NULL,
+    centro_id NUMBER NOT NULL,
+    FOREIGN KEY(actividad_id) REFERENCES c##common_user.actividad(actividad_id),
+    FOREIGN KEY(temporada_id) REFERENCES c##common_user.temporada(temporada_id),
+    FOREIGN KEY(centro_id) REFERENCES c##common_user.centro(centro_id),
     CONSTRAINT centro_actividad_actividad_id_centro_id_UK UNIQUE (actividad_id, temporada_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE actividad_imagen(
-    imagen_actividad_id NUMBER PRIMARY KEY,
-    imagen IMAGE,
-    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+    imagen_actividad_id NUMBER NOT NULL PRIMARY KEY,
+    imagen BLOB,
+    actividad_id NUMBER NOT NULL,
+    FOREIGN KEY(actividad_id) REFERENCES c##common_user.actividad(actividad_id)
 ) tablespace NEGOCIO_MEDIA_TBS;
 
 CREATE TABLE campamento(
-    actividad_id NUMBER PRIMARY KEY,
-    nombre_campamento VARCHAR(20),
-    duracion_campamento NUMBER(3),
+    actividad_id NUMBER NOT NULL PRIMARY KEY,
+    nombre_campamento VARCHAR(50) NOT NULL,
+    duracion_campamento NUMBER(3) NOT NULL,
     latitud_campamento VARCHAR(15),
     longitud_campamento VARCHAR(15),
     delegacion_campamento VARCHAR(20),
     numero_campamento NUMBER(3),
     calle_campamento NUMBER(5),
     colonia_campamento VARCHAR(20),
-    estado_campamento VARCHAR(20)
-    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+    estado_campamento VARCHAR(20),
+    FOREIGN KEY(actividad_id) REFERENCES c##common_user.actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE tipo_deporte(
-    tipo_deporte_id NUMBER PRIMARY KEY,
-    clave_tipo_deporte NUMBER,
-    descripcion_tipo_deporte VARCHAR(30),
+    tipo_deporte_id NUMBER NOT NULL PRIMARY KEY,
+    clave_tipo_deporte NUMBER NOT NULL,
+    descripcion_tipo_deporte VARCHAR(50),
     CONSTRAINT tipo_deporte_clave_tipo_deporte_UK UNIQUE (clave_tipo_deporte)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE deporte(
-    actividad_id NUMBER PRIMARY KEY,
-    horas_entrenamiento NUMBER(3),
-    nombre_deporte VARCHAR(15),
+    actividad_id NUMBER NOT NULL PRIMARY KEY,
+    horas_entrenamiento NUMBER(3) NOT NULL,
+    nombre_deporte VARCHAR(30),
     tipo_deporte_id NUMBER(2) NOT NULL,
-    FOREIGN KEY(tipo_deporte_id) REFERENCES tipo_deporte(tipo_deporte_id), 
-    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+    FOREIGN KEY(tipo_deporte_id) REFERENCES c##common_user.tipo_deporte(tipo_deporte_id), 
+    FOREIGN KEY(actividad_id) REFERENCES c##common_user.actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS; 
 
 CREATE TABLE accesorios(
-    accesorio_id NUMBER PRIMARY KEY,
-    nombre_accesorio VARCHAR(18),
-    actividad_id NUMBER,
-    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+    accesorio_id NUMBER NOT NULL PRIMARY KEY,
+    nombre_accesorio VARCHAR(30),
+    actividad_id NUMBER NOT NULL,
+    FOREIGN KEY(actividad_id) REFERENCES c##common_user.actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE tipo_juego(
-    tipo_juego_id NUMBER PRIMARY KEY,
-    clave_tipo_juego NUMBER,
+    tipo_juego_id NUMBER NOT NULL PRIMARY KEY,
+    clave_tipo_juego NUMBER NOT NULL,
     descripcion_tipo_juego VARCHAR(30),
-    nombre_tipo_juego VARCHAR(15),
+    nombre_tipo_juego VARCHAR(30),
     CONSTRAINT tipo_juego_clave_tipo_juego_UK UNIQUE (clave_tipo_juego)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE juego(
-    actividad_id NUMBER PRIMARY KEY,
-    nombre_juego VARCHAR(20),
-    num_participantes NUMBER(2),
+    actividad_id NUMBER NOT NULL PRIMARY KEY,
+    nombre_juego VARCHAR(30),
+    num_participantes NUMBER(2) NOT NULL,
     descripcion_juego VARCHAR(30),
-    tipo_juego_id NUMBER(2),
-    FOREIGN KEY(tipo_juego_id) REFERENCES tipo_juego(tipo_juego_id),
-    FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
+    tipo_juego_id NUMBER(3) NOT NULL,
+    FOREIGN KEY(tipo_juego_id) REFERENCES c##common_user.tipo_juego(tipo_juego_id),
+    FOREIGN KEY(actividad_id) REFERENCES c##common_user.actividad(actividad_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
+CREATE TABLE estatus_membresia (
+    estatus_membresia_id NUMBER NOT NULL PRIMARY KEY,
+    estatus_nombre VARCHAR2(15) DEFAULT 'VIGENTE'
+)tablespace NEGOCIO_MEMBRESIA_TBS;
+
 CREATE TABLE membresia (
-    membresia_id NUMBER PRIMARY KEY,
-    numero_membresia NUMBER,
+    membresia_id NUMBER NOT NULL PRIMARY KEY,
+    numero_membresia NUMBER NOT NULL,
     fecha_registro DATE,
-    numero_tarjeta NUMBER,
-    tipo_tarjeta VARCHAR2(15),
-    anio_expiracion NUMBER(4),
+    numero_tarjeta NUMBER NOT NULL,
+    tipo_tarjeta VARCHAR2(15) DEFAULT 'BASIC',
+    anio_expiracion NUMBER(4) NOT NULL,
     mes_expiracion NUMBER(2),
     num_max_invitados NUMBER(1),
-    costo_mensual NUMBER(5),
-    cliente_id NUMBER,
-    estatus_membresia_id NUMBER,
-    CONSTRAINT fk_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id),
-    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id),
+    costo_mensual NUMBER(5) NOT NULL,
+    cliente_id NUMBER NOT NULL,
+    estatus_membresia_id NUMBER NOT NULL,
+    CONSTRAINT fk_membresia_cliente_id FOREIGN KEY (cliente_id) REFERENCES c##common_user.cliente(cliente_id),
+    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES c##common_user.estatus_membresia(estatus_membresia_id),
     CONSTRAINT membresia_numero_membresia_UK UNIQUE (numero_membresia)
 ) tablespace NEGOCIO_MEMBRESIA_TBS;
 
-CREATE TABLE estatus_membresia (
-    estatus_membresia_id NUMBER PRIMARY KEY,
-    estatus_nombre VARCHAR2(10)
-)tablespace NEGOCIO_MEMBRESIA_TBS;
-
 CREATE TABLE historico_estatus_membresia (
     historico_estatus_membresia_id NUMBER PRIMARY KEY,
-    estatus_membresia_id NUMBER,
-    membresia_id NUMBER,
+    estatus_membresia_id NUMBER NOT NULL,
+    membresia_id NUMBER NOT NULL,
     fecha_cambio DATE,
-    motivo_cancelacion VARCHAR2(20),
-    CONSTRAINT fk_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id),
-    CONSTRAINT fk_membresia_id FOREIGN KEY (membresia_id) REFERENCES membresia(membresia_id)
+    motivo_cancelacion VARCHAR2(50),
+    CONSTRAINT fk_historico_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES c##common_user.estatus_membresia(estatus_membresia_id),
+    CONSTRAINT fk_membresia_id FOREIGN KEY (membresia_id) REFERENCES c##common_user.membresia(membresia_id)
 )tablespace NEGOCIO_MEMBRESIA_TBS;
