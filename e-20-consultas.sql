@@ -21,14 +21,14 @@ connect &syslogon
 set linesize window
 
 PROMPT Consulta que muestre la distribución de todos sus datafiles
-COLUMN container FORMAT A30
+COLUMN container FORMAT A10
 COLUMN datafile FORMAT A80
 
 SELECT c.NAME CONTAINER, c.CON_ID, 
 v.name DATAFILE, v.bytes/(1024*1024) bytes_mb 
 FROM V$CONTAINERS c, v$datafile v 
 where c.con_id = v.con_id  
-and c.CON_ID > 2
+and c.CON_ID > -1
 order by c.CON_ID;
 
 PROMPT Consulta que muestre las ubicaciones de los grupos de Redo Logs

@@ -36,6 +36,7 @@ COLUMN OPEN_TIME FORMAT A30
 SELECT NAME, OPEN_MODE, RESTRICTED, OPEN_TIME FROM V$PDBS;
 
 --- combre de contenedor y sus datafiles
-COLUMN container FORMAT A30
+COLUMN container FORMAT A10
 COLUMN datafile FORMAT A80
-SELECT c.NAME CONTAINER, c.CON_ID, v.name DATAFILE FROM V$CONTAINERS c, v$datafile v where c.con_id = v.con_id  order by c.CON_ID;
+SELECT c.NAME CONTAINER, c.CON_ID, v.name DATAFILE 
+FROM V$CONTAINERS c, v$datafile v where c.con_id = v.con_id  order by c.CON_ID;
