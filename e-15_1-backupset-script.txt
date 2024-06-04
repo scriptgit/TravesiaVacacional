@@ -1,0 +1,18 @@
+RUN {
+
+  # Establecer tipo de almacenamiento
+  BACKUP DEVICE TYPE DISK DATABASE;
+
+  # Canal para FRA
+  ALLOCATE CHANNEL fra_channel DEVICE TYPE DISK;
+
+  # Backup en FRA
+  BACKUP AS BACKUPSET DATABASE;
+
+   # Canal para backup fuera de FRA
+  ALLOCATE CHANNEL external_channel DEVICE TYPE DISK FORMAT '/travesia/disk-05/backups/%u_%p_%c';
+
+  # Backup fuera de FRA
+  BACKUP AS BACKUPSET DATABASE;
+
+}
