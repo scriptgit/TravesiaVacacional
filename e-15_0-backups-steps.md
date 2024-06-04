@@ -22,4 +22,11 @@ Conectar como sysdba y ejecutar la siguiente instrucción
 `rman target / e-15_2-backupcopy-script.txt`
 
 
+# Full Backup
+`rman target / e-15_3-fullbackup-script.txt`
+
+# Incremental Backup
+`rman target / e-15_4-incbackup-script.txt`
+
+
 #### `*importante haber ejecutarlo desde oracle y export ORACLE_SID=travdip1`

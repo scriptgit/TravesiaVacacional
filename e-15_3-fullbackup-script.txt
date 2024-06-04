@@ -1,0 +1,3 @@
+RUN {
+    BACKUP DATABASE PLUS ARCHIVELOG TAG inicial_full_bk1;
+}
