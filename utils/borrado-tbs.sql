@@ -14,6 +14,7 @@ define pdb2_container='negocio_con'
 
 
 Prompt inicio sesion en root
+Prompt conectando como sys
 conn &syslogon
 alter session set container = cdb$root;
 
@@ -23,15 +24,24 @@ alter pluggable database &app_container open;
 alter pluggable database &pdb1_container open;
 alter pluggable database &pdb2_container open;
 
+PROMPT Conectando como SYS
+connect &syslogon
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
+Prompt conectando como common_user
+conn &common_user_logon
 
 DROP TABLESPACE ADMIN_TBS INCLUDING CONTENTS AND DATAFILES;
 DROP TABLESPACE ADMIN_EMPLEADO_TBS INCLUDING CONTENTS AND DATAFILES;
 DROP TABLESPACE ADMIN_INDICES_TBS INCLUDING CONTENTS AND DATAFILES;
 
+PROMPT Conectando como SYS
+connect &syslogon
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
+Prompt conectando como common_user
+conn &common_user_logon
+
 
 DROP TABLESPACE NEGOCIO_CLIENTE_TBS INCLUDING CONTENTS AND DATAFILES;
 DROP TABLESPACE NEGOCIO_MEMBRESIA_TBS INCLUDING CONTENTS AND DATAFILES;
@@ -41,5 +51,7 @@ DROP TABLESPACE NEGOCIO_INDICES_TBS INCLUDING CONTENTS AND DATAFILES;
 
 
 PAUSE Presione [enter] para continuar con borrado de common_user
+PROMPT Conectando como SYS
+connect &syslogon
 PROMPT elimnando common_user
 DROP USER c##common_user cascade;
