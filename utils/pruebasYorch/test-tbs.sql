@@ -85,8 +85,8 @@ SHUTDOWN IMMEDIATE
 STARTUP
 alter pluggable database &app_container open;
 alter session set container = &app_container;
-alter pluggable database &pdb1_container open;
-alter session set container = &pdb1_container;*/
+alter pluggable database &pdb1_container open;*/
+alter session set container = &pdb1_container;
 
 
 drop user user02 cascade;

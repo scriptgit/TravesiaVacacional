@@ -40,3 +40,17 @@ COLUMN container FORMAT A10
 COLUMN datafile FORMAT A80
 SELECT c.NAME CONTAINER, c.CON_ID, v.name DATAFILE 
 FROM V$CONTAINERS c, v$datafile v where c.con_id = v.con_id  order by c.CON_ID;
+
+
+--tablespaces
+COLUMN tablespace_name  FORMAT A15
+SELECT file_name, status, tablespace_name FROM dba_data_files;
+
+--grupos redologs
+col member format a40
+select GROUP#,TYPE,MEMBER from v$logfile;
+select * from v$log;
+
+--info pdb y app containers
+COL pdb_NAME FORMAT a15
+select pdb_name,application_root,application_pdb,application_seed,application_clone from dba_pdbs;

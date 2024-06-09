@@ -27,12 +27,13 @@ alter pluggable database &app_container open;
 alter pluggable database &pdb1_container open;
 alter pluggable database &pdb2_container open;
 
-Prompt Cambiando sesión a &pdb1_container
+PROMPT Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
-Prompt conectando como common_user
-conn &common_user_logon
 
-PROMPT creando tablas 
+PROMPT Conectando como &pdb1_admin usando nombre de servicio travdip_adm
+conn &pdb1_admin/&pdb1_admin@travdip_adm
+
+PROMPT Creando tablas 
 
 CREATE TABLE asociacion (
     asociacion_id NUMBER NOT NULL PRIMARY KEY,
@@ -51,10 +52,10 @@ Pause Terminar el programa aqui [Enter] Para continuar
 conn &syslogon
 Prompt Cambiando sesión a &app_container
 alter session set container = &app_container;
-Prompt conectando como common_user
-conn &common_user_logon
+Prompt Conectando como &app_admin usando nombre de servicio travdip_app
+conn &app_admin/&app_admin@travdip_app
 
-CREATE TABLE centro (
+CREATE TABLE centro sharing=data(
     centro_id NUMBER NOT NULL PRIMARY KEY,
     clave_centro NUMBER NOT NULL,
     calle_centro VARCHAR2(20) DEFAULT 'UNKNOWN',
@@ -62,15 +63,15 @@ CREATE TABLE centro (
     numero_centro NUMBER(5) NOT NULL,
     estado_centro VARCHAR2(20) DEFAULT 'UNKNOWN',
     asociacion_id_rid NUMBER,
-    CONSTRAINT centro_clave_centro_UK UNIQUE (clave_centro),
-    CONSTRAINT fk_asociacion_id_rid FOREIGN KEY (asociacion_id_rid) REFERENCES c##common_user.asociacion(asociacion_id) ENABLE
+    CONSTRAINT centro_clave_centro_UK UNIQUE (clave_centro)
+    --CONSTRAINT fk_asociacion_id_rid FOREIGN KEY (asociacion_id_rid) REFERENCES c##common_user.asociacion(asociacion_id) ENABLE
 );
 
 conn &syslogon
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
-Prompt conectando como common_user
-conn &common_user_logon
+PROMPT Conectando como &pdb1_admin usando nombre de servicio travdip_adm
+conn &pdb1_admin/&pdb1_admin@travdip_adm
 
 CREATE TABLE certificacion (
     certificacion_id NUMBER NOT NULL PRIMARY KEY,
@@ -133,8 +134,8 @@ CREATE TABLE version_lider (
 conn &syslogon
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
-Prompt conectando como common_user
-conn &common_user_logon
+PROMPT Conectando como &pdb2_admin usando nombre de servicio travdip_neg
+conn &pdb2_admin/&pdb2_admin@travdip_neg
 
 CREATE TABLE cliente (
     cliente_id NUMBER NOT NULL PRIMARY KEY,
