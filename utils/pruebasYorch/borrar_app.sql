@@ -22,3 +22,9 @@ drop user app_user cascade;
 drop tablespace APP_TBS including contents and datafiles;
 
 alter pluggable database application &app_name end uninstall;
+
+column app_name format a15
+column app_version format a10
+
+select app_name,app_version,app_status
+from   dba_applications;

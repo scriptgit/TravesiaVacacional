@@ -1010,3 +1010,4 @@ INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, enca
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES (998, 47689, 'Nikolas', 'McLaughlan', 'Tarbox', 32018268, 46, 7);
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES (999, 64725, 'Bar', 'Ickovic', 'Rylance', 54291142, 16, 5);
 INSERT INTO EMPLEADO (empleado_id, clave, nombre, ap_pat, ap_mat, telefono, encargado_id, asociacion_id) VALUES (1000, 48043, 'Neila', 'Bilbery', 'Bysshe', 40129644, 65, 10);
+commit;

@@ -213,3 +213,5 @@ INSERT INTO MEMBRESIA (membresia_id, numero_membresia, fecha_registro, numero_ta
 INSERT INTO MEMBRESIA (membresia_id, numero_membresia, fecha_registro, numero_tarjeta, tipo_tarjeta, anio_expiracion, mes_expiracion, num_max_invitados, costo_mensual, cliente_id, estatus_membresia_id) VALUES (198, 88104019, TO_DATE('28/05/2018', 'DD/MM/YYYY'), 39221000, 'BASIC', 2029, 6, 1, 99, 764, 3);
 INSERT INTO MEMBRESIA (membresia_id, numero_membresia, fecha_registro, numero_tarjeta, tipo_tarjeta, anio_expiracion, mes_expiracion, num_max_invitados, costo_mensual, cliente_id, estatus_membresia_id) VALUES (199, 67750025, TO_DATE('18/08/2019', 'DD/MM/YYYY'), 18157342, 'PREMIUM', 2026, 4, 3, 299, 864, 1);
 INSERT INTO MEMBRESIA (membresia_id, numero_membresia, fecha_registro, numero_tarjeta, tipo_tarjeta, anio_expiracion, mes_expiracion, num_max_invitados, costo_mensual, cliente_id, estatus_membresia_id) VALUES (200, 49555820, TO_DATE('20/04/2021', 'DD/MM/YYYY'), 91075149, 'PREMIUM', 2028, 6, 3, 299, 201, 2);
+
+commit;

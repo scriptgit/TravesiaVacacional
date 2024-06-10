@@ -98,3 +98,5 @@ INSERT INTO historico_estatus_membresia (historico_estatus_membresia_id, estatus
     VALUES (49, 4, 193, TO_DATE('01/12/2023', 'DD/MM/YYYY'), NULL);
 INSERT INTO historico_estatus_membresia (historico_estatus_membresia_id, estatus_membresia_id, membresia_id, fecha_cambio, motivo_cancelacion)
     VALUES (50, 3, 3, TO_DATE('02/12/2023', 'DD/MM/YYYY'), NULL);
+
+commit;

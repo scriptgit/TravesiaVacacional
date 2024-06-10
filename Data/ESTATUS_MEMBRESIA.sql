@@ -6,8 +6,15 @@
 
 INSERT INTO ESTATUS_MEMBRESIA (estatus_membresia_id, estatus_nombre) 
 VALUES 
-(1, 'VIGENTE'),
-(2, 'CON ADEUDO'),
-(3, 'SUSPENDIDA'),
+(1, 'VIGENTE'); 
+INSERT INTO ESTATUS_MEMBRESIA (estatus_membresia_id, estatus_nombre) 
+VALUES 
+(2, 'CON ADEUDO'); 
+INSERT INTO ESTATUS_MEMBRESIA (estatus_membresia_id, estatus_nombre) 
+VALUES 
+(3, 'SUSPENDIDA'); 
+INSERT INTO ESTATUS_MEMBRESIA (estatus_membresia_id, estatus_nombre) 
+VALUES 
 (4, 'CANCELADA');
 
+commit;

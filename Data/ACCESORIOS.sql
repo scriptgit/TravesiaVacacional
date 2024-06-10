@@ -15,3 +15,5 @@ INSERT INTO ACCESORIOS (accesorio_id, actividad_id, nombre_accesorio) VALUES (7,
 INSERT INTO ACCESORIOS (accesorio_id, actividad_id, nombre_accesorio) VALUES (8, 9, 'guantes de box');
 INSERT INTO ACCESORIOS (accesorio_id, actividad_id, nombre_accesorio) VALUES (9, 2, 'guantes de beisbol');
 INSERT INTO ACCESORIOS (accesorio_id, actividad_id, nombre_accesorio) VALUES (10, 20, 'arco');
+
+commit;

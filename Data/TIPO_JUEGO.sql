@@ -7,5 +7,8 @@
 );*/
 
 INSERT INTO TIPO_JUEGO (tipo_juego_id, clave_tipo_juego, descripcion_tipo_juego, nombre_tipo_juego) VALUES 
-('1', 15126, 'Juegos con interaccion fisica', 'Juego de mesa'),
+('1', 15126, 'Juegos con interaccion fisica', 'Juego de mesa');
+INSERT INTO TIPO_JUEGO (tipo_juego_id, clave_tipo_juego, descripcion_tipo_juego, nombre_tipo_juego) VALUES
 ('2', 66224, 'Juegos en ambientes virtuales', 'Juego digital');
+
+commit;

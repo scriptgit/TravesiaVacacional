@@ -1009,3 +1009,5 @@ insert into VISITA (visita_id, fecha, hora_llegada, hora_salida, centro_id, clie
 insert into VISITA (visita_id, fecha, hora_llegada, hora_salida, centro_id, cliente_id) values (998, TO_DATE('5/20/2024', 'MM/D/YYYY'), '2:54 AM', '11:15 AM', 13, 175);
 insert into VISITA (visita_id, fecha, hora_llegada, hora_salida, centro_id, cliente_id) values (999, TO_DATE('5/15/2024', 'MM/D/YYYY'), '9:14 AM', '12:16 AM', 28, 214);
 insert into VISITA (visita_id, fecha, hora_llegada, hora_salida, centro_id, cliente_id) values (1000, TO_DATE('5/9/2024', 'MM/D/YYYY'), '8:35 PM', '3:03 PM', 25, 171);
+
+commit;

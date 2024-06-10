@@ -29,20 +29,22 @@ PROMPT Cambiando sesión a &app_container
 alter session set container = &app_container;
 
 PROMPT Iniciamos instalacion de la app
-alter pluggable database application t3_app begin install '1.0';
+alter pluggable database application app_trav1 begin install '1.0';
 
 Pause [Enter] Para continuar
 
 
 PROMPT Creando usuario
-create user app_user  identified by app_user
+create user app_user1  identified by app_user1
+  quota unlimited on system
   container=all;
+Pause [Enter] Para continuar
 
-PROMPT Dando permisos a app_user
-grant create session, create table to app_user;
+PROMPT Dando permisos a app_user1
+grant create session, create table to app_user1;
 
 PROMPT Creando tabla Centro para el build de la app
-CREATE TABLE app_user.centro sharing=extended data(
+CREATE TABLE app_user1.centro sharing=extended data(
     centro_id NUMBER NOT NULL PRIMARY KEY,
     clave_centro NUMBER NOT NULL,
     calle_centro VARCHAR2(20) DEFAULT 'UNKNOWN',
@@ -53,10 +55,14 @@ CREATE TABLE app_user.centro sharing=extended data(
     CONSTRAINT centro_clave_centro_UK UNIQUE (clave_centro)
 );
 
+PROMPT hacemos insert en tabla centro
+-- app_user1.centro
+@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CENTRO.sql
+Pause [Enter] Para continuar
 commit;
 
 PROMPT Terminar el proceso de instalación de la aplicación
-alter pluggable database application t3_app end install;
+alter pluggable database application app_trav1 end install;
 
 PROMPT Consultar las applicaciones creadas
 column app_name format a15
@@ -71,17 +77,17 @@ Pause [Enter] Para continuar
 conn &syslogon
 PROMPT Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
-alter pluggable database application t3_app sync;
-grant all on app_user.centro to &pdb1_admin;
+alter pluggable database application app_trav1 sync;
+grant all on app_user1.centro to &pdb1_admin;
 
 PROMPT Verficar la presencia de application objects.
-desc app_user.centro;
+desc app_user1.centro;
 
 conn &syslogon
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
-alter pluggable database application t3_app sync;
-grant all on app_user.centro to &pdb2_admin;
+alter pluggable database application app_trav1 sync;
+grant all on app_user1.centro to &pdb2_admin;
 
 PROMPT Verficar la presencia de application objects.
-desc app_user.centro;
+desc app_user1.centro;

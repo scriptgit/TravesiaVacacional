@@ -47,7 +47,7 @@ CREATE TABLE asociacion (
     CONSTRAINT asociacion_clave_UK UNIQUE (clave)
 ) tablespace ADMIN_TBS;
 
--- se elimina la creación de la tabla centro ya que fue creada en el script 09 como parte de la aplicación app_user.centro
+-- se elimina la creación de la tabla centro ya que fue creada en el script 09 como parte de la aplicación app_user1.centro
 
 CREATE TABLE certificacion (
     certificacion_id NUMBER NOT NULL PRIMARY KEY,
@@ -95,7 +95,7 @@ CREATE TABLE lider_centro (
     centro_id NUMBER NOT NULL,
     PRIMARY KEY (empleado_id, centro_id),
     FOREIGN KEY (empleado_id) REFERENCES lider(empleado_id),
-    FOREIGN KEY (centro_id) REFERENCES app_user.centro(centro_id)
+    FOREIGN KEY (centro_id) REFERENCES app_user1.centro(centro_id)
 ) tablespace ADMIN_EMPLEADO_TBS;
 Pause [Enter] para continuar
 
@@ -139,7 +139,7 @@ CREATE TABLE visita (
     hora_salida	VARCHAR(12),
     centro_id NUMBER NOT NULL,
     cliente_id NUMBER NOT NULL,
-    FOREIGN KEY (centro_id) REFERENCES app_user.centro(centro_id),
+    FOREIGN KEY (centro_id) REFERENCES app_user1.centro(centro_id),
     FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
@@ -184,7 +184,7 @@ CREATE TABLE centro_actividad(
     centro_id NUMBER NOT NULL,
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id),
     FOREIGN KEY(temporada_id) REFERENCES temporada(temporada_id),
-    FOREIGN KEY(centro_id) REFERENCES app_user.centro(centro_id),
+    FOREIGN KEY(centro_id) REFERENCES app_user1.centro(centro_id),
     CONSTRAINT centro_actividad_actividad_id_centro_id_UK UNIQUE (actividad_id, temporada_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 

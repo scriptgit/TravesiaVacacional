@@ -1008,3 +1008,5 @@ insert into VERSION (version_id, numero_version, objetivos, temario, nivel versi
 insert into VERSION (version_id, numero_version, objetivos, temario, nivel version, certificacion_id) values (998, 3, 'objetivos dummy', 'temario dummy', 5, 998);
 insert into VERSION (version_id, numero_version, objetivos, temario, nivel version, certificacion_id) values (999, 2, 'objetivos dummy', 'temario dummy', 4, 999);
 insert into VERSION (version_id, numero_version, objetivos, temario, nivel version, certificacion_id) values (1000, 1, 'objetivos dummy', 'temario dummy', 3, 1000);
+
+commit;
