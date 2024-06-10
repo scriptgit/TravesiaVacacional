@@ -24,9 +24,44 @@ conn &syslogon
 
 
 PROMPT primero debemos actualizar al common Obj haciendo upgrade de la applicacion
+PROMPT Cambiando sesión a &app_container
+alter session set container = &app_container;
 
+PROMPT Iniciamos UPGRADE
+alter pluggable database application t3_app begin upgrade '1.0' to '1.1';
 
+PROMPT Realizamos cambios en aplicación
+PROMPT hacemos insert en tabla centro
+-- app_user.centro
+@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CENTRO.sql
 
+PROMPT Terminar el proceso de upgrade
+alter pluggable database application t3_app end upgrade;
+
+PROMPT Hacemos sync con las PDBS 
+Pause [Enter] Para continuar
+
+conn &syslogon
+PROMPT Cambiando sesión a &pdb1_container
+alter session set container = &pdb1_container;
+alter pluggable database application t3_app sync;
+grant all on app_user.centro to &pdb1_admin;
+
+PROMPT Verficar la presencia de application objects.
+desc app_user.centro;
+
+conn &syslogon
+Prompt Cambiando sesión a &pdb2_container
+alter session set container = &pdb2_container;
+alter pluggable database application t3_app sync;
+grant all on app_user.centro to &pdb2_admin;
+
+PROMPT Verficar la presencia de application objects.
+desc app_user.centro;
+
+PROMPT [Enter] para continuar con población del resto de tablas
+
+conn &syslogon
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
 
