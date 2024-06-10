@@ -26,14 +26,15 @@ alter session set container = cdb$root;
 Prompt Apertura del app container
 alter pluggable database &app_container open;
 
-Pause [Enter] para continuar
-
 Prompt Apertura de las pdbs
 alter pluggable database &pdb1_container open;
 alter pluggable database &pdb2_container open;
 
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
+GRANT CREATE TABLESPACE TO &pdb1_admin;
+GRANT CREATE TABLE TO &pdb1_admin;
+
 PROMPT Conectando como &pdb1_admin usando nombre de servicio travdip_adm
 conn &pdb1_admin/&pdb1_admin@travdip_adm
 
@@ -44,7 +45,7 @@ create tablespace ADMIN_TBS
     autoallocate
     segment space management auto
 ;
-
+Pause [Enter] para continuar
 create tablespace ADMIN_EMPLEADO_TBS
     datafile 
         '/travesia/disk-01/app/oracle/oradata/TRAVDIP1/admin_empleado_tbs_01.dbf' size 1G,
@@ -64,14 +65,15 @@ create tablespace ADMIN_INDICES_TBS
     segment space management auto
 ;
 
-
 Prompt volviendose a conectar como sys
 conn &syslogon
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
+GRANT CREATE TABLESPACE TO &pdb2_admin;
+GRANT CREATE TABLE TO &pdb2_admin;
+
 PROMPT Conectando como &pdb2_admin usando nombre de servicio travdip_neg
 conn &pdb2_admin/&pdb2_admin@travdip_neg
-
 
 create tablespace NEGOCIO_CLIENTE_TBS
     datafile 
@@ -82,7 +84,7 @@ create tablespace NEGOCIO_CLIENTE_TBS
     autoallocate
     segment space management auto
 ;
-
+Pause [Enter] para continuar
 create tablespace NEGOCIO_MEMBRESIA_TBS
     datafile 
         '/travesia/disk-04/app/oracle/oradata/TRAVDIP1/negocio_membresia_tbs_01.dbf' size 1G,
