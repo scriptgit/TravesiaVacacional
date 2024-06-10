@@ -67,6 +67,7 @@ conn &syslogon
 PROMPT Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
 alter pluggable database application t3_app sync;
+grant all on app_user.centro to &pdb1_admin;
 
 PROMPT Verficar la presencia de application objects.
 desc app_user.centro;
@@ -75,6 +76,7 @@ conn &syslogon
 Prompt Cambiando sesión a &pdb2_container
 alter session set container = &pdb2_container;
 alter pluggable database application t3_app sync;
+grant all on app_user.centro to &pdb2_admin;
 
 PROMPT Verficar la presencia de application objects.
 desc app_user.centro;
