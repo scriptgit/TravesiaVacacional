@@ -22,46 +22,12 @@ define pdb2_container='negocio_con'
 Prompt inicio sesion en root
 conn &syslogon
 
-/*
-PROMPT primero debemos actualizar al common Obj haciendo upgrade de la applicacion
-PROMPT Cambiando sesión a &app_container
-alter session set container = &app_container;
-
-PROMPT Iniciamos UPGRADE
-alter pluggable database application t3_app begin upgrade '1.1' to '1.2';
-
-PROMPT Realizamos cambios en aplicación
-
-
-PROMPT Terminar el proceso de upgrade
-alter pluggable database application t3_app end upgrade;
-
-PROMPT Hacemos sync con las PDBS 
-Pause [Enter] Para continuar
-
-conn &syslogon
-PROMPT Cambiando sesión a &pdb1_container
-alter session set container = &pdb1_container;
-alter pluggable database application t3_app sync;
-grant all on app_user.centro to &pdb1_admin;
-
-PROMPT Verficar la presencia de application objects.
-desc app_user.centro;
-
-conn &syslogon
-Prompt Cambiando sesión a &pdb2_container
-alter session set container = &pdb2_container;
-alter pluggable database application t3_app sync;
-grant all on app_user.centro to &pdb2_admin;
-
-PROMPT Verficar la presencia de application objects.
-desc app_user.centro;
-*/
-PROMPT [Enter] para continuar con población del resto de tablas
-
-conn &syslogon
 Prompt Cambiando sesión a &pdb1_container
 alter session set container = &pdb1_container;
+
+ALTER USER &pdb1_admin QUOTA UNLIMITED on ADMIN_TBS;
+ALTER USER &pdb1_admin QUOTA UNLIMITED on ADMIN_EMPLEADO_TBS;
+ALTER USER &pdb1_admin QUOTA UNLIMITED on ADMIN_INDICES_TBS;
 
 PROMPT Conectando como &pdb1_admin usando nombre de servicio travdip_adm
 conn &pdb1_admin/&pdb1_admin@travdip_adm
@@ -69,25 +35,37 @@ conn &pdb1_admin/&pdb1_admin@travdip_adm
 
 PROMPT Poblando tabla asociacion
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ASOCIACION.sql
-Pause [Enter] Para continuar
 
 PROMPT Poblando tabla certificacion
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CERTIFICACION.sql
 
 PROMPT Poblando tabla version
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/VERSION.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla empleado
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/EMPLEADO.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla lider
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/LIDER.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla lider_centro
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/LIDER_CENTRO.sql
 
 PROMPT Poblando tabla version_lider
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/VERSION_LIDER.sql
+Pause [Enter] Para continuar
+
+conn &syslogon
+Prompt Cambiando sesión a &pdb2_container
+
+ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_CLIENTE_TBS;
+ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_MEMBRESIA_TBS;
+ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_ACTIVIDAD_TBS;
+ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_MEDIA_TBS;
+ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_INDICES_TBS;
 
 PROMPT Conectando como &pdb2_admin usando nombre de servicio travdip_neg
 conn &pdb2_admin/&pdb2_admin@travdip_neg
@@ -104,6 +82,7 @@ PROMPT Poblando tabla acompaniante
 
 PROMPT Poblando tabla auto
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/AUTO.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla temporada
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/TEMPORADA.sql
@@ -116,6 +95,7 @@ PROMPT Poblando tabla centro_actividad
 
 PROMPT Poblando tabla actividad_imagen
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD_IMAGEN.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla campamento
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CAMPAMENTO.sql
@@ -125,6 +105,7 @@ PROMPT Poblando tabla tipo_deporte
 
 PROMPT Poblando tabla deporte
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/DEPORTE.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla accesorios
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACCESORIOS.sql
@@ -134,6 +115,7 @@ PROMPT Poblando tabla tipo_juego
 
 PROMPT Poblando tabla juego
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/JUEGO.sql
+Pause [Enter] Para continuar
 
 PROMPT Poblando tabla estatus_membresia
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ESTATUS_MEMBRESIA.sql
