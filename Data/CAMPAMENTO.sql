@@ -19,19 +19,34 @@
 );
  INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES*/
 
-INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(4, 'Campamento al aire libre', 120, 547.556556, 388.869951, 'Zaraysk', 24011, 'Hoffman', 'Dovetail', 'Montijo');
- INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(5, 'Campamento de halloween', 72, -224.803601, -46.633882, 'Toshkivka', 79480, 'Pawling', 'Carpenter', 'Luojiaping');
- INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(6, 'Campamento de invierno', 120, 32.584368, 120.133523, 'Shengao', 89482, 'Graceland', '7th', 'Bintang');
- INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(7, 'Campamento de verano', 120, -71.480086, 107.899563, 'Warungpeuteuy', 80756, 'Katie', 'Waubesa', 'Pyhäjoki');
- INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(8, 'Campamento de primavera', 120, -203.855743, -435.035777, 'Ouro Preto', 37771, 'Golf', 'Dunning', 'Hyattsville');
- INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(13, 'Guardabosques', 120, 40.336837, -78.256005, 'Penalva de Alva', 38449, 'Lotheville', 'Forster', 'Philadelphia');
- INSERT INTO CAMPAMENTO (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento) VALUES
-(18, 'Supervivencia a la intemperie', 72, 520.122717, 225.207958, 'Albany', 85071, 'Banding', 'Valley Edge', 'Heishan');
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (1, 'Campamento Aventura', 5, '19.432608', '-99.133209', 'Cuauhtémoc', 101, 1234, 'Centro', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (2, 'Campamento Eco', 3, '19.427024', '-99.167665', 'Miguel Hidalgo', 202, 5678, 'Polanco', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (3, 'Campamento Montaña', 7, '19.434423', '-99.141098', 'Venustiano Carranza', 303, 2345, 'Morelos', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (4, 'Campamento Playa', 4, '19.428832', '-99.180765', 'Álvaro Obregón', 404, 6789, 'San Ángel', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (5, 'Campamento Selva', 6, '19.436912', '-99.131217', 'Benito Juárez', 505, 3456, 'Del Valle', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (6, 'Campamento Deportivo', 5, '19.445623', '-99.121984', 'Coyoacán', 606, 4567, 'Coyoacán', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (7, 'Campamento Aventurero', 3, '19.452362', '-99.110232', 'Iztapalapa', 707, 5678, 'Iztapalapa', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (8, 'Campamento Natural', 4, '19.469841', '-99.107499', 'Xochimilco', 808, 6789, 'Xochimilco', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (9, 'Campamento Rural', 6, '19.482774', '-99.104987', 'Tlalpan', 909, 7890, 'Tlalpan', 'CDMX');
+
+INSERT INTO campamento (actividad_id, nombre_campamento, duracion_campamento, latitud_campamento, longitud_campamento, delegacion_campamento, numero_campamento, calle_campamento, colonia_campamento, estado_campamento)
+VALUES (10, 'Campamento Urbano', 5, '19.496032', '-99.102865', 'Azcapotzalco', 1010, 8901, 'Azcapotzalco', 'CDMX');
  
 commit;
