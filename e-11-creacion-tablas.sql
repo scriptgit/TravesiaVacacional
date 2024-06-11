@@ -186,7 +186,7 @@ CREATE TABLE centro_actividad(
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id),
     FOREIGN KEY(temporada_id) REFERENCES temporada(temporada_id),
     FOREIGN KEY(centro_id) REFERENCES app_user1.centro(centro_id),
-    CONSTRAINT centro_actividad_actividad_id_centro_id_UK UNIQUE (actividad_id, temporada_id)
+    CONSTRAINT centro_actividad_actividad_id_temporada_id_UK UNIQUE (actividad_id, temporada_id)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
 CREATE TABLE actividad_imagen(
