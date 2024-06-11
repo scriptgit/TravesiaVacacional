@@ -22,7 +22,7 @@ set linesize window
 PROMPT mostrando nombre y ubicación de CONTROLFILE
 SELECT name FROM v$controlfile;
 
-Pause [Enter] para continuar
+Pause Cambiar el nombre del controlfile en el script terminar en este punto el programa, una vez hecho pulse [Enter] para continuar
 
 --show parameter control_files
 ALTER SYSTEM SET CONTROL_FILES='/travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/o1_mf_m3xn99nd_.ctl',
