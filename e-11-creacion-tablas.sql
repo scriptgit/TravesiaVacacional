@@ -235,8 +235,8 @@ CREATE TABLE accesorios(
 CREATE TABLE tipo_juego(
     tipo_juego_id NUMBER NOT NULL PRIMARY KEY,
     clave_tipo_juego NUMBER NOT NULL,
-    descripcion_tipo_juego VARCHAR(30),
-    nombre_tipo_juego VARCHAR(30),
+    descripcion_tipo_juego VARCHAR(80),
+    nombre_tipo_juego VARCHAR(80),
     CONSTRAINT tipo_juego_clave_tipo_juego_UK UNIQUE (clave_tipo_juego)
 ) tablespace NEGOCIO_ACTIVIDAD_TBS;
 
