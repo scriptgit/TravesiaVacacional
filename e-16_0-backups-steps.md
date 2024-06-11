@@ -14,19 +14,19 @@
 # BackupSet
 Conectar como sysdba y ejecutar la siguiente instrucción
 
-`rman target / @e-15_1-backupset-script.txt`
+`rman target / @e-16_1-backupset-script.txt`
 
 # Backup Copy
 Conectar como sysdba y ejecutar la siguiente instrucción
 
-`rman target / @e-15_2-backupcopy-script.txt`
+`rman target / @e-16_2-backupcopy-script.txt`
 
 
 # Full Backup
-`rman target / @e-15_3-fullbackup-script.txt`
+`rman target / @e-16_3-fullbackup-script.txt`
 
 # Incremental Backup
-`rman target / @e-15_4-incbackup-script.txt`
+`rman target / @e-16_4-incbackup-script.txt`
 
 
 #### `*importante haber ejecutarlo desde oracle y export ORACLE_SID=travdip1`
