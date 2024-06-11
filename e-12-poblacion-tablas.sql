@@ -86,16 +86,13 @@ PROMPT Poblando tabla actividad
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD.sql
 
 PROMPT Poblando tabla centro_actividad
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CENTRO_ACTIVIDAD.sql
 
 PROMPT Poblando tabla actividad_imagen
-Pause [Enter] Para continuar
-@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD_IMAGEN.sql
+--@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD_IMAGEN.sql
 
 
 PROMPT Poblando tabla campamento
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CAMPAMENTO.sql
 
 PROMPT Poblando tabla tipo_deporte
@@ -105,26 +102,20 @@ PROMPT Poblando tabla deporte
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/DEPORTE.sql
 
 PROMPT Poblando tabla accesorios
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACCESORIOS.sql
 
 PROMPT Poblando tabla tipo_juego
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/TIPO_JUEGO.sql
 
 PROMPT Poblando tabla juego
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/JUEGO.sql
 
 PROMPT Poblando tabla estatus_membresia
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ESTATUS_MEMBRESIA.sql
 
 PROMPT Poblando tabla membresia
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/MEMBRESIA.sql
 
 PROMPT Poblando tabla historico_estatus_membresia
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/HISTORICO_ESTATUS_MEMBRESIA.sql
 
