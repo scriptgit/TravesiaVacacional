@@ -119,3 +119,5 @@ PROMPT Poblando tabla membresia
 PROMPT Poblando tabla historico_estatus_membresia
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/HISTORICO_ESTATUS_MEMBRESIA.sql
 
+PROPMT Poblando tabla pago_actividad
+@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/PAGO_ACTIVIDAD.sql
