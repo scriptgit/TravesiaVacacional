@@ -32,10 +32,8 @@ DROP TABLE auto cascade constraints;
 DROP TABLE acompaniante cascade constraints;
 DROP TABLE visita cascade constraints;
 DROP TABLE cliente cascade constraints;
-conn &syslogon
-Prompt Cambiando sesión a &pdb2_container
-alter session set container = &pdb2_container;
-drop user app_user CASCADE;
+
+
 
 conn &syslogon
 PROMPT Cambiando sesión a &pdb1_container
@@ -52,7 +50,3 @@ DROP TABLE version cascade constraints;
 DROP TABLE certificacion cascade constraints;
 
 DROP TABLE asociacion cascade constraints;
-conn &syslogon
-PROMPT Cambiando sesión a &pdb1_container
-alter session set container = &pdb1_container;
-drop user app_user CASCADE;

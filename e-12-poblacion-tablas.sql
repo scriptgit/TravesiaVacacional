@@ -71,23 +71,18 @@ PROMPT Poblando tabla cliente
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CLIENTE.sql
 
 PROMPT Poblando tabla visita
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/VISITA.sql
 
 PROMPT Poblando tabla acompaniante
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACOMPANIANTE.sql
 
 PROMPT Poblando tabla auto
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/AUTO.sql
 
 PROMPT Poblando tabla temporada
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/TEMPORADA.sql
 
 PROMPT Poblando tabla actividad
-Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD.sql
 
 PROMPT Poblando tabla centro_actividad
@@ -95,8 +90,9 @@ Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CENTRO_ACTIVIDAD.sql
 
 PROMPT Poblando tabla actividad_imagen
-@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD_IMAGEN.sql
 Pause [Enter] Para continuar
+@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD_IMAGEN.sql
+
 
 PROMPT Poblando tabla campamento
 Pause [Enter] Para continuar
