@@ -1,419 +1,1016 @@
-﻿/*CREATE TABLE ACOMPANIANTE 
-(
-    visita_id	INT,
-    nombre	VARCHAR(512);
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-    ap_paterno	VARCHAR(512);
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-    ap_materno	VARCHAR(512);
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-    parentesco	VARCHAR(512);
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-    edad	INT,
-    ocupacion	VARCHAR(512)
+﻿/*
+create table ACOMPANIANTE (
+	acompaniante_id INT,
+	nombre VARCHAR(50),
+	ap_paterno VARCHAR(50),
+	ap_materno VARCHAR(50),
+	parentesco DECIMAL(10,2),
+	edad INT,
+	ocupacion DECIMAL(10,2),
+	visita_id INT
 );
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES*/
-
+*/
 -- Insertar múltiples filas en la tabla ACOMPANIANTE en una sola sentencia
-INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(28, 'Andonis', 'Blinman', 'Sturt', 'NINGUNO', 89, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(43, 'Melesa', 'Varndell', 'Challenor', 'NINGUNO', 80, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(45, 'Gisela', 'Vanstone', 'Blackwell', 'NINGUNO', 78, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(46, 'Basil', 'Stickles', 'Bankhurst', 'FAMILIAR', 84, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(48, 'Willi', 'Kenright', 'Maffini', 'FAMILIAR', 80, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(58, 'Adelind', 'Seagrove', 'Starmont', 'NINGUNO', 80, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(64, 'Amber', 'Copeman', 'Curtoys', 'NINGUNO', 64, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(72, 'Doll', 'Khomin', 'Gowing', 'FAMILIAR', 24, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(76, 'Carita', 'Whates', 'Elner', 'FAMILIAR', 76, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(82, 'Maximilien', 'Schettini', 'Greville', 'NINGUNO', 30, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(86, 'Benoit', 'Dobson', 'Cowell', 'NINGUNO', 74, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(92, 'Charita', 'Goolding', 'Gilby', 'FAMILIAR', 29, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(96, 'Warner', 'Shayler', 'Rosettini', 'FAMILIAR', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(100, 'Mikkel', 'Farrand', 'Tink', 'FAMILIAR', 78, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(103, 'Letta', 'Carlaw', 'Marvel', 'FAMILIAR', 68, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(105, 'Theodoric', 'Klempke', 'Brookwell', 'FAMILIAR', 27, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(110, 'Maxi', 'Littley', 'Waterfield', 'FAMILIAR', 45, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(114, 'Jamima', 'Szachniewicz', 'Salthouse', 'FAMILIAR', 13, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(122, 'Damon', 'Conrart', 'Fyrth', 'FAMILIAR', 87, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(124, 'Kalli', 'Bockh', 'Rushmare', 'FAMILIAR', 15, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(128, 'Kellina', 'Snowdon', 'Hancox', 'FAMILIAR', 22, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(143, 'Kristoffer', 'Gobel', 'Youens', 'NINGUNO', 66, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(151, 'Guido', 'Ateridge', 'Sandaver', 'FAMILIAR', 76, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(195, 'Hermy', 'Barber', 'Rice', 'FAMILIAR', 78, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(201, 'Drake', 'Dysart', 'Peterffy', 'FAMILIAR', 13, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(207, 'Willyt', 'McGinnis', 'Calvard', 'NINGUNO', 47, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(208, 'Dag', 'Case', 'Osbourne', 'NINGUNO', 39, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(210, 'Ogdon', 'Scanlon', 'Juden', 'NINGUNO', 17, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(214, 'Ernest', 'Morrissey', 'Burdytt', 'NINGUNO', 90, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(218, 'Lulita', 'Labin', 'Rawdales', 'NINGUNO', 84, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(219, 'Silvano', 'Landal', 'Hartgill', 'NINGUNO', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(224, 'Adara', 'Warters', 'Shrubshall', 'NINGUNO', 42, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(229, 'Ceciley', 'Trewin', 'Coady', 'NINGUNO', 12, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(231, 'Teriann', 'Vassbender', 'Kahler', 'FAMILIAR', 55, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(235, 'Elyssa', 'Hemms', 'Wheowall', 'NINGUNO', 76, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(236, 'Bourke', 'Stenyng', 'Falkous', 'FAMILIAR', 71, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(242, 'Ronny', 'Heaney', 'Wyley', 'FAMILIAR', 29, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(245, 'Alistair', 'De Avenell', 'Natwick', 'NINGUNO', 28, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(260, 'Gae', 'Blyden', 'Gavrieli', 'NINGUNO', 88, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(269, 'Bess', 'Le Sieur', 'Yewdall', 'FAMILIAR', 51, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(270, 'Jacquelynn', 'Boissier', 'Drawmer', 'NINGUNO', 29, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(277, 'Jordan', 'Barukh', 'Snodden', 'FAMILIAR', 49, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(280, 'Wally', 'Fulstow', 'Khomishin', 'NINGUNO', 55, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(294, 'Evangeline', 'Anstead', 'Legon', 'NINGUNO', 41, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(304, 'Con', 'Baudinelli', 'Matthewman', 'NINGUNO', 10, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(307, 'Dane', 'Akam', 'O Reagan', 'FAMILIAR', 49, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(308, 'Jessey', 'Potell', 'Ulrik', 'FAMILIAR', 65, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(309, 'Alfi', 'Lieber', 'Laughlan', 'NINGUNO', 36, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(311, 'Nata', 'Cherm', 'Petras', 'FAMILIAR', 38, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(338, 'Ric', 'Matas', 'Jolley', 'NINGUNO', 34, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(341, 'Rafi', 'Northedge', 'Botley', 'NINGUNO', 30, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(343, 'Dougy', 'Lavell', 'Dougal', 'FAMILIAR', 28, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(348, 'Arluene', 'Scott', 'Biddles', 'FAMILIAR', 63, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(350, 'Kelbee', 'Murrthum', 'Chalcot', 'FAMILIAR', 84, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(357, 'Carlye', 'Dawid', 'Dronsfield', 'FAMILIAR', 54, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(358, 'Windham', 'Blackborow', 'Rikel', 'NINGUNO', 51, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(361, 'Jordan', 'Cubley', 'Tanfield', 'NINGUNO', 20, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(361, 'Hugues', 'Staig', 'Wloch', 'FAMILIAR', 72, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(363, 'Cris', 'Lukianov', 'Denecamp', 'NINGUNO', 42, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(366, 'Boonie', 'Dannehl', 'Burrass', 'NINGUNO', 71, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(374, 'Stoddard', 'Brower', 'Brindley', 'FAMILIAR', 62, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(375, 'Georgette', 'Pooly', 'Mayhead', 'FAMILIAR', 69, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(377, 'Sabina', 'Cawsy', 'Cock', 'FAMILIAR', 67, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(383, 'Joelly', 'Mongeot', 'Schoroder', 'FAMILIAR', 34, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(384, 'Lorrie', 'Candlin', 'Ethridge', 'NINGUNO', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(385, 'Linnell', 'Geldart', 'Baggett', 'NINGUNO', 30, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(386, 'Reggi', 'Lavall', 'Meredith', 'FAMILIAR', 45, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(389, 'Andras', 'Bolt', 'Fancutt', 'FAMILIAR', 80, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(392, 'Doreen', 'Colbridge', 'Bazylets', 'FAMILIAR', 72, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(396, 'Feliza', 'Slainey', 'Espinha', 'NINGUNO', 53, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(412, 'Gavra', 'Mullins', 'Rillett', 'FAMILIAR', 35, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(412, 'Gale', 'Hallawell', 'Rosita', 'FAMILIAR', 64, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(412, 'Marna', 'Merrilees', 'Aldersey', 'NINGUNO', 82, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(420, 'Hedwiga', 'Clair', 'Pettyfar', 'FAMILIAR', 11, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(424, 'Kikelia', 'Reicharz', 'Pickavance', 'NINGUNO', 49, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(425, 'Elisha', 'Vankov', 'Murthwaite', 'NINGUNO', 88, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(432, 'Cordelia', 'Greally', 'Sturm', 'FAMILIAR', 78, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(434, 'Kaitlyn', 'Caddy', 'Jedras', 'FAMILIAR', 14, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(440, 'Stephan', 'Larner', 'Emmins', 'FAMILIAR', 61, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(442, 'Nealy', 'Gifkins', 'Marchment', 'FAMILIAR', 15, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(452, 'Dorthea', 'Greening', 'Keasley', 'NINGUNO', 56, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(456, 'Kippie', 'Throughton', 'Yarnell', 'FAMILIAR', 64, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(461, 'Anders', 'Goves', 'Conway', 'NINGUNO', 49, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(466, 'Lemmy', 'McGarrell', 'Rundall', 'FAMILIAR', 35, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(469, 'Marius', 'Streeter', 'Towsie', 'NINGUNO', 38, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(469, 'Selie', 'Garland', 'Newiss', 'NINGUNO', 40, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(479, 'Kerrin', 'Pink', 'Chamley', 'NINGUNO', 57, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(482, 'Amalie', 'Causon', 'Burgwyn', 'NINGUNO', 61, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(485, 'Rees', 'Tatters', 'Fernely', 'FAMILIAR', 22, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(487, 'Spence', 'Jackalin', 'Aicheson', 'NINGUNO', 58, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(492, 'Bettine', 'Hewes', 'Hayto', 'NINGUNO', 47, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(493, 'Danni', 'Lamperd', 'Sherwin', 'NINGUNO', 66, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(494, 'Son', 'Broggelli', 'Chatto', 'NINGUNO', 12, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(495, 'Lenora', 'Glowach', 'Cogger', 'FAMILIAR', 22, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(496, 'Diane-marie', 'Lillegard', 'Fernando', 'FAMILIAR', 24, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(500, 'Xenos', 'Noe', 'Walch', 'NINGUNO', 46, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(503, 'Devy', 'Fillon', 'Brown', 'FAMILIAR', 58, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(508, 'Florry', 'De Maria', 'Dackombe', 'FAMILIAR', 25, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(526, 'Hobart', 'Kerford', 'Diboll', 'FAMILIAR', 61, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(534, 'Sullivan', 'Champ', 'Longrigg', 'FAMILIAR', 70, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(538, 'Winn', 'Brizland', 'MacCroary', 'FAMILIAR', 87, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(551, 'Gilda', 'Grennan', 'Arnely', 'FAMILIAR', 59, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(553, 'Kathrine', 'Gerred', 'Cocking', 'FAMILIAR', 54, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(556, 'Peta', 'Gutowski', 'Shildrick', 'FAMILIAR', 31, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(557, 'Connie', 'Odgaard', 'Kopta', 'NINGUNO', 49, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(563, 'Gretal', 'Rimington', 'Cristobal', 'NINGUNO', 38, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(571, 'Dorry', 'Mallows', 'Gallego', 'NINGUNO', 58, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(575, 'Lorin', 'McCarrick', 'Whetton', 'FAMILIAR', 84, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(577, 'Anett', 'Serginson', 'Renshaw', 'NINGUNO', 74, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(579, 'Ariel', 'Swannick', 'Pulman', 'FAMILIAR', 10, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(579, 'Haily', 'Canto', 'Trunks', 'NINGUNO', 71, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(581, 'Lexie', 'Birdsall', 'Watting', 'NINGUNO', 73, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(588, 'Christyna', 'Rablin', 'Senecaut', 'FAMILIAR', 10, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(588, 'Bo', 'Goligher', 'Egel', 'NINGUNO', 56, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(590, 'Wilhelmine', 'Dymott', 'Ivanyushkin', 'NINGUNO', 86, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(598, 'Morgan', 'Whistan', 'Gordon-Giles', 'FAMILIAR', 54, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(605, 'Mariam', 'Haliburn', 'Jurca', 'FAMILIAR', 71, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(611, 'Maurita', 'Kilduff', 'Menichi', 'FAMILIAR', 48, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(619, 'Meg', 'De la Perrelle', 'Mussalli', 'FAMILIAR', 69, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(621, 'Cesare', 'Neames', 'Weddup', 'NINGUNO', 70, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(624, 'Pietra', 'Harmant', 'Myhill', 'NINGUNO', 36, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(626, 'Bradan', 'Priestland', 'Tottman', 'FAMILIAR', 15, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(630, 'Elwood', 'Quinsee', 'Sommersett', 'FAMILIAR', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(641, 'Tuck', 'Bartkiewicz', 'Mathelon', 'FAMILIAR', 83, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(658, 'Toma', 'Found', 'Bontein', 'NINGUNO', 79, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(666, 'Vern', 'Hardwick', 'Chinnery', 'FAMILIAR', 35, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(679, 'Shelly', 'Hobbing', 'Rippen', 'FAMILIAR', 61, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(682, 'Ninette', 'Maffioletti', 'Jossel', 'FAMILIAR', 61, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(683, 'Valeda', 'Tredger', 'Oehm', 'FAMILIAR', 70, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(688, 'Eula', 'Farbrace', 'Gladtbach', 'NINGUNO', 32, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(689, 'Ceciley', 'Toffler', 'Morfield', 'FAMILIAR', 82, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(694, 'Shena', 'Terbrug', 'Whitlam', 'NINGUNO', 36, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(698, 'Jacinthe', 'Aspin', 'Ghost', 'FAMILIAR', 11, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(703, 'Pattie', 'Ales', 'Bradman', 'FAMILIAR', 34, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(704, 'Ethelred', 'Kopfen', 'Oguz', 'FAMILIAR', 78, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(745, 'Tamarah', 'Bosden', 'Vanichev', 'NINGUNO', 59, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(749, 'Damita', 'Binne', 'Archbald', 'FAMILIAR', 54, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(751, 'Royce', 'Pennone', 'McIsaac', 'FAMILIAR', 50, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(758, 'Gae', 'Ducker', 'Kirby', 'FAMILIAR', 49, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(761, 'Georgi', 'Kitt', 'Riha', 'NINGUNO', 28, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(761, 'Nadia', 'McKoy', 'Roizin', 'FAMILIAR', 46, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(766, 'Dolli', 'Farnie', 'Jandourek', 'NINGUNO', 65, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(767, 'Magnum', 'Berthome', 'Snoday', 'FAMILIAR', 20, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(768, 'Cally', 'Portal', 'Armstead', 'NINGUNO', 14, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(770, 'Anstice', 'Halloran', 'Purple', 'FAMILIAR', 63, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(770, 'Diarmid', 'Donisi', 'Moral', 'FAMILIAR', 70, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(775, 'Farleigh', 'Teresi', 'Dakers', 'FAMILIAR', 28, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(781, 'Osbourn', 'Coytes', 'Crambie', 'NINGUNO', 84, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(784, 'Anallise', 'Studeart', 'Wandrack', 'NINGUNO', 22, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(789, 'Errol', 'Farlham', 'Riall', 'FAMILIAR', 38, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(791, 'Chaunce', 'Rooksby', 'McCook', 'FAMILIAR', 21, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(794, 'Ros', 'Kermon', 'Squibbes', 'NINGUNO', 32, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(805, 'Holden', 'Pellew', 'Levensky', 'FAMILIAR', 20, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(805, 'Hartwell', 'Jammes', 'Fanton', 'FAMILIAR', 78, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(807, 'Georgetta', 'Raubenheim', 'Ricardin', 'FAMILIAR', 65, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(819, 'Ethelda', 'Doble', 'Burrage', 'NINGUNO', 90, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(834, 'Marlo', 'Cassedy', 'Faulkes', 'FAMILIAR', 75, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(834, 'Suzann', 'Josuweit', 'Lynde', 'NINGUNO', 82, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(837, 'Kai', 'Adanet', 'Christophe', 'FAMILIAR', 31, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(837, 'Camella', 'Duffyn', 'Goodfellow', 'FAMILIAR', 80, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(838, 'Becca', 'Salaman', 'Pagel', 'NINGUNO', 55, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(864, 'Colman', 'Elnough', 'Gresswell', 'FAMILIAR', 47, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(866, 'Janeen', 'Tuttiett', 'Tyson', 'FAMILIAR', 29, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(867, 'Joey', 'Spedroni', 'Kinneir', 'FAMILIAR', 58, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(869, 'Frans', 'Hales', 'Pheazey', 'NINGUNO', 27, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(875, 'Jobie', 'Hunnable', 'Seeking', 'NINGUNO', 46, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(876, 'Haleigh', 'Wadge', 'Vick', 'FAMILIAR', 53, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(882, 'Virgil', 'Kryszka', 'Demoge', 'NINGUNO', 21, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(885, 'Edith', 'Thynn', 'Tidbald', 'NINGUNO', 11, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(885, 'Syman', 'Franceschielli', 'Iacovo', 'FAMILIAR', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(892, 'Danyette', 'Gaiford', 'Goodlatt', 'FAMILIAR', 29, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(897, 'Wendi', 'Petrowsky', 'McGall', 'NINGUNO', 90, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(903, 'Albert', 'Fasey', 'Killingbeck', 'NINGUNO', 32, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(906, 'Corinna', 'Ackerman', 'Walework', 'NINGUNO', 80, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(907, 'Lesya', 'Stove', 'Keelin', 'FAMILIAR', 39, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(908, 'Sumner', 'Banke', 'McBoyle', 'NINGUNO', 69, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(909, 'Mathilde', 'Beyn', 'Speers', 'NINGUNO', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(913, 'Moe', 'Gehricke', 'Garbar', 'FAMILIAR', 84, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(916, 'Sandor', 'Dickinson', 'Checo', 'FAMILIAR', 56, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(916, 'Elizabet', 'Beard', 'Biesterfeld', 'FAMILIAR', 70, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(918, 'Ivar', 'Beacock', 'Kerwick', 'FAMILIAR', 75, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(922, 'Anton', 'Tommeo', 'Fetherston', 'FAMILIAR', 61, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(923, 'Lona', 'Gemmill', 'Hadley', 'FAMILIAR', 57, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(925, 'Jerry', 'Flemmich', 'Lorie', 'FAMILIAR', 35, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(929, 'Demetria', 'Styan', 'Revie', 'NINGUNO', 43, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(930, 'Kirsteni', 'Domenget', 'Killbey', 'NINGUNO', 62, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(933, 'Aindrea', 'LHommeau', 'Winders', 'FAMILIAR', 56, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(933, 'Olia', 'Bakes', 'Tinkham', 'NINGUNO', 88, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(940, 'Mary', 'Playden', 'Mosdell', 'NINGUNO', 13, 'ESTUDIANTE');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(944, 'Ola', 'Woolard', 'Dwerryhouse', 'FAMILIAR', 83, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(947, 'Scott', 'Merle', 'Nealon', 'NINGUNO', 72, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(950, 'Blithe', 'Campsall', 'Call', 'FAMILIAR', 55, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(951, 'Tammie', 'Jime', 'Ledekker', 'NINGUNO', 40, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(963, 'Vincenty', 'Wolfers', 'Broader', 'FAMILIAR', 54, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(974, 'Judy', 'Freegard', 'Thal', 'FAMILIAR', 16, 'SIN ESPECIFICAR');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(977, 'Mercedes', 'Lawrenson', 'Cassell', 'NINGUNO', 35, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(978, 'Mahmoud', 'Henrys', 'Lorain', 'NINGUNO', 54, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(985, 'Woodman', 'Domonkos', 'Dioniso', 'NINGUNO', 39, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(991, 'Zachary', 'Bortoletti', 'Giacopini', 'FAMILIAR', 77, 'EMPLEADO');
- INSERT INTO ACOMPANIANTE (visita_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion) VALUES
-(996, 'Crystie', 'Emmott', 'Pipkin', 'NINGUNO', 68, 'EMPLEADO');
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (1, 'Kora', 'Lightwing', 'Batteson', 'Hermano', 46, 'Empresario', 301);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (2, 'Mozelle', 'Dunphy', 'McMorran', 'Padre', 16, 'Desconocido', 711);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (3, 'Katrina', 'Harland', 'Drennan', 'Hermano', 40, 'Empleado', 95);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (4, 'Elyn', 'Skentelbury', 'Ferrini', 'Hermano', 21, 'Empleado', 489);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (5, 'Zitella', 'Hollingby', 'Poulter', 'Padre', 12, 'Empleado', 26);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (6, 'Araldo', 'Molfino', 'Mowne', 'Padre', 61, 'Desconocido', 410);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (7, 'Eva', 'Cantopher', 'Bantham', 'Hermano', 50, 'Empleado', 302);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (8, 'Roland', 'Tinniswood', 'Lahy', 'Hermano', 48, 'Empleado', 692);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (9, 'Deeanne', 'Meekin', 'Saynor', 'Hermano', 26, 'Desconocido', 271);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (10, 'Roger', 'McTague', 'Carillo', 'Hermano', 27, 'Empleado', 237);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (11, 'Zsa zsa', 'Gilogly', 'Gallen', 'Hermano', 8, 'Empleado', 419);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (12, 'Tanitansy', 'Daws', 'Andrzejewski', 'Padre', 40, 'Empleado', 750);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (13, 'Royce', 'Blythe', 'Gerhold', 'Hermano', 70, 'Empresario', 733);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (14, 'Siana', 'Ashfull', 'Laviste', 'Padre', 28, 'Empresario', 556);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (15, 'Chloe', 'Roff', 'Cockram', 'Sobrino', 67, 'Desconocido', 696);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (16, 'Kelli', 'Muncey', 'Hedau', 'Hermano', 37, 'Empleado', 590);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (17, 'Netti', 'Lowndsbrough', 'Oakes', 'Hermano', 52, 'Desconocido', 166);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (18, 'Armando', 'Gregoli', 'Skillanders', 'Hermano', 10, 'Desconocido', 446);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (19, 'Chicky', 'Dalligan', 'Reolfo', 'Hermano', 47, 'Desconocido', 130);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (20, 'Ertha', 'Stut', 'Fergyson', 'Hermano', 38, 'Desconocido', 63);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (21, 'Winnifred', 'Heine', 'Samples', 'Hermano', 55, 'Empleado', 139);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (22, 'Milena', 'Tremmil', 'Mechan', 'Padre', 27, 'Empleado', 524);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (23, 'Jackson', 'Predohl', 'Leyre', 'Padre', 63, 'Empleado', 555);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (24, 'Kaitlyn', 'Petrasso', 'Blest', 'Padre', 11, 'Empleado', 105);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (25, 'Charles', 'Rissen', 'McGrory', 'Hermano', 69, 'Empleado', 90);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (26, 'Skippie', 'Golds', 'McBeath', 'Hermano', 75, 'Empleado', 689);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (27, 'Regan', 'Gumey', 'Gillingwater', 'Hermano', 65, 'Empresario', 614);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (28, 'Phedra', 'Heinlein', 'Gillham', 'Hermano', 19, 'Empleado', 137);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (29, 'Iggy', 'Hillburn', 'Phinnessy', 'Sobrino', 7, 'Empresario', 514);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (30, 'Selene', 'Cawte', 'Judkins', 'Sobrino', 57, 'Empleado', 651);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (31, 'Malachi', 'Pollastro', 'Maving', 'Hermano', 7, 'Empleado', 704);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (32, 'Alayne', 'Kieff', 'Trodd', 'Padre', 53, 'Desconocido', 416);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (33, 'Beverlee', 'Patchett', 'Colles', 'Hermano', 25, 'Empresario', 158);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (34, 'Chrissy', 'Roark', 'Shearn', 'Hermano', 45, 'Empleado', 321);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (35, 'Irwin', 'Paterson', 'Wartnaby', 'Padre', 75, 'Empleado', 559);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (36, 'Krishna', 'Simla', 'Bordes', 'Hermano', 50, 'Desconocido', 106);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (37, 'Silas', 'Bugdale', 'Bootell', 'Hermano', 25, 'Empleado', 691);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (38, 'Geordie', 'Gonzales', 'Inger', 'Hermano', 37, 'Empleado', 218);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (39, 'Radcliffe', 'Cristobal', 'Villa', 'Sobrino', 2, 'Empleado', 455);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (40, 'Rorie', 'Treleaven', 'Esposita', 'Sobrino', 11, 'Desconocido', 424);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (41, 'Rodie', 'Sterre', 'Mara', 'Hermano', 13, 'Empleado', 232);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (42, 'Remington', 'Mazdon', 'Caunt', 'Hermano', 62, 'Empleado', 310);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (43, 'Ellyn', 'McMenamy', 'Flowers', 'Hermano', 40, 'Empleado', 444);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (44, 'Ulysses', 'Twizell', 'Chisholme', 'Sobrino', 5, 'Desconocido', 33);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (45, 'Jessi', 'Kryszka', 'Rewan', 'Hermano', 17, 'Desconocido', 653);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (46, 'Claudell', 'Camps', 'Biskupek', 'Hermano', 61, 'Empleado', 430);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (47, 'Murray', 'Robathon', 'Renish', 'Padre', 10, 'Desconocido', 736);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (48, 'Crystie', 'Pidcock', 'Trowill', 'Padre', 65, 'Empleado', 677);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (49, 'Corbett', 'Pundy', 'Janak', 'Hermano', 34, 'Empresario', 653);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (50, 'Deanne', 'Trays', 'Hamon', 'Sobrino', 26, 'Empleado', 160);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (51, 'Uri', 'Kepling', 'O''Connolly', 'Sobrino', 5, 'Empresario', 706);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (52, 'Nariko', 'Woolager', 'Letteresse', 'Hermano', 49, 'Empleado', 613);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (53, 'Romona', 'Theis', 'Cosens', 'Hermano', 40, 'Empleado', 651);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (54, 'Eugenie', 'Jeram', 'Goadsby', 'Sobrino', 27, 'Empleado', 156);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (55, 'Kort', 'Gorsse', 'Chadderton', 'Sobrino', 52, 'Empresario', 301);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (56, 'Charlotta', 'Edgworth', 'Criag', 'Hermano', 11, 'Empleado', 502);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (57, 'Emlyn', 'Strang', 'Glasscoe', 'Sobrino', 53, 'Empleado', 542);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (58, 'Elsworth', 'Strapp', 'Tregido', 'Sobrino', 71, 'Empresario', 98);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (59, 'Alyosha', 'Noonan', 'Kytter', 'Sobrino', 48, 'Empleado', 491);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (60, 'Ivar', 'Maltman', 'Jinda', 'Sobrino', 39, 'Empresario', 221);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (61, 'Angelia', 'Brunelleschi', 'Le Franc', 'Sobrino', 9, 'Desconocido', 385);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (62, 'Delbert', 'Fedorchenko', 'Breslauer', 'Hermano', 66, 'Empleado', 225);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (63, 'Peri', 'Bangs', 'Dimelow', 'Hermano', 10, 'Empleado', 686);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (64, 'Ruperta', 'Flageul', 'Wohlers', 'Hermano', 40, 'Empresario', 608);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (65, 'Sarena', 'Drinkwater', 'Hainsworth', 'Padre', 33, 'Empleado', 333);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (66, 'Wally', 'Finey', 'Malzard', 'Sobrino', 35, 'Empleado', 658);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (67, 'Eudora', 'Georg', 'Gagin', 'Padre', 65, 'Empleado', 657);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (68, 'Jacinta', 'Costen', 'Rowlands', 'Hermano', 45, 'Desconocido', 400);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (69, 'Vonni', 'Gaffey', 'Docwra', 'Hermano', 37, 'Empleado', 158);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (70, 'Adler', 'Martensen', 'Vertey', 'Hermano', 15, 'Empresario', 730);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (71, 'Saxon', 'Flinders', 'Thynn', 'Sobrino', 58, 'Empresario', 546);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (72, 'Renate', 'Getcliffe', 'McBride', 'Sobrino', 23, 'Empleado', 586);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (73, 'Twyla', 'Fischer', 'Innwood', 'Hermano', 57, 'Empleado', 240);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (74, 'Giraldo', 'Gallehawk', 'Keningham', 'Padre', 20, 'Empleado', 570);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (75, 'Elvyn', 'Buckerfield', 'Bowler', 'Padre', 50, 'Empresario', 555);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (76, 'Janel', 'Kee', 'Orehead', 'Sobrino', 4, 'Empleado', 122);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (77, 'Cassey', 'Reaveley', 'O''Lynn', 'Padre', 46, 'Empleado', 372);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (78, 'Noell', 'Hydes', 'Esbrook', 'Sobrino', 54, 'Empresario', 58);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (79, 'Amalita', 'McLenahan', 'Kershow', 'Hermano', 39, 'Desconocido', 214);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (80, 'Leola', 'Whitehorne', 'Bellocht', 'Hermano', 16, 'Empleado', 383);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (81, 'Terry', 'Snelgar', 'Guerro', 'Hermano', 60, 'Empresario', 642);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (82, 'Tully', 'Leeman', 'Ivkovic', 'Padre', 1, 'Desconocido', 441);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (83, 'Westley', 'Jenk', 'Simonel', 'Hermano', 6, 'Empleado', 517);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (84, 'Felita', 'Drewe', 'Premble', 'Hermano', 15, 'Empleado', 267);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (85, 'Egon', 'Warde', 'Muston', 'Hermano', 46, 'Desconocido', 484);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (86, 'Eda', 'Yokel', 'Reese', 'Sobrino', 29, 'Empresario', 549);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (87, 'Prudi', 'Kivelhan', 'Farland', 'Hermano', 54, 'Desconocido', 531);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (88, 'Rivkah', 'Adamsson', 'Keigher', 'Padre', 47, 'Empleado', 300);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (89, 'Arri', 'Hullyer', 'Crone', 'Padre', 27, 'Empleado', 418);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (90, 'Caria', 'Fowlie', 'Gretham', 'Padre', 65, 'Empresario', 162);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (91, 'Flora', 'Pracy', 'Malim', 'Hermano', 8, 'Empleado', 300);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (92, 'Clareta', 'Ishak', 'Antoniewicz', 'Padre', 57, 'Empleado', 238);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (93, 'Felicle', 'Cheine', 'Brentnall', 'Hermano', 41, 'Empleado', 225);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (94, 'Merridie', 'Mongenot', 'Batchan', 'Hermano', 27, 'Desconocido', 681);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (95, 'Minta', 'Joret', 'Pittwood', 'Sobrino', 10, 'Empresario', 403);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (96, 'Anneliese', 'Surfleet', 'Dameisele', 'Padre', 20, 'Empresario', 589);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (97, 'Manda', 'Bestwick', 'Pollastrone', 'Padre', 65, 'Empresario', 498);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (98, 'Les', 'Aggiss', 'Wroath', 'Padre', 18, 'Empleado', 101);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (99, 'Tammy', 'Stanning', 'Bythway', 'Hermano', 28, 'Desconocido', 561);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (100, 'Griz', 'Palin', 'Athersmith', 'Padre', 5, 'Desconocido', 515);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (101, 'Tim', 'Hazard', 'Regenhardt', 'Sobrino', 50, 'Empleado', 652);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (102, 'Ardys', 'Fearnill', 'Haylands', 'Hermano', 27, 'Empleado', 43);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (103, 'Richmound', 'Clyma', 'Bent', 'Hermano', 34, 'Desconocido', 704);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (104, 'Danny', 'Balffye', 'Toller', 'Hermano', 71, 'Empresario', 307);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (105, 'Janeczka', 'Izard', 'Blumson', 'Sobrino', 16, 'Empresario', 552);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (106, 'Kerry', 'Curman', 'Priddis', 'Sobrino', 44, 'Empleado', 654);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (107, 'Fons', 'Patchett', 'Burland', 'Padre', 11, 'Empleado', 664);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (108, 'Killy', 'Winslade', 'Hasselby', 'Padre', 3, 'Empleado', 7);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (109, 'Brena', 'Mulbery', 'Rawne', 'Hermano', 19, 'Empleado', 103);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (110, 'Lorie', 'Pape', 'Baswall', 'Sobrino', 25, 'Desconocido', 1);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (111, 'Phelia', 'Jacob', 'Blunsum', 'Hermano', 47, 'Empleado', 158);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (112, 'Minor', 'Darwent', 'Hartrick', 'Sobrino', 46, 'Empleado', 27);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (113, 'Clary', 'Horry', 'Banat', 'Hermano', 35, 'Empleado', 299);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (114, 'Svend', 'Cressar', 'Taberer', 'Hermano', 60, 'Empresario', 655);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (115, 'Amalle', 'Oatley', 'Chamberlin', 'Hermano', 68, 'Empleado', 513);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (116, 'Cori', 'Folliss', 'Nern', 'Sobrino', 50, 'Desconocido', 128);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (117, 'Blakelee', 'Torrent', 'Bramer', 'Hermano', 28, 'Desconocido', 447);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (118, 'Cicely', 'Arrow', 'Egar', 'Hermano', 48, 'Desconocido', 559);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (119, 'Ida', 'Goldson', 'Cattenach', 'Hermano', 66, 'Empleado', 717);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (120, 'Jori', 'Caird', 'Grizard', 'Sobrino', 29, 'Empleado', 388);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (121, 'Brander', 'Heart', 'Wessing', 'Hermano', 57, 'Empleado', 664);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (122, 'Kimmy', 'Martijn', 'McIlwrick', 'Hermano', 15, 'Empleado', 159);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (123, 'Zach', 'Dauncey', 'Bushel', 'Sobrino', 17, 'Empleado', 334);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (124, 'Agustin', 'Clemoes', 'Barkway', 'Sobrino', 40, 'Empleado', 182);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (125, 'Rickie', 'McDougal', 'Leroux', 'Hermano', 18, 'Empresario', 362);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (126, 'Jan', 'Hampe', 'Witherington', 'Padre', 24, 'Empleado', 188);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (127, 'Fara', 'Lancastle', 'Spillman', 'Sobrino', 48, 'Empleado', 353);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (128, 'Birgit', 'Stanaway', 'Nussey', 'Hermano', 68, 'Empresario', 177);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (129, 'Demetris', 'Blazeby', 'Worge', 'Padre', 33, 'Desconocido', 51);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (130, 'Genevra', 'Carnoghan', 'Luter', 'Hermano', 56, 'Empresario', 70);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (131, 'Aggi', 'Lutsch', 'Martinyuk', 'Padre', 55, 'Empresario', 36);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (132, 'Latia', 'Ilyushkin', 'Dalziell', 'Padre', 16, 'Empleado', 426);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (133, 'Rouvin', 'Clausner', 'Bavidge', 'Padre', 23, 'Empleado', 21);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (134, 'Francisco', 'Manueau', 'Castille', 'Sobrino', 69, 'Empresario', 638);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (135, 'Lorie', 'Humphrys', 'Gilmore', 'Hermano', 9, 'Empresario', 320);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (136, 'Hayley', 'Canland', 'Banke', 'Hermano', 26, 'Empresario', 661);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (137, 'Delmor', 'Enrich', 'Burg', 'Hermano', 38, 'Empleado', 683);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (138, 'Rafaello', 'Schruur', 'Figures', 'Hermano', 70, 'Empleado', 265);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (139, 'Wernher', 'Hearley', 'Marlon', 'Padre', 25, 'Desconocido', 358);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (140, 'Olivero', 'Krollmann', 'Flute', 'Hermano', 11, 'Empleado', 696);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (141, 'Blithe', 'Whatling', 'Echallie', 'Padre', 17, 'Desconocido', 455);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (142, 'Danit', 'Beaze', 'Grabham', 'Padre', 43, 'Desconocido', 329);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (143, 'Kass', 'Niblo', 'Casari', 'Hermano', 30, 'Empresario', 51);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (144, 'Jeanne', 'Stredwick', 'Woller', 'Sobrino', 55, 'Empleado', 224);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (145, 'Ardelia', 'Loch', 'Bayly', 'Padre', 44, 'Desconocido', 531);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (146, 'Ellery', 'Folland', 'Ticehurst', 'Sobrino', 33, 'Empleado', 29);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (147, 'Benedikt', 'Caveau', 'Sketch', 'Hermano', 46, 'Empleado', 686);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (148, 'Anette', 'Willoughway', 'Stoke', 'Hermano', 18, 'Empresario', 282);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (149, 'Ahmed', 'Cornish', 'Atherton', 'Hermano', 52, 'Desconocido', 331);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (150, 'Muffin', 'Symers', 'Gadson', 'Sobrino', 67, 'Empresario', 170);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (151, 'Callie', 'Jilliss', 'Matusiak', 'Sobrino', 52, 'Empleado', 422);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (152, 'Bancroft', 'Jossum', 'Trudgion', 'Hermano', 65, 'Empresario', 674);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (153, 'Ravi', 'MacTrustey', 'Sisnett', 'Padre', 15, 'Empleado', 319);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (154, 'Briano', 'Tunder', 'Gheorghescu', 'Sobrino', 9, 'Empleado', 429);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (155, 'Donall', 'Rubens', 'Stourton', 'Hermano', 20, 'Empleado', 83);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (156, 'Netta', 'Urry', 'Rhydderch', 'Hermano', 40, 'Empresario', 544);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (157, 'Collette', 'Beake', 'Thorneloe', 'Sobrino', 64, 'Empresario', 205);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (158, 'Whitney', 'Douglass', 'Peizer', 'Sobrino', 13, 'Empresario', 352);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (159, 'Ransom', 'Blodg', 'Dougal', 'Sobrino', 7, 'Desconocido', 669);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (160, 'Anna', 'Milleton', 'Craisford', 'Hermano', 56, 'Empresario', 383);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (161, 'Nobe', 'Flaune', 'McCrostie', 'Padre', 48, 'Empresario', 679);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (162, 'Land', 'Trebbett', 'Scopyn', 'Hermano', 45, 'Empresario', 394);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (163, 'Fee', 'Goundry', 'Gingle', 'Sobrino', 13, 'Empresario', 696);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (164, 'Rawley', 'Severwright', 'Bonehill', 'Hermano', 25, 'Empleado', 377);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (165, 'Goldarina', 'Campbell-Dunlop', 'D''Ambrosio', 'Hermano', 17, 'Desconocido', 688);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (166, 'Jorry', 'Trulocke', 'Moran', 'Hermano', 23, 'Empleado', 385);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (167, 'Bekki', 'Lakey', 'Epsly', 'Hermano', 45, 'Desconocido', 370);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (168, 'Brendan', 'Stovell', 'Pettegre', 'Hermano', 66, 'Desconocido', 157);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (169, 'Boris', 'Herreros', 'Spellar', 'Sobrino', 73, 'Empresario', 194);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (170, 'Zaria', 'Surmon', 'Pulsford', 'Hermano', 28, 'Empleado', 472);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (171, 'Elroy', 'Romeuf', 'Colthurst', 'Hermano', 34, 'Empresario', 63);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (172, 'Cornela', 'Maly', 'Elvins', 'Padre', 52, 'Desconocido', 346);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (173, 'Avivah', 'Le Pine', 'Pledger', 'Hermano', 2, 'Desconocido', 31);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (174, 'Lora', 'Benettini', 'Greschke', 'Hermano', 30, 'Empresario', 32);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (175, 'Sela', 'Tirrell', 'Bampford', 'Padre', 16, 'Empleado', 634);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (176, 'Keely', 'Barmby', 'Ong', 'Sobrino', 25, 'Desconocido', 730);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (177, 'Bertie', 'Jorez', 'Spivey', 'Padre', 3, 'Empresario', 164);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (178, 'Francesco', 'Jarry', 'Keinrat', 'Hermano', 16, 'Empresario', 17);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (179, 'Nicole', 'Badrick', 'Meredith', 'Hermano', 15, 'Desconocido', 281);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (180, 'Berkley', 'Rattray', 'Ding', 'Hermano', 22, 'Empleado', 470);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (181, 'Tomi', 'Crack', 'MacTrustie', 'Hermano', 1, 'Empleado', 382);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (182, 'Bunnie', 'Reeman', 'Speaks', 'Sobrino', 40, 'Empleado', 534);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (183, 'Akim', 'Connew', 'Spolton', 'Padre', 67, 'Empresario', 614);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (184, 'Horten', 'Pagram', 'Blacksland', 'Padre', 57, 'Desconocido', 110);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (185, 'Erroll', 'Putnam', 'Seyfart', 'Padre', 20, 'Desconocido', 510);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (186, 'Manon', 'Havenhand', 'Po', 'Hermano', 58, 'Desconocido', 38);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (187, 'Tawsha', 'Bunting', 'Drinkwater', 'Hermano', 22, 'Empresario', 180);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (188, 'Forrester', 'Podmore', 'Minto', 'Hermano', 63, 'Empleado', 71);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (189, 'Saidee', 'Kesterton', 'Shrimplin', 'Sobrino', 42, 'Desconocido', 404);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (190, 'Lorry', 'Siccombe', 'Flaxon', 'Hermano', 16, 'Empresario', 726);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (191, 'Care', 'Colicot', 'Onn', 'Sobrino', 32, 'Empleado', 314);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (192, 'Erinn', 'Durden', 'Giorgetti', 'Padre', 29, 'Empresario', 292);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (193, 'Skell', 'Esslement', 'Krauze', 'Sobrino', 44, 'Empleado', 25);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (194, 'Edan', 'Gonnely', 'Dun', 'Hermano', 51, 'Empresario', 194);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (195, 'Bria', 'Meale', 'McGoon', 'Padre', 52, 'Empresario', 482);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (196, 'Lebbie', 'Denecamp', 'Goldine', 'Sobrino', 42, 'Empresario', 361);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (197, 'Alia', 'Banbrigge', 'Rawling', 'Hermano', 16, 'Empleado', 65);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (198, 'Cris', 'Fowle', 'Franceschi', 'Hermano', 23, 'Empresario', 353);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (199, 'Hedda', 'De Stoop', 'Kettley', 'Sobrino', 43, 'Desconocido', 743);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (200, 'Garek', 'Spain', 'Moberley', 'Padre', 54, 'Empleado', 572);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (201, 'Haslett', 'Leys', 'Bouts', 'Hermano', 68, 'Empleado', 365);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (202, 'Leah', 'Clempton', 'Klimmek', 'Padre', 31, 'Empresario', 603);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (203, 'Barclay', 'Breach', 'Murrock', 'Hermano', 66, 'Empresario', 734);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (204, 'Clair', 'Searby', 'Retallick', 'Sobrino', 17, 'Empleado', 22);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (205, 'Emlen', 'Friberg', 'Shorton', 'Padre', 73, 'Empleado', 586);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (206, 'Curr', 'Speers', 'Keeling', 'Padre', 44, 'Empresario', 299);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (207, 'Milena', 'Domaschke', 'McIlvenny', 'Padre', 58, 'Desconocido', 246);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (208, 'Cariotta', 'Faltin', 'Dimitresco', 'Hermano', 48, 'Desconocido', 374);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (209, 'Hubie', 'Sandeman', 'Hallows', 'Padre', 44, 'Empleado', 514);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (210, 'Brynne', 'Piddlesden', 'De Bruijn', 'Hermano', 33, 'Desconocido', 122);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (211, 'Dorri', 'Bussy', 'Beames', 'Padre', 8, 'Empleado', 455);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (212, 'Steffen', 'Simukov', 'Marran', 'Hermano', 16, 'Empresario', 514);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (213, 'Gerladina', 'Ambrosetti', 'Eglaise', 'Sobrino', 43, 'Empresario', 532);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (214, 'Jimmie', 'Leopold', 'Synan', 'Padre', 69, 'Empleado', 521);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (215, 'Regan', 'Stubbins', 'Schulkins', 'Padre', 64, 'Empresario', 199);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (216, 'Chan', 'Manclark', 'Silverlock', 'Hermano', 29, 'Empleado', 132);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (217, 'Ingaberg', 'Towse', 'Earpe', 'Hermano', 54, 'Empresario', 334);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (218, 'Spenser', 'Perel', 'Quinell', 'Hermano', 54, 'Empleado', 326);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (219, 'Fiona', 'Leary', 'Fabry', 'Hermano', 17, 'Empleado', 249);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (220, 'Flo', 'Sapauton', 'Koubu', 'Padre', 27, 'Desconocido', 85);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (221, 'Raymund', 'Clibbery', 'Juszkiewicz', 'Sobrino', 18, 'Empresario', 359);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (222, 'Jobey', 'Acheson', 'Whitchurch', 'Hermano', 73, 'Desconocido', 141);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (223, 'Friedrick', 'Savoury', 'Itzkowicz', 'Padre', 40, 'Desconocido', 510);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (224, 'Amabel', 'Windridge', 'Marcone', 'Sobrino', 33, 'Empleado', 416);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (225, 'Riccardo', 'Bonas', 'Brambill', 'Sobrino', 36, 'Empleado', 652);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (226, 'Lawton', 'Rawstorn', 'Bridgland', 'Padre', 21, 'Empresario', 233);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (227, 'Jefferson', 'Jorck', 'Haney', 'Hermano', 13, 'Empresario', 566);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (228, 'Rriocard', 'Barrim', 'Casale', 'Hermano', 30, 'Empresario', 106);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (229, 'Timothy', 'Itzak', 'Chevolleau', 'Hermano', 26, 'Desconocido', 21);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (230, 'Avram', 'Roubeix', 'Emma', 'Hermano', 54, 'Desconocido', 575);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (231, 'Jere', 'Thunder', 'Edser', 'Padre', 20, 'Empleado', 595);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (232, 'Claudette', 'Cowlas', 'Elan', 'Sobrino', 61, 'Desconocido', 268);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (233, 'Cyb', 'Priden', 'Heavens', 'Hermano', 4, 'Empleado', 323);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (234, 'Whitney', 'Garvey', 'Crinage', 'Hermano', 31, 'Empleado', 529);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (235, 'Jory', 'Rault', 'Feedome', 'Sobrino', 20, 'Desconocido', 337);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (236, 'Gabie', 'Arnal', 'Haker', 'Hermano', 73, 'Empleado', 262);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (237, 'Kippie', 'Shellshear', 'Corrigan', 'Padre', 1, 'Desconocido', 179);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (238, 'Jasper', 'Carlyle', 'Klas', 'Sobrino', 36, 'Empleado', 680);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (239, 'Farrah', 'Chasney', 'Maddin', 'Hermano', 25, 'Empleado', 51);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (240, 'Ardith', 'Jarville', 'Oiller', 'Padre', 26, 'Empresario', 672);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (241, 'Thurston', 'Gero', 'Brinkler', 'Hermano', 13, 'Empresario', 370);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (242, 'Ediva', 'Seabridge', 'Rays', 'Padre', 43, 'Empleado', 324);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (243, 'Nona', 'Enright', 'Keslake', 'Hermano', 43, 'Empleado', 331);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (244, 'Briggs', 'Heathwood', 'Devenport', 'Sobrino', 42, 'Desconocido', 311);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (245, 'Eddi', 'Rabjohns', 'Skehens', 'Hermano', 1, 'Desconocido', 487);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (246, 'Byran', 'Boylund', 'Holbie', 'Hermano', 41, 'Empleado', 354);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (247, 'Ronny', 'Gowen', 'Finnigan', 'Sobrino', 38, 'Empleado', 745);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (248, 'Addy', 'Trembey', 'McCard', 'Hermano', 72, 'Empleado', 123);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (249, 'Jourdain', 'Biggam', 'Bench', 'Hermano', 64, 'Empleado', 538);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (250, 'Jamie', 'Yelyashev', 'Duerden', 'Sobrino', 10, 'Desconocido', 26);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (251, 'Guinna', 'Okie', 'Korf', 'Sobrino', 33, 'Empresario', 718);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (252, 'Zelda', 'Riedel', 'Eymer', 'Hermano', 2, 'Empleado', 297);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (253, 'Eleanora', 'Banisch', 'Westpfel', 'Padre', 53, 'Empleado', 413);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (254, 'Arlyn', 'Brech', 'Mangeon', 'Hermano', 74, 'Desconocido', 153);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (255, 'Basilio', 'Pocklington', 'Kupke', 'Padre', 72, 'Empleado', 615);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (256, 'Oberon', 'Penylton', 'Clemoes', 'Sobrino', 35, 'Empleado', 617);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (257, 'Rhodia', 'Warwicker', 'Pallasch', 'Padre', 20, 'Empresario', 648);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (258, 'Kassey', 'Kelemen', 'Vaines', 'Hermano', 5, 'Desconocido', 607);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (259, 'Ambros', 'Caccavella', 'Horder', 'Hermano', 38, 'Desconocido', 406);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (260, 'Forster', 'Menlow', 'Kynman', 'Sobrino', 40, 'Empleado', 305);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (261, 'Adham', 'Crimin', 'Laxson', 'Hermano', 27, 'Empleado', 330);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (262, 'North', 'Rudloff', 'Stirrup', 'Hermano', 74, 'Empleado', 542);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (263, 'Hilary', 'Decruse', 'Shellcross', 'Hermano', 73, 'Desconocido', 114);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (264, 'Felipa', 'Learmond', 'Helwig', 'Hermano', 10, 'Empleado', 434);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (265, 'Roosevelt', 'Lenahan', 'Al Hirsi', 'Hermano', 61, 'Empresario', 355);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (266, 'Link', 'McCulley', 'Scurry', 'Sobrino', 23, 'Empresario', 402);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (267, 'Jilly', 'D''Oyley', 'Aguirrezabal', 'Hermano', 2, 'Desconocido', 485);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (268, 'Kristyn', 'Kuhnel', 'Sexten', 'Padre', 11, 'Desconocido', 88);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (269, 'Kristi', 'Schulze', 'Stroton', 'Padre', 6, 'Empresario', 127);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (270, 'Row', 'Wheelhouse', 'Dyter', 'Padre', 26, 'Desconocido', 642);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (271, 'Mickie', 'Hambric', 'Shreeve', 'Hermano', 51, 'Empleado', 600);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (272, 'Gage', 'Clearley', 'Folk', 'Padre', 75, 'Empleado', 103);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (273, 'Vikki', 'Argent', 'Greim', 'Hermano', 42, 'Empleado', 412);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (274, 'Banky', 'Kovnot', 'Murley', 'Hermano', 24, 'Empresario', 506);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (275, 'Gonzales', 'Hurry', 'Duplan', 'Hermano', 36, 'Empleado', 641);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (276, 'Fowler', 'Maccrea', 'Signore', 'Sobrino', 16, 'Empleado', 662);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (277, 'Milzie', 'Grunder', 'Raymond', 'Sobrino', 5, 'Empleado', 14);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (278, 'Tristam', 'Duckhouse', 'Ferrelli', 'Hermano', 31, 'Desconocido', 429);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (279, 'Wilmar', 'Hindenberger', 'Mabbett', 'Hermano', 18, 'Empleado', 338);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (280, 'Gladi', 'Whiten', 'Vasic', 'Sobrino', 40, 'Empleado', 121);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (281, 'Salomo', 'Ends', 'Mithon', 'Hermano', 62, 'Empresario', 139);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (282, 'Leupold', 'Orrick', 'Windybank', 'Hermano', 1, 'Desconocido', 330);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (283, 'Wenda', 'Proswell', 'Rikkard', 'Hermano', 21, 'Desconocido', 171);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (284, 'Andrew', 'Voelker', 'McNee', 'Hermano', 44, 'Desconocido', 630);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (285, 'Padget', 'Crosthwaite', 'Losty', 'Hermano', 70, 'Empresario', 629);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (286, 'Lacee', 'Joseland', 'Spatoni', 'Padre', 17, 'Empleado', 95);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (287, 'Angelika', 'Roddy', 'Bothams', 'Sobrino', 12, 'Empleado', 106);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (288, 'Jennilee', 'Morcomb', 'Greathead', 'Hermano', 28, 'Desconocido', 243);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (289, 'Brigida', 'Trenouth', 'Corke', 'Sobrino', 74, 'Empresario', 270);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (290, 'Lazaro', 'Common', 'Blemen', 'Padre', 2, 'Desconocido', 447);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (291, 'Matty', 'Davie', 'Targett', 'Sobrino', 33, 'Empleado', 572);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (292, 'Tomlin', 'Brimelow', 'Borwick', 'Padre', 60, 'Empleado', 275);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (293, 'Hortensia', 'Besemer', 'Witten', 'Sobrino', 6, 'Empresario', 533);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (294, 'Leonore', 'Easen', 'Marthen', 'Hermano', 67, 'Empleado', 117);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (295, 'Vincents', 'Joule', 'Canfield', 'Sobrino', 49, 'Empresario', 571);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (296, 'Saree', 'Adenot', 'Lawty', 'Padre', 63, 'Desconocido', 657);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (297, 'Cathy', 'Kenen', 'Lehr', 'Padre', 40, 'Desconocido', 740);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (298, 'Darius', 'Danelutti', 'McGaw', 'Hermano', 17, 'Empleado', 372);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (299, 'Melinde', 'Haysham', 'Camelli', 'Padre', 17, 'Empleado', 560);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (300, 'Michelina', 'Larter', 'Consterdine', 'Hermano', 37, 'Desconocido', 110);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (301, 'Fairleigh', 'Dickie', 'Blondelle', 'Padre', 55, 'Desconocido', 388);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (302, 'Melisenda', 'Bentote', 'Boggish', 'Sobrino', 50, 'Empleado', 271);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (303, 'Pamelina', 'Mackrill', 'Harsant', 'Sobrino', 69, 'Empleado', 578);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (304, 'Cal', 'Savery', 'Pudan', 'Hermano', 19, 'Empleado', 201);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (305, 'Meara', 'Windram', 'Mulgrew', 'Sobrino', 18, 'Desconocido', 447);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (306, 'Darcee', 'Dingwall', 'Peer', 'Sobrino', 49, 'Empleado', 347);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (307, 'Abrahan', 'Sapsforde', 'Newiss', 'Sobrino', 20, 'Desconocido', 553);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (308, 'Carin', 'Ben', 'Stampfer', 'Hermano', 23, 'Empleado', 417);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (309, 'Caesar', 'Lammertz', 'Portt', 'Hermano', 6, 'Empleado', 295);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (310, 'Brander', 'Kall', 'Blagbrough', 'Hermano', 75, 'Empleado', 671);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (311, 'Rhiamon', 'Vasilmanov', 'Goning', 'Padre', 22, 'Empleado', 143);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (312, 'Britt', 'Westrey', 'Warne', 'Padre', 15, 'Empleado', 711);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (313, 'Loralie', 'Dorcey', 'Balwin', 'Hermano', 64, 'Empleado', 190);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (314, 'Zed', 'Berg', 'Seale', 'Sobrino', 7, 'Desconocido', 327);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (315, 'Gaultiero', 'Petrusch', 'Timson', 'Hermano', 61, 'Empleado', 29);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (316, 'Garland', 'MacGuffie', 'Arthan', 'Sobrino', 20, 'Desconocido', 374);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (317, 'Christina', 'Cassel', 'Davitti', 'Sobrino', 74, 'Desconocido', 164);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (318, 'Lilia', 'Ramet', 'Karby', 'Hermano', 28, 'Empleado', 87);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (319, 'Mignon', 'Hanster', 'Moulds', 'Hermano', 71, 'Empleado', 286);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (320, 'Lauren', 'Menichillo', 'Romagnosi', 'Sobrino', 67, 'Empleado', 593);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (321, 'Alphard', 'Hampson', 'Giddons', 'Sobrino', 21, 'Desconocido', 404);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (322, 'Eleen', 'Brownbridge', 'Silverston', 'Hermano', 44, 'Empleado', 135);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (323, 'Amber', 'Cottam', 'Hurdman', 'Sobrino', 21, 'Empresario', 562);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (324, 'Brande', 'Spicer', 'Chue', 'Hermano', 13, 'Empresario', 180);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (325, 'Sylas', 'Kocher', 'Carncross', 'Sobrino', 4, 'Desconocido', 406);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (326, 'Franny', 'Canning', 'Wandrich', 'Padre', 31, 'Empresario', 725);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (327, 'Prinz', 'Pol', 'Carmody', 'Padre', 1, 'Desconocido', 260);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (328, 'Merrill', 'Sugge', 'Capener', 'Sobrino', 67, 'Empleado', 86);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (329, 'Beale', 'McCrory', 'Bogges', 'Padre', 63, 'Empresario', 97);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (330, 'Tatiania', 'Gaitung', 'Danbi', 'Sobrino', 31, 'Empresario', 492);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (331, 'Vin', 'Swindlehurst', 'Fawkes', 'Padre', 12, 'Empleado', 80);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (332, 'Trevor', 'Bechley', 'Biggs', 'Padre', 43, 'Empleado', 65);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (333, 'Jessee', 'Roust', 'Trayte', 'Sobrino', 48, 'Empresario', 37);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (334, 'Thaine', 'Goater', 'Sollas', 'Padre', 5, 'Desconocido', 111);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (335, 'Myrlene', 'Roome', 'Stobie', 'Sobrino', 57, 'Desconocido', 675);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (336, 'Clarisse', 'Parysiak', 'Chree', 'Hermano', 56, 'Desconocido', 580);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (337, 'Nollie', 'Frill', 'Scryne', 'Padre', 40, 'Empleado', 284);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (338, 'Harriette', 'Brachell', 'Kisar', 'Hermano', 48, 'Empleado', 361);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (339, 'Banky', 'Larkings', 'Weetch', 'Hermano', 68, 'Empleado', 369);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (340, 'Dave', 'Thoresby', 'Pilgram', 'Padre', 60, 'Desconocido', 339);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (341, 'Marwin', 'Oherlihy', 'Westwater', 'Padre', 63, 'Desconocido', 305);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (342, 'Pietra', 'Hebbard', 'Geere', 'Padre', 48, 'Desconocido', 593);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (343, 'Carling', 'Caulcott', 'Lawrey', 'Hermano', 9, 'Desconocido', 99);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (344, 'Arlin', 'Cromarty', 'Harkness', 'Hermano', 14, 'Desconocido', 571);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (345, 'Finley', 'Felgate', 'Broadley', 'Sobrino', 52, 'Empresario', 748);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (346, 'Evonne', 'Beyn', 'Tyas', 'Hermano', 44, 'Desconocido', 731);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (347, 'Giusto', 'Topham', 'Dyble', 'Hermano', 8, 'Empleado', 469);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (348, 'Lydon', 'McNae', 'Dibb', 'Hermano', 34, 'Empleado', 165);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (349, 'Essy', 'Laverick', 'Maffei', 'Hermano', 15, 'Empleado', 598);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (350, 'Kelcey', 'Tukesby', 'Tichelaar', 'Hermano', 18, 'Empresario', 455);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (351, 'Noreen', 'Stilly', 'Loynes', 'Sobrino', 73, 'Empleado', 211);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (352, 'Katleen', 'Freegard', 'Scandrick', 'Padre', 25, 'Empresario', 639);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (353, 'Aldis', 'Halahan', 'Cavaney', 'Hermano', 26, 'Empleado', 63);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (354, 'Ginni', 'Marritt', 'Ducker', 'Padre', 41, 'Empresario', 101);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (355, 'Auberta', 'Labern', 'West-Frimley', 'Padre', 66, 'Desconocido', 94);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (356, 'Pat', 'Dobrowlski', 'Lamblot', 'Hermano', 46, 'Empleado', 700);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (357, 'Kareem', 'Linch', 'Stower', 'Padre', 13, 'Empleado', 590);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (358, 'Katrinka', 'De Blasiis', 'Sign', 'Padre', 46, 'Empresario', 732);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (359, 'Florencia', 'Garlic', 'Trowle', 'Hermano', 56, 'Empleado', 190);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (360, 'Bruce', 'Buckel', 'Brickdale', 'Sobrino', 72, 'Desconocido', 5);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (361, 'Cass', 'Nugent', 'Goldthorp', 'Padre', 28, 'Empleado', 26);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (362, 'Cyrillus', 'Eamer', 'Aviss', 'Padre', 16, 'Empleado', 352);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (363, 'Lief', 'Bonsul', 'Deakes', 'Hermano', 69, 'Desconocido', 437);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (364, 'Clarette', 'Schaffel', 'Frostdicke', 'Sobrino', 24, 'Empleado', 482);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (365, 'Susy', 'Stoner', 'Whittet', 'Hermano', 32, 'Empleado', 193);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (366, 'Cybil', 'Keyser', 'Ayliffe', 'Sobrino', 3, 'Empleado', 147);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (367, 'Nikolos', 'Klamman', 'Kuhwald', 'Padre', 11, 'Empleado', 710);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (368, 'Gabriel', 'Cahani', 'Markie', 'Hermano', 27, 'Empleado', 442);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (369, 'Jacynth', 'Johnke', 'Lindeboom', 'Hermano', 63, 'Desconocido', 272);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (370, 'Nevsa', 'Pinsent', 'Fuchs', 'Padre', 13, 'Empleado', 177);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (371, 'Chrisse', 'Blaxter', 'Fenkel', 'Sobrino', 70, 'Empleado', 680);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (372, 'Babbette', 'Aleksashin', 'Morot', 'Sobrino', 4, 'Empleado', 303);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (373, 'Angie', 'Pepineaux', 'Ferson', 'Padre', 28, 'Empleado', 330);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (374, 'Alfy', 'Rowlings', 'Silvers', 'Hermano', 14, 'Empleado', 697);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (375, 'Reta', 'Spiby', 'Cazereau', 'Sobrino', 7, 'Desconocido', 534);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (376, 'Cooper', 'Marlowe', 'Twiname', 'Hermano', 17, 'Empresario', 338);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (377, 'Corilla', 'Pechacek', 'Olley', 'Hermano', 48, 'Empleado', 358);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (378, 'Jimmie', 'Ludlam', 'Ankrett', 'Hermano', 63, 'Empleado', 380);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (379, 'Pasquale', 'Schwand', 'Andriesse', 'Hermano', 52, 'Desconocido', 90);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (380, 'Beth', 'Bunkle', 'MacNulty', 'Sobrino', 2, 'Empleado', 130);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (381, 'Flint', 'Wyllie', 'Wellbeloved', 'Hermano', 22, 'Empleado', 717);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (382, 'Perry', 'Fish', 'Tortis', 'Hermano', 32, 'Empresario', 635);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (383, 'Carri', 'Scatchard', 'Elman', 'Padre', 6, 'Empresario', 517);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (384, 'Stu', 'Maisey', 'Bathersby', 'Hermano', 19, 'Empleado', 587);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (385, 'Jory', 'Hardwell', 'Sleany', 'Padre', 7, 'Empleado', 80);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (386, 'Izak', 'Mansell', 'Paolino', 'Hermano', 5, 'Desconocido', 129);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (387, 'Adelle', 'Orrice', 'Straughan', 'Padre', 17, 'Empresario', 21);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (388, 'Kinnie', 'Panner', 'Pavey', 'Padre', 56, 'Desconocido', 127);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (389, 'Lurlene', 'Niessen', 'McKevitt', 'Hermano', 70, 'Empresario', 640);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (390, 'Goldy', 'Thumnel', 'Lindenberg', 'Hermano', 41, 'Empresario', 536);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (391, 'Jilly', 'Gulk', 'Yepiskov', 'Hermano', 35, 'Empleado', 197);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (392, 'Eilis', 'enzley', 'Folini', 'Hermano', 31, 'Desconocido', 70);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (393, 'Carlita', 'Bortoluzzi', 'Klainer', 'Padre', 54, 'Empresario', 420);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (394, 'Shelagh', 'Lalonde', 'Berre', 'Hermano', 10, 'Empleado', 704);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (395, 'Kaitlin', 'Greenstreet', 'Mapston', 'Hermano', 39, 'Desconocido', 310);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (396, 'Leslie', 'Manus', 'Cuttings', 'Sobrino', 12, 'Empleado', 130);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (397, 'Wallache', 'McHale', 'Ewestace', 'Hermano', 67, 'Desconocido', 33);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (398, 'Ashbey', 'Rigard', 'Friedenbach', 'Hermano', 28, 'Desconocido', 256);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (399, 'Vania', 'Hillitt', 'Robard', 'Hermano', 65, 'Empleado', 157);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (400, 'Louie', 'Shapiro', 'Southerton', 'Sobrino', 53, 'Empresario', 555);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (401, 'Aldridge', 'Haslum', 'Ayto', 'Sobrino', 62, 'Empleado', 343);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (402, 'Harriette', 'Penhallurick', 'Dike', 'Sobrino', 6, 'Empleado', 339);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (403, 'Lulita', 'Springthorp', 'Gaitley', 'Sobrino', 30, 'Empresario', 540);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (404, 'Artemas', 'Rivallant', 'Knifton', 'Hermano', 14, 'Empleado', 633);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (405, 'Andree', 'Tutton', 'Hunnicutt', 'Hermano', 70, 'Empresario', 696);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (406, 'Adelaide', 'Judkin', 'Forrestall', 'Sobrino', 69, 'Empresario', 420);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (407, 'Mildrid', 'Cumpsty', 'Haggett', 'Padre', 54, 'Empresario', 116);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (408, 'Gianna', 'Llop', 'Biskupski', 'Hermano', 10, 'Desconocido', 219);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (409, 'Urson', 'Creddon', 'Biaggioni', 'Hermano', 16, 'Empresario', 732);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (410, 'Isidoro', 'Lansdowne', 'Yendle', 'Hermano', 40, 'Desconocido', 103);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (411, 'Niko', 'Gammage', 'Syddie', 'Sobrino', 7, 'Empleado', 335);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (412, 'Hewie', 'Pedreschi', 'Placide', 'Hermano', 71, 'Desconocido', 732);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (413, 'Devlin', 'O'' Faherty', 'Hastelow', 'Hermano', 10, 'Empresario', 584);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (414, 'Baldwin', 'Diglin', 'Stichall', 'Padre', 13, 'Empresario', 585);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (415, 'Langsdon', 'Chmiel', 'Heap', 'Hermano', 64, 'Empleado', 30);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (416, 'Beverly', 'Enevold', 'Mosco', 'Padre', 73, 'Empleado', 128);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (417, 'Bil', 'Dench', 'Vinecombe', 'Hermano', 13, 'Empleado', 266);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (418, 'Nehemiah', 'Boatswain', 'Probert', 'Sobrino', 1, 'Desconocido', 691);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (419, 'Kathye', 'Worge', 'Glascott', 'Padre', 54, 'Empresario', 627);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (420, 'Sayre', 'Seiler', 'Hue', 'Hermano', 41, 'Empleado', 327);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (421, 'Nertie', 'Ruddock', 'Gentile', 'Hermano', 44, 'Empresario', 545);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (422, 'Fawne', 'Ownsworth', 'Bendel', 'Padre', 58, 'Empresario', 646);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (423, 'Rosetta', 'Coultard', 'Thieme', 'Sobrino', 51, 'Empleado', 206);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (424, 'Rorie', 'Ridett', 'Poulglais', 'Hermano', 16, 'Empleado', 582);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (425, 'Juliann', 'Matthew', 'Cradick', 'Padre', 58, 'Empleado', 459);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (426, 'Scotti', 'Sieur', 'Ayerst', 'Padre', 54, 'Empresario', 264);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (427, 'Patrica', 'Apple', 'Copes', 'Hermano', 39, 'Empresario', 565);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (428, 'Cristie', 'Rattery', 'Bannister', 'Hermano', 42, 'Empleado', 629);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (429, 'Nels', 'Geldard', 'Radborn', 'Hermano', 41, 'Empleado', 66);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (430, 'Benedikta', 'Hardinge', 'Ganley', 'Padre', 18, 'Empresario', 71);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (431, 'Mylo', 'Jeanon', 'Vasilic', 'Padre', 57, 'Empleado', 677);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (432, 'Benedetta', 'Pendre', 'Harper', 'Padre', 10, 'Empleado', 670);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (433, 'Shantee', 'Measor', 'Hugnin', 'Hermano', 56, 'Empleado', 265);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (434, 'Aidan', 'Guidi', 'Mont', 'Sobrino', 69, 'Empleado', 367);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (435, 'Aleece', 'Dreier', 'Heaslip', 'Hermano', 34, 'Empresario', 304);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (436, 'Patrizia', 'Bosche', 'Blasiak', 'Hermano', 32, 'Empleado', 533);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (437, 'Paddie', 'Oakeshott', 'O''Curran', 'Padre', 49, 'Empresario', 114);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (438, 'Scot', 'Gratland', 'Auld', 'Hermano', 56, 'Empleado', 459);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (439, 'Josias', 'Natwick', 'Akeherst', 'Sobrino', 74, 'Empleado', 598);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (440, 'Dahlia', 'Feechum', 'Ciciura', 'Hermano', 36, 'Empresario', 416);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (441, 'Stacie', 'Sturney', 'Cassius', 'Hermano', 16, 'Empresario', 419);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (442, 'Virgil', 'Putley', 'Coe', 'Sobrino', 6, 'Empleado', 88);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (443, 'Sander', 'Guyot', 'Humphris', 'Hermano', 67, 'Desconocido', 683);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (444, 'Rockey', 'Skone', 'Greenrde', 'Padre', 13, 'Desconocido', 568);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (445, 'Kelli', 'Hellikes', 'Ambrozewicz', 'Hermano', 4, 'Desconocido', 178);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (446, 'Willie', 'Calderbank', 'Amott', 'Padre', 10, 'Empleado', 216);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (447, 'Ivory', 'Dow', 'Climson', 'Padre', 24, 'Empresario', 284);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (448, 'Alisha', 'McGrouther', 'Bleiman', 'Sobrino', 39, 'Empleado', 78);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (449, 'Dennet', 'Penman', 'Martensen', 'Hermano', 40, 'Empleado', 546);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (450, 'Mariellen', 'Barreau', 'Corradino', 'Sobrino', 26, 'Empleado', 316);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (451, 'Sileas', 'Hutchins', 'Lawlor', 'Hermano', 46, 'Desconocido', 5);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (452, 'Bailie', 'Eustis', 'Bool', 'Padre', 64, 'Empresario', 195);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (453, 'Wally', 'Gyorgy', 'Claringbold', 'Padre', 34, 'Desconocido', 341);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (454, 'Wanids', 'Spehr', 'Bickersteth', 'Hermano', 58, 'Desconocido', 677);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (455, 'Agna', 'Slyman', 'Yeowell', 'Hermano', 55, 'Empresario', 426);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (456, 'Dana', 'Stilling', 'Scorthorne', 'Hermano', 19, 'Empleado', 358);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (457, 'Melisa', 'Longthorne', 'Zannolli', 'Hermano', 52, 'Desconocido', 637);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (458, 'Alain', 'Renbold', 'Caukill', 'Sobrino', 15, 'Empleado', 536);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (459, 'Irwin', 'Burns', 'Handrik', 'Padre', 54, 'Empleado', 88);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (460, 'Annetta', 'Heigl', 'Serjeantson', 'Padre', 6, 'Desconocido', 437);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (461, 'Cornelius', 'Parsand', 'Van den Velde', 'Hermano', 70, 'Empresario', 409);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (462, 'Koren', 'Keysall', 'Vynoll', 'Padre', 71, 'Empresario', 447);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (463, 'Lorrayne', 'Normant', 'Elson', 'Sobrino', 54, 'Empleado', 713);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (464, 'Kyle', 'Wayte', 'Goodhall', 'Hermano', 73, 'Empresario', 33);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (465, 'Clarey', 'Ainsbury', 'Jentzsch', 'Sobrino', 9, 'Empleado', 595);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (466, 'Susette', 'Walklate', 'Petera', 'Sobrino', 29, 'Empleado', 506);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (467, 'Geri', 'Uglow', 'Gilstin', 'Padre', 59, 'Empleado', 622);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (468, 'Marion', 'Estrella', 'Legon', 'Padre', 39, 'Empresario', 529);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (469, 'Isa', 'Loughead', 'Climer', 'Sobrino', 42, 'Empleado', 677);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (470, 'Dugald', 'Speedy', 'Blunsden', 'Hermano', 3, 'Empleado', 374);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (471, 'Bunnie', 'Merrgan', 'Gudgin', 'Hermano', 61, 'Empresario', 186);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (472, 'Fowler', 'Surmon', 'Drewitt', 'Hermano', 70, 'Empleado', 198);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (473, 'Cookie', 'Scotchbourouge', 'Longhorne', 'Sobrino', 66, 'Empleado', 269);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (474, 'Aguste', 'Oblein', 'Harses', 'Hermano', 57, 'Empleado', 636);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (475, 'Vinni', 'Balmforth', 'Vinter', 'Hermano', 67, 'Empleado', 517);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (476, 'Britney', 'Skeldon', 'Easun', 'Hermano', 49, 'Empleado', 639);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (477, 'Davon', 'Conibere', 'Regler', 'Padre', 16, 'Empresario', 607);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (478, 'Damian', 'Welling', 'Isworth', 'Hermano', 49, 'Empleado', 336);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (479, 'Leena', 'Hateley', 'Keely', 'Hermano', 68, 'Empleado', 520);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (480, 'Colan', 'Goreway', 'Leverentz', 'Padre', 9, 'Empresario', 316);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (481, 'Yuri', 'Abramovitz', 'Edgcumbe', 'Sobrino', 32, 'Desconocido', 450);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (482, 'Gian', 'Sydry', 'Bim', 'Padre', 7, 'Desconocido', 2);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (483, 'Peta', 'Jakubovicz', 'Shevlane', 'Sobrino', 22, 'Desconocido', 749);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (484, 'Etheline', 'Boice', 'Putterill', 'Hermano', 54, 'Empleado', 527);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (485, 'Teodor', 'Kear', 'Pilsbury', 'Hermano', 14, 'Desconocido', 335);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (486, 'Erinn', 'Jakeman', 'Clothier', 'Hermano', 14, 'Empleado', 318);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (487, 'Joleen', 'Chappel', 'Bolam', 'Hermano', 33, 'Empresario', 168);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (488, 'Andonis', 'De Goey', 'Pilmer', 'Hermano', 6, 'Empleado', 397);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (489, 'Sol', 'Mowbury', 'Scading', 'Sobrino', 1, 'Desconocido', 222);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (490, 'Jonell', 'Northage', 'Bugg', 'Sobrino', 61, 'Desconocido', 633);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (491, 'Paulie', 'Graber', 'Glave', 'Hermano', 62, 'Empleado', 188);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (492, 'Raine', 'Parradice', 'Temprell', 'Hermano', 20, 'Empleado', 402);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (493, 'Les', 'Ruck', 'Kensington', 'Hermano', 7, 'Desconocido', 554);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (494, 'Nanny', 'Brain', 'Haslum', 'Hermano', 55, 'Empleado', 237);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (495, 'Melisenda', 'Hawler', 'Gosling', 'Padre', 72, 'Empresario', 66);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (496, 'Wallis', 'Blade', 'Rosendorf', 'Hermano', 65, 'Desconocido', 416);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (497, 'Quintina', 'Dutson', 'Cozzi', 'Hermano', 73, 'Desconocido', 652);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (498, 'Alexio', 'Flear', 'Frunks', 'Padre', 11, 'Empleado', 357);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (499, 'Lyndsie', 'Thomann', 'Ogle', 'Hermano', 10, 'Empresario', 92);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (500, 'Gisella', 'Barthelet', 'Goscar', 'Padre', 44, 'Empleado', 659);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (501, 'Andromache', 'Hinsche', 'Adicot', 'Padre', 54, 'Empleado', 63);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (502, 'Dickie', 'Heavy', 'Knellen', 'Sobrino', 31, 'Empleado', 659);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (503, 'Adrian', 'Longea', 'Dyott', 'Hermano', 62, 'Empresario', 605);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (504, 'Alvy', 'Harwell', 'Goggen', 'Padre', 9, 'Desconocido', 17);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (505, 'Piper', 'Bremen', 'Lelievre', 'Hermano', 52, 'Desconocido', 207);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (506, 'Anatol', 'Brandon', 'Berndtssen', 'Padre', 33, 'Desconocido', 208);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (507, 'Antonina', 'Willoughley', 'Kopje', 'Hermano', 32, 'Empleado', 402);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (508, 'Laverne', 'Kelle', 'Broadist', 'Hermano', 66, 'Empleado', 403);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (509, 'Vera', 'Tarply', 'Oels', 'Hermano', 34, 'Empleado', 389);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (510, 'Connie', 'MacSorley', 'Cumberlidge', 'Hermano', 20, 'Desconocido', 417);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (511, 'Stearne', 'Odams', 'Emsden', 'Hermano', 32, 'Desconocido', 731);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (512, 'Nicola', 'Hattrick', 'Midford', 'Hermano', 72, 'Empresario', 564);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (513, 'Loraine', 'Coot', 'Baison', 'Hermano', 20, 'Empresario', 472);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (514, 'Phoebe', 'Rosier', 'Langelaan', 'Padre', 9, 'Empleado', 678);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (515, 'Chalmers', 'Tellenbrook', 'Shackel', 'Padre', 22, 'Empleado', 548);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (516, 'Jesse', 'Millis', 'Cocozza', 'Padre', 8, 'Desconocido', 375);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (517, 'Chen', 'Mortel', 'Trank', 'Hermano', 4, 'Empleado', 613);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (518, 'Rosemaria', 'Ronca', 'Monnoyer', 'Hermano', 70, 'Empleado', 383);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (519, 'Estel', 'Maven', 'Mongan', 'Sobrino', 36, 'Empleado', 297);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (520, 'Cristi', 'Rother', 'Siggers', 'Sobrino', 29, 'Empresario', 59);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (521, 'Brigham', 'Phair', 'Gounin', 'Padre', 26, 'Empleado', 159);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (522, 'Ibby', 'Cavey', 'Ruffli', 'Hermano', 34, 'Empleado', 625);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (523, 'Muire', 'Skedgell', 'Yegorev', 'Hermano', 32, 'Desconocido', 32);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (524, 'Sherill', 'Danielian', 'Beckley', 'Sobrino', 57, 'Empresario', 553);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (525, 'Melinda', 'Morant', 'Rabl', 'Hermano', 41, 'Desconocido', 52);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (526, 'Nolan', 'Gallgher', 'Russan', 'Hermano', 12, 'Desconocido', 729);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (527, 'Pearl', 'Heinig', 'Selwyne', 'Sobrino', 31, 'Empresario', 574);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (528, 'Patrizia', 'Akister', 'Waszczyk', 'Hermano', 53, 'Empresario', 182);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (529, 'Lexine', 'Parnell', 'Waliszek', 'Sobrino', 48, 'Desconocido', 74);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (530, 'Bertie', 'Duddridge', 'Hatfull', 'Sobrino', 39, 'Empleado', 221);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (531, 'Costanza', 'Mularkey', 'Deakin', 'Sobrino', 65, 'Empleado', 84);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (532, 'Sawyer', 'Riddoch', 'Comino', 'Hermano', 37, 'Empresario', 227);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (533, 'Simeon', 'Cramond', 'Thomen', 'Hermano', 12, 'Empresario', 646);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (534, 'Ag', 'Kirrage', 'Jumeau', 'Sobrino', 35, 'Empleado', 299);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (535, 'Mab', 'Elnaugh', 'Matkovic', 'Hermano', 74, 'Empleado', 157);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (536, 'Alfie', 'Gheeraert', 'Skerman', 'Padre', 63, 'Empleado', 418);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (537, 'Kellen', 'Clemmow', 'Ewings', 'Padre', 27, 'Desconocido', 688);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (538, 'Barney', 'Lundbech', 'Aujean', 'Padre', 26, 'Empleado', 292);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (539, 'Patin', 'Goodee', 'Barme', 'Hermano', 75, 'Empresario', 208);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (540, 'Guido', 'Wadeson', 'Hanny', 'Padre', 26, 'Empresario', 463);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (541, 'Luther', 'Preble', 'Ronca', 'Hermano', 23, 'Desconocido', 449);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (542, 'Kath', 'Gravy', 'Sandwick', 'Hermano', 60, 'Desconocido', 589);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (543, 'Garvey', 'Bayles', 'Ferrucci', 'Hermano', 55, 'Empresario', 721);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (544, 'Delores', 'Elsbury', 'Waylen', 'Padre', 60, 'Empleado', 614);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (545, 'Greer', 'Librey', 'Legrave', 'Padre', 52, 'Empleado', 20);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (546, 'Davide', 'Jentzsch', 'Boldero', 'Sobrino', 38, 'Empleado', 565);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (547, 'Say', 'Bleddon', 'Hazelhurst', 'Hermano', 9, 'Empresario', 341);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (548, 'Aleksandr', 'Harkness', 'Charnock', 'Sobrino', 31, 'Desconocido', 169);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (549, 'Benson', 'Burren', 'Rock', 'Hermano', 60, 'Desconocido', 364);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (550, 'Lorette', 'Brilon', 'Hayer', 'Sobrino', 52, 'Empleado', 612);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (551, 'Hadlee', 'Venmore', 'Argabrite', 'Sobrino', 67, 'Desconocido', 239);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (552, 'Fianna', 'Napoleon', 'Senner', 'Padre', 15, 'Empleado', 731);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (553, 'Timothy', 'O''Henehan', 'Creed', 'Padre', 3, 'Desconocido', 32);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (554, 'Kev', 'Iacomi', 'Stidworthy', 'Padre', 2, 'Empleado', 576);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (555, 'Purcell', 'Turton', 'Rolland', 'Hermano', 28, 'Empleado', 346);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (556, 'Roanna', 'Elwell', 'Giacomoni', 'Padre', 33, 'Empleado', 717);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (557, 'Sal', 'Macek', 'Bramble', 'Sobrino', 68, 'Empresario', 454);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (558, 'Kimberly', 'Stebbings', 'Lorkings', 'Sobrino', 31, 'Empleado', 360);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (559, 'Corena', 'Ambrose', 'Sibbert', 'Padre', 30, 'Empresario', 289);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (560, 'Parnell', 'Olle', 'Tryme', 'Padre', 64, 'Empleado', 2);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (561, 'Leonie', 'Dudek', 'Chatin', 'Hermano', 33, 'Desconocido', 56);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (562, 'Alicea', 'Midner', 'Audsley', 'Padre', 26, 'Empleado', 521);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (563, 'Finley', 'Varker', 'McMyler', 'Padre', 25, 'Empleado', 351);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (564, 'Joelie', 'Edensor', 'Antonazzi', 'Hermano', 33, 'Empresario', 594);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (565, 'Candis', 'Cook', 'De Ferraris', 'Sobrino', 8, 'Empleado', 122);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (566, 'Deni', 'Hartwright', 'Kenson', 'Hermano', 31, 'Desconocido', 320);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (567, 'Annamarie', 'Favell', 'Sandbach', 'Hermano', 7, 'Desconocido', 443);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (568, 'Arleen', 'Zealy', 'Marques', 'Hermano', 1, 'Empleado', 577);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (569, 'Weber', 'Grafham', 'Harnes', 'Sobrino', 68, 'Empleado', 613);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (570, 'Haslett', 'Jenking', 'Toolan', 'Padre', 39, 'Empleado', 129);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (571, 'Ephrayim', 'Bielefeld', 'Longthorne', 'Hermano', 28, 'Empleado', 593);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (572, 'Cort', 'Jakubiak', 'Scarrisbrick', 'Sobrino', 46, 'Empleado', 564);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (573, 'Rochette', 'Weir', 'Bruyett', 'Hermano', 53, 'Empresario', 531);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (574, 'Kirbie', 'Skegg', 'Jeratt', 'Hermano', 54, 'Desconocido', 409);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (575, 'Falito', 'Peyton', 'Sansbury', 'Hermano', 73, 'Empleado', 200);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (576, 'Addi', 'Flegg', 'Hedman', 'Padre', 75, 'Empleado', 730);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (577, 'Hubey', 'Ramos', 'Cowap', 'Hermano', 25, 'Empleado', 502);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (578, 'Parker', 'Rydeard', 'Liebmann', 'Sobrino', 72, 'Empleado', 158);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (579, 'Sig', 'Botwood', 'Standall', 'Sobrino', 18, 'Empresario', 80);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (580, 'Bendick', 'Feehan', 'Brunone', 'Hermano', 54, 'Desconocido', 603);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (581, 'Chad', 'Cluse', 'Whatford', 'Padre', 59, 'Empresario', 636);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (582, 'Shalna', 'Griffey', 'Bilsland', 'Padre', 63, 'Desconocido', 160);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (583, 'Jyoti', 'Mussard', 'Izchaki', 'Hermano', 6, 'Empresario', 153);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (584, 'Faustine', 'Breming', 'Farryann', 'Padre', 40, 'Empleado', 74);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (585, 'Mikey', 'Lars', 'O''Caine', 'Padre', 12, 'Empleado', 200);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (586, 'Erminia', 'Dennison', 'Kopp', 'Hermano', 53, 'Empleado', 218);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (587, 'Rollins', 'Drews', 'Robichon', 'Hermano', 59, 'Empresario', 559);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (588, 'Dael', 'Dearn', 'Carnegy', 'Hermano', 37, 'Empleado', 230);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (589, 'Frasier', 'Orrice', 'Matyashev', 'Padre', 15, 'Empleado', 329);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (590, 'Fred', 'Storek', 'McDermid', 'Sobrino', 73, 'Desconocido', 492);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (591, 'Syman', 'Bletsor', 'Goldsberry', 'Hermano', 71, 'Empleado', 279);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (592, 'Editha', 'Marzelli', 'Henke', 'Hermano', 51, 'Empresario', 142);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (593, 'Ade', 'Cauldwell', 'Magowan', 'Padre', 11, 'Empleado', 284);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (594, 'Ulrikaumeko', 'Fredson', 'Stuchbury', 'Sobrino', 63, 'Empleado', 404);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (595, 'Kermit', 'Peploe', 'Sheraton', 'Padre', 30, 'Empresario', 561);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (596, 'Georgiana', 'Cornils', 'Pagin', 'Sobrino', 35, 'Empresario', 112);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (597, 'Danni', 'Wethers', 'Gringley', 'Hermano', 71, 'Empleado', 137);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (598, 'Stepha', 'Tilsley', 'Hurle', 'Hermano', 44, 'Empresario', 10);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (599, 'Erskine', 'Bernardoux', 'Dreier', 'Hermano', 46, 'Empresario', 655);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (600, 'Dora', 'Blannin', 'Furzer', 'Padre', 26, 'Empleado', 440);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (601, 'Sergent', 'Bonsall', 'McCrum', 'Hermano', 14, 'Empleado', 33);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (602, 'Svend', 'Duffie', 'Swindlehurst', 'Hermano', 42, 'Empleado', 592);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (603, 'Lettie', 'Burnsall', 'Dirr', 'Sobrino', 25, 'Desconocido', 740);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (604, 'Clarita', 'Trotton', 'Jorat', 'Sobrino', 69, 'Desconocido', 169);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (605, 'Jeffie', 'Powlett', 'Tyt', 'Padre', 12, 'Desconocido', 616);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (606, 'Murdock', 'Curror', 'Smallridge', 'Hermano', 45, 'Empleado', 264);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (607, 'Allie', 'Naismith', 'Busk', 'Padre', 24, 'Empresario', 225);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (608, 'Herold', 'Staveley', 'Buxcey', 'Padre', 39, 'Empleado', 481);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (609, 'Gale', 'Twine', 'Coffee', 'Hermano', 5, 'Empleado', 682);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (610, 'Vail', 'Hardes', 'Esposi', 'Hermano', 23, 'Empleado', 599);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (611, 'Jack', 'Benet', 'Aleshintsev', 'Hermano', 54, 'Empleado', 280);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (612, 'Silvain', 'Pareman', 'Feron', 'Padre', 37, 'Empleado', 726);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (613, 'Kareem', 'Thorsby', 'Lesmonde', 'Hermano', 72, 'Empleado', 209);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (614, 'Perry', 'Fri', 'Klimontovich', 'Sobrino', 3, 'Empleado', 318);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (615, 'Freida', 'Priddie', 'Gittens', 'Sobrino', 64, 'Empleado', 236);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (616, 'Marya', 'Simononsky', 'Hefner', 'Hermano', 13, 'Empleado', 267);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (617, 'Sandi', 'Attawell', 'Cuttings', 'Sobrino', 27, 'Empresario', 75);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (618, 'Thomas', 'Lantaff', 'Raulstone', 'Hermano', 39, 'Empleado', 656);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (619, 'Dominga', 'Falk', 'Como', 'Hermano', 19, 'Empleado', 577);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (620, 'Adriana', 'Pareman', 'Wylder', 'Padre', 40, 'Empresario', 617);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (621, 'Jo-ann', 'Goldhawk', 'Corain', 'Hermano', 29, 'Empleado', 335);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (622, 'Beltran', 'Burress', 'Elvish', 'Padre', 12, 'Desconocido', 474);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (623, 'Abigail', 'Creser', 'Chanson', 'Padre', 10, 'Empleado', 738);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (624, 'Loree', 'Becks', 'Nurden', 'Sobrino', 3, 'Empresario', 488);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (625, 'Carmencita', 'Woodhead', 'Oswald', 'Padre', 62, 'Empresario', 497);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (626, 'Arline', 'Hefford', 'Pammenter', 'Sobrino', 41, 'Empresario', 700);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (627, 'Delphine', 'Kenneway', 'Pepperrall', 'Hermano', 72, 'Empresario', 610);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (628, 'Magdalene', 'Bulbrook', 'Dougliss', 'Hermano', 60, 'Empresario', 437);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (629, 'Gaylord', 'Borgnol', 'Jellis', 'Hermano', 72, 'Desconocido', 175);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (630, 'Cathe', 'Lyston', 'Kluger', 'Hermano', 41, 'Empleado', 737);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (631, 'Zaccaria', 'Dainty', 'Pluthero', 'Sobrino', 13, 'Desconocido', 22);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (632, 'Geno', 'Kilalea', 'Pothergill', 'Hermano', 63, 'Empleado', 425);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (633, 'Wakefield', 'Balnave', 'Jacquemard', 'Hermano', 53, 'Empleado', 361);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (634, 'Beverly', 'Kahn', 'Demelt', 'Hermano', 55, 'Empleado', 711);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (635, 'Melisandra', 'Winsiowiecki', 'Hugenin', 'Hermano', 10, 'Empleado', 266);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (636, 'Debera', 'De Francesco', 'Cabral', 'Sobrino', 3, 'Empleado', 460);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (637, 'Kristoffer', 'Quarton', 'Mcsarry', 'Sobrino', 23, 'Empleado', 673);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (638, 'Irma', 'Liggens', 'Yeskov', 'Hermano', 6, 'Empleado', 10);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (639, 'Pennie', 'Ropkins', 'Rabjohn', 'Hermano', 19, 'Empresario', 444);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (640, 'Jacenta', 'Bachman', 'Grenter', 'Padre', 2, 'Empleado', 691);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (641, 'Karen', 'Jory', 'Brognot', 'Hermano', 55, 'Desconocido', 139);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (642, 'Jerad', 'Cartwight', 'Batstone', 'Sobrino', 25, 'Empleado', 730);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (643, 'Hector', 'Garber', 'Purviss', 'Padre', 4, 'Empleado', 345);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (644, 'Fred', 'Farrah', 'Carillo', 'Hermano', 46, 'Empleado', 597);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (645, 'Fredelia', 'Hagan', 'Peattie', 'Padre', 22, 'Empresario', 562);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (646, 'Emelita', 'Tesh', 'Jennrich', 'Padre', 41, 'Empleado', 240);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (647, 'Licha', 'Riedel', 'Dictus', 'Padre', 2, 'Desconocido', 225);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (648, 'Alex', 'Doogood', 'Cantu', 'Padre', 15, 'Empleado', 262);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (649, 'Ethelind', 'Georgi', 'Cockshut', 'Sobrino', 27, 'Empleado', 381);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (650, 'Kizzie', 'Ankrett', 'Reisenstein', 'Hermano', 10, 'Desconocido', 465);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (651, 'Gherardo', 'Murden', 'Redferne', 'Sobrino', 53, 'Empresario', 48);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (652, 'Leese', 'Rubra', 'Ogbourne', 'Sobrino', 33, 'Empresario', 733);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (653, 'Banky', 'Gooble', 'Sargeaunt', 'Hermano', 42, 'Desconocido', 484);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (654, 'Clemmy', 'Tremblett', 'Lidgertwood', 'Hermano', 10, 'Empleado', 704);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (655, 'Kane', 'Pabst', 'Tesimon', 'Hermano', 28, 'Empleado', 348);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (656, 'Boote', 'Cartmail', 'Scolts', 'Hermano', 34, 'Empleado', 453);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (657, 'Izzy', 'Thaxton', 'Ledgeway', 'Padre', 51, 'Desconocido', 484);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (658, 'Coraline', 'Gloucester', 'Brunicke', 'Padre', 66, 'Empleado', 648);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (659, 'Eduardo', 'Dondon', 'Arderne', 'Hermano', 6, 'Empleado', 34);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (660, 'Barbabra', 'Greenlies', 'Wastie', 'Padre', 46, 'Empleado', 183);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (661, 'Beverley', 'McPhilemy', 'Mill', 'Hermano', 75, 'Empleado', 63);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (662, 'Merle', 'Durrand', 'Holehouse', 'Sobrino', 19, 'Empleado', 27);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (663, 'Shellie', 'Cicculi', 'Smout', 'Padre', 22, 'Empleado', 461);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (664, 'Billy', 'Paur', 'Paliser', 'Sobrino', 3, 'Empleado', 558);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (665, 'Cathleen', 'McCurtin', 'Andretti', 'Sobrino', 17, 'Empresario', 387);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (666, 'Zarla', 'Posten', 'Weatherill', 'Hermano', 40, 'Empleado', 158);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (667, 'Creigh', 'Relf', 'MacCosto', 'Sobrino', 10, 'Empleado', 515);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (668, 'Meris', 'Rowena', 'Bullough', 'Hermano', 56, 'Empleado', 659);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (669, 'Erin', 'Milkins', 'Thebe', 'Hermano', 7, 'Desconocido', 153);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (670, 'Florette', 'Hanes', 'Rizzardini', 'Sobrino', 46, 'Empleado', 41);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (671, 'Vicki', 'Shoulder', 'Sillars', 'Padre', 50, 'Desconocido', 230);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (672, 'Mikey', 'Maleham', 'Croser', 'Sobrino', 69, 'Empresario', 578);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (673, 'Carrol', 'Wailes', 'Spooner', 'Padre', 14, 'Empleado', 451);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (674, 'Simona', 'Halsted', 'Gomar', 'Padre', 4, 'Empleado', 469);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (675, 'Valera', 'Kleisle', 'Duchart', 'Sobrino', 3, 'Empleado', 329);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (676, 'Melva', 'Curless', 'Caves', 'Hermano', 21, 'Empleado', 28);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (677, 'Wash', 'Slimm', 'Desantis', 'Hermano', 21, 'Empresario', 305);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (678, 'Corbie', 'Oneile', 'Cannavan', 'Padre', 39, 'Desconocido', 367);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (679, 'Lyndsay', 'Ferrotti', 'Lorans', 'Hermano', 70, 'Desconocido', 252);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (680, 'Jill', 'Tidey', 'Meanwell', 'Hermano', 36, 'Empleado', 674);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (681, 'Terrye', 'Lorrain', 'Hunnicot', 'Sobrino', 73, 'Empleado', 478);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (682, 'Tatiana', 'Sibbet', 'Rickert', 'Padre', 19, 'Empleado', 703);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (683, 'Katti', 'Grout', 'Burnapp', 'Hermano', 75, 'Empresario', 416);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (684, 'Kendricks', 'Akenhead', 'Speer', 'Hermano', 11, 'Desconocido', 243);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (685, 'Drusi', 'Dumini', 'Connop', 'Padre', 69, 'Empleado', 525);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (686, 'Lynde', 'Scholtz', 'Ellerman', 'Hermano', 71, 'Empresario', 192);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (687, 'Carson', 'Flaunders', 'Tinline', 'Padre', 53, 'Empleado', 130);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (688, 'Gavin', 'Cawdron', 'Kebell', 'Hermano', 35, 'Empresario', 20);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (689, 'Issiah', 'Lennie', 'Easthope', 'Hermano', 53, 'Desconocido', 406);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (690, 'Vanya', 'Rate', 'Goaley', 'Sobrino', 42, 'Empresario', 22);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (691, 'Piggy', 'Roelvink', 'Amphlett', 'Hermano', 36, 'Empresario', 463);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (692, 'Nanni', 'Faier', 'Ballintime', 'Hermano', 51, 'Desconocido', 449);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (693, 'Tanitansy', 'Benedettini', 'Giffard', 'Hermano', 27, 'Desconocido', 449);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (694, 'Meris', 'Hoys', 'Farrey', 'Hermano', 10, 'Empleado', 545);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (695, 'Margaret', 'Gosse', 'Paulillo', 'Hermano', 35, 'Empleado', 568);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (696, 'Anica', 'Belt', 'Masser', 'Hermano', 3, 'Empresario', 66);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (697, 'Lief', 'Heephy', 'Chippin', 'Hermano', 17, 'Desconocido', 540);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (698, 'Luisa', 'Tirrey', 'Madeley', 'Padre', 4, 'Empleado', 421);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (699, 'Kizzie', 'Derby', 'Robak', 'Padre', 9, 'Empresario', 192);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (700, 'Hube', 'Pennycuick', 'Gallamore', 'Sobrino', 38, 'Empleado', 667);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (701, 'Reamonn', 'McFeate', 'Summerside', 'Sobrino', 19, 'Empleado', 539);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (702, 'Teddie', 'Micheu', 'Johanning', 'Hermano', 41, 'Empresario', 17);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (703, 'Noni', 'Topham', 'Genery', 'Sobrino', 26, 'Empleado', 637);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (704, 'Whitby', 'Noulton', 'Carthew', 'Hermano', 74, 'Empresario', 527);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (705, 'Mendy', 'McAlees', 'Bidewel', 'Padre', 39, 'Empleado', 638);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (706, 'Olive', 'Polfer', 'Morrallee', 'Padre', 39, 'Empresario', 749);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (707, 'Sam', 'Heaffey', 'Claeskens', 'Hermano', 15, 'Empresario', 196);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (708, 'Hoebart', 'De Bruijne', 'Marquez', 'Hermano', 64, 'Empleado', 178);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (709, 'Devan', 'Farris', 'Boards', 'Hermano', 70, 'Empresario', 346);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (710, 'Osbert', 'Boteman', 'Scougall', 'Hermano', 44, 'Empleado', 708);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (711, 'Ramonda', 'Minnette', 'Warland', 'Sobrino', 4, 'Empleado', 285);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (712, 'Lindy', 'Murdy', 'Aloshikin', 'Sobrino', 4, 'Empresario', 90);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (713, 'Emmi', 'Dowall', 'Karpfen', 'Hermano', 25, 'Empresario', 266);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (714, 'Helenelizabeth', 'Boscher', 'Landal', 'Hermano', 21, 'Empleado', 726);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (715, 'Cicely', 'Dovermann', 'Bastock', 'Sobrino', 9, 'Desconocido', 539);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (716, 'Crissy', 'Alekhov', 'Silcocks', 'Hermano', 12, 'Empleado', 636);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (717, 'Pamella', 'Dunckley', 'Vasyukhin', 'Hermano', 62, 'Desconocido', 283);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (718, 'Nollie', 'Tack', 'Knath', 'Hermano', 46, 'Desconocido', 579);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (719, 'Ann-marie', 'Leasor', 'Ordelt', 'Sobrino', 68, 'Empleado', 455);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (720, 'Rana', 'Densham', 'Chartres', 'Hermano', 11, 'Empleado', 458);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (721, 'Richie', 'Keggins', 'Greenland', 'Padre', 68, 'Empleado', 673);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (722, 'Tremayne', 'Stoney', 'Braiden', 'Hermano', 7, 'Empleado', 182);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (723, 'Tabbitha', 'Guare', 'Gegay', 'Hermano', 75, 'Desconocido', 738);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (724, 'Tobias', 'Jessope', 'Blagden', 'Hermano', 33, 'Empresario', 518);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (725, 'Alison', 'McKinn', 'Lankester', 'Hermano', 34, 'Empleado', 619);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (726, 'Flossie', 'Allbon', 'Hagan', 'Hermano', 69, 'Empresario', 298);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (727, 'Romy', 'Stendall', 'Eddolls', 'Sobrino', 56, 'Empleado', 221);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (728, 'Keene', 'Brekonridge', 'Wood', 'Padre', 58, 'Desconocido', 295);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (729, 'Madelena', 'Gabriely', 'Braiden', 'Hermano', 58, 'Empleado', 218);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (730, 'Billie', 'Coolahan', 'Robottham', 'Padre', 47, 'Desconocido', 124);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (731, 'Sandra', 'Belfitt', 'Tompkinson', 'Padre', 41, 'Empleado', 355);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (732, 'Alexei', 'Torrie', 'Benedicte', 'Hermano', 41, 'Empleado', 9);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (733, 'Reuven', 'Mounfield', 'Linguard', 'Sobrino', 74, 'Empleado', 22);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (734, 'Ethelbert', 'Donke', 'Azam', 'Hermano', 61, 'Empleado', 431);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (735, 'Mandie', 'O'' Molan', 'Hyndman', 'Padre', 15, 'Empresario', 746);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (736, 'Cory', 'Cord', 'Fewell', 'Sobrino', 57, 'Desconocido', 749);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (737, 'Dieter', 'Tiddeman', 'Sheran', 'Hermano', 17, 'Empleado', 702);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (738, 'Petronilla', 'Bugg', 'Tunny', 'Hermano', 19, 'Empresario', 249);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (739, 'Miguelita', 'Kelner', 'McGonnell', 'Sobrino', 71, 'Empresario', 2);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (740, 'Cecily', 'Pfeifer', 'Fido', 'Hermano', 36, 'Empleado', 183);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (741, 'Bentlee', 'Glassard', 'Hackleton', 'Sobrino', 69, 'Empresario', 642);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (742, 'Saudra', 'Osipenko', 'Boshere', 'Hermano', 23, 'Empleado', 374);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (743, 'Alessandra', 'Girardini', 'Kaye', 'Hermano', 61, 'Empresario', 749);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (744, 'Christoper', 'Fiveash', 'Teodori', 'Sobrino', 61, 'Empleado', 202);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (745, 'Marco', 'Bertenshaw', 'Scoates', 'Padre', 69, 'Empleado', 257);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (746, 'Jenelle', 'Jarry', 'Lergan', 'Padre', 72, 'Desconocido', 734);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (747, 'Marysa', 'Freake', 'Perrygo', 'Sobrino', 34, 'Empresario', 673);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (748, 'Appolonia', 'Crew', 'Kerridge', 'Hermano', 68, 'Empleado', 628);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (749, 'Salmon', 'Crowe', 'Wetwood', 'Hermano', 71, 'Empleado', 385);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (750, 'Donica', 'Itzhak', 'Pummell', 'Hermano', 42, 'Desconocido', 732);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (751, 'Archy', 'Lean', 'Banbrigge', 'Hermano', 20, 'Empresario', 328);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (752, 'Anatollo', 'Binton', 'Icom', 'Sobrino', 42, 'Empresario', 226);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (753, 'Kingsley', 'Cossam', 'Vamplew', 'Hermano', 70, 'Desconocido', 727);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (754, 'Koenraad', 'Slinger', 'Cardenas', 'Sobrino', 61, 'Empleado', 583);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (755, 'Rona', 'Simonaitis', 'Volcker', 'Hermano', 31, 'Empleado', 88);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (756, 'Elisha', 'Duro', 'Laffan', 'Padre', 34, 'Empresario', 548);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (757, 'Tulley', 'Bergstrand', 'Dorman', 'Hermano', 73, 'Empleado', 553);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (758, 'Bald', 'Kift', 'Vallack', 'Hermano', 40, 'Empleado', 740);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (759, 'Kent', 'Dunstan', 'Marder', 'Sobrino', 72, 'Empleado', 450);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (760, 'Albert', 'Neve', 'Cresswell', 'Hermano', 27, 'Empleado', 687);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (761, 'Alair', 'Dowyer', 'O''Regan', 'Hermano', 44, 'Empresario', 227);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (762, 'Misti', 'Seabourne', 'Tankin', 'Sobrino', 8, 'Empresario', 245);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (763, 'Noam', 'Dudmarsh', 'Jaimez', 'Padre', 73, 'Empleado', 646);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (764, 'Gilbert', 'Mudle', 'Eblein', 'Padre', 63, 'Empleado', 675);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (765, 'Marna', 'Rattery', 'O''Sullivan', 'Padre', 8, 'Empleado', 51);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (766, 'Elysha', 'Vittery', 'Challice', 'Hermano', 68, 'Desconocido', 318);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (767, 'Meridith', 'Tolliday', 'Tarbet', 'Padre', 28, 'Desconocido', 68);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (768, 'Devora', 'Morot', 'Biaggi', 'Padre', 30, 'Desconocido', 537);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (769, 'Ivie', 'Tredger', 'Patesel', 'Sobrino', 55, 'Desconocido', 734);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (770, 'Kelsy', 'Caudrelier', 'Audritt', 'Padre', 28, 'Empleado', 719);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (771, 'Boyd', 'Fountain', 'Buttrey', 'Sobrino', 53, 'Empleado', 520);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (772, 'Fedora', 'Diter', 'Fardo', 'Hermano', 9, 'Empleado', 202);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (773, 'Xymenes', 'Haskey', 'Renad', 'Padre', 49, 'Empleado', 300);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (774, 'Kipper', 'Dugald', 'Sadd', 'Sobrino', 61, 'Empleado', 335);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (775, 'David', 'Ruff', 'Hearsum', 'Hermano', 9, 'Desconocido', 195);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (776, 'Tresa', 'Alessandrucci', 'Insley', 'Padre', 64, 'Empleado', 321);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (777, 'Chaddie', 'Laphorn', 'Ashbolt', 'Hermano', 62, 'Empleado', 153);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (778, 'Brigit', 'Perrelle', 'Djuricic', 'Hermano', 15, 'Empresario', 384);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (779, 'Glynn', 'Lelande', 'Mantle', 'Hermano', 32, 'Empleado', 221);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (780, 'Kali', 'Vanini', 'Pont', 'Hermano', 11, 'Empleado', 308);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (781, 'Clare', 'Rossander', 'Feather', 'Padre', 25, 'Empresario', 727);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (782, 'Catha', 'Spinks', 'Morritt', 'Sobrino', 42, 'Desconocido', 412);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (783, 'Nobie', 'Cleobury', 'Gain', 'Hermano', 1, 'Empresario', 724);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (784, 'Meggy', 'Clemens', 'Broster', 'Padre', 45, 'Desconocido', 433);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (785, 'Mitzi', 'Siegertsz', 'Bruffell', 'Sobrino', 67, 'Empleado', 235);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (786, 'Iris', 'Yon', 'Andrewartha', 'Padre', 21, 'Empleado', 126);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (787, 'Oneida', 'Drane', 'Creavan', 'Hermano', 34, 'Empleado', 423);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (788, 'Iosep', 'Rannie', 'Lovitt', 'Sobrino', 39, 'Empresario', 135);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (789, 'Walden', 'Brodway', 'Daintry', 'Sobrino', 75, 'Empleado', 280);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (790, 'Jere', 'Duquesnay', 'Follitt', 'Sobrino', 24, 'Empleado', 37);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (791, 'Kelvin', 'Starling', 'Kobel', 'Hermano', 65, 'Desconocido', 341);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (792, 'Edgard', 'Resdale', 'Winspeare', 'Hermano', 21, 'Empleado', 270);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (793, 'Kelcey', 'Burkert', 'Fladgate', 'Hermano', 63, 'Empleado', 182);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (794, 'Benedict', 'Casassa', 'Mulheron', 'Padre', 52, 'Desconocido', 646);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (795, 'Donalt', 'Van Castele', 'Warsop', 'Hermano', 46, 'Empleado', 500);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (796, 'Germayne', 'Maypother', 'Bussons', 'Hermano', 47, 'Empresario', 172);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (797, 'Carin', 'Bleazard', 'Elloit', 'Sobrino', 27, 'Empleado', 92);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (798, 'Adoree', 'Shervil', 'Verzey', 'Padre', 49, 'Empleado', 513);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (799, 'Fay', 'Vine', 'Keyzor', 'Padre', 45, 'Empleado', 414);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (800, 'Artair', 'Riccardini', 'Joddens', 'Padre', 33, 'Empleado', 164);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (801, 'Bryce', 'Allnutt', 'Broadbere', 'Hermano', 51, 'Desconocido', 712);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (802, 'Danyelle', 'Kime', 'Flook', 'Sobrino', 40, 'Empleado', 115);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (803, 'Ayn', 'Drakeford', 'Manketell', 'Sobrino', 74, 'Desconocido', 250);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (804, 'Riobard', 'Bartoletti', 'Guthrie', 'Sobrino', 46, 'Empleado', 249);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (805, 'Babs', 'Learmonth', 'Winnett', 'Hermano', 74, 'Empleado', 87);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (806, 'Clarita', 'Grayley', 'Reedyhough', 'Padre', 56, 'Empresario', 329);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (807, 'Chelsey', 'Nucciotti', 'Zoellner', 'Hermano', 74, 'Empleado', 412);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (808, 'Tracey', 'Dorkin', 'Sealey', 'Hermano', 52, 'Empleado', 117);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (809, 'Tersina', 'Worsnop', 'Bourner', 'Hermano', 36, 'Empresario', 51);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (810, 'Hamnet', 'Windmill', 'Besemer', 'Hermano', 44, 'Empresario', 332);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (811, 'Filippa', 'Ruppertz', 'Collingworth', 'Sobrino', 11, 'Empresario', 481);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (812, 'Smith', 'Gemnett', 'Houtby', 'Hermano', 48, 'Empresario', 623);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (813, 'Chevy', 'Corker', 'Lutwyche', 'Sobrino', 44, 'Empleado', 76);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (814, 'Daryl', 'Blazej', 'Merrall', 'Hermano', 1, 'Desconocido', 140);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (815, 'Roshelle', 'Egdale', 'Ortet', 'Padre', 51, 'Empresario', 180);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (816, 'Jordon', 'Kobelt', 'Fullard', 'Hermano', 26, 'Empresario', 196);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (817, 'Raynor', 'Kless', 'Trundell', 'Padre', 67, 'Empleado', 535);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (818, 'Noel', 'Mandry', 'Kave', 'Hermano', 27, 'Empleado', 212);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (819, 'Brear', 'Habden', 'Ritzman', 'Hermano', 7, 'Empleado', 24);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (820, 'Christa', 'Cranson', 'Scud', 'Hermano', 13, 'Desconocido', 604);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (821, 'Charissa', 'Sammons', 'Sharpous', 'Hermano', 32, 'Empleado', 236);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (822, 'Phillipp', 'Mingasson', 'Swire', 'Hermano', 37, 'Desconocido', 310);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (823, 'Lacie', 'De La Salle', 'Steutly', 'Hermano', 71, 'Empleado', 617);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (824, 'Hazlett', 'Nolin', 'Neilan', 'Hermano', 23, 'Empleado', 336);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (825, 'Rhetta', 'Grigoletti', 'Amey', 'Hermano', 21, 'Desconocido', 734);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (826, 'Jill', 'Kundt', 'Olivas', 'Hermano', 26, 'Empresario', 342);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (827, 'Jesselyn', 'Curr', 'Matveiko', 'Sobrino', 7, 'Desconocido', 548);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (828, 'Randolf', 'Glascott', 'Neylon', 'Hermano', 46, 'Desconocido', 48);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (829, 'Pat', 'Bariball', 'Pretorius', 'Padre', 36, 'Empresario', 353);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (830, 'Vyky', 'Hancock', 'Rubinow', 'Hermano', 33, 'Empresario', 642);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (831, 'Darby', 'Greenside', 'Scollan', 'Hermano', 64, 'Desconocido', 381);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (832, 'Jan', 'Crewe', 'Lefort', 'Hermano', 29, 'Desconocido', 133);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (833, 'Reiko', 'Hirschmann', 'Ghio', 'Sobrino', 14, 'Empresario', 362);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (834, 'Aarika', 'Gidman', 'Moatt', 'Padre', 14, 'Empresario', 530);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (835, 'Breena', 'Fidge', 'Nasey', 'Padre', 37, 'Desconocido', 501);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (836, 'Elwin', 'Jacobi', 'Josovitz', 'Padre', 72, 'Empresario', 548);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (837, 'Steven', 'Jumonet', 'Pichmann', 'Padre', 44, 'Empleado', 37);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (838, 'Thornie', 'Blackadder', 'Colmore', 'Padre', 59, 'Empresario', 79);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (839, 'Briano', 'Swatradge', 'Van der Hoven', 'Sobrino', 74, 'Empleado', 58);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (840, 'Shandy', 'Forlong', 'Coughlan', 'Sobrino', 44, 'Empresario', 530);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (841, 'Janot', 'Emlen', 'Rennicks', 'Sobrino', 5, 'Empleado', 164);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (842, 'Doralia', 'Pegden', 'Till', 'Sobrino', 19, 'Empleado', 167);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (843, 'Melvin', 'Jaze', 'O''Scollee', 'Hermano', 53, 'Empleado', 279);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (844, 'Brandy', 'Westbrook', 'Vardie', 'Hermano', 29, 'Empleado', 654);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (845, 'Abrahan', 'Benninck', 'Brideoke', 'Hermano', 27, 'Empleado', 7);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (846, 'Orelle', 'Galer', 'Zini', 'Padre', 50, 'Empleado', 261);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (847, 'Elaina', 'Chamberlen', 'Hedgecock', 'Hermano', 27, 'Desconocido', 480);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (848, 'Tory', 'Giorgini', 'Monckton', 'Sobrino', 63, 'Empresario', 452);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (849, 'Bellina', 'Bellany', 'Dahmel', 'Sobrino', 16, 'Empresario', 397);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (850, 'Sheryl', 'Kachel', 'Ennew', 'Hermano', 21, 'Empresario', 59);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (851, 'Desmund', 'Emmins', 'Esposito', 'Hermano', 17, 'Empresario', 308);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (852, 'Jenny', 'Ference', 'Raff', 'Hermano', 12, 'Desconocido', 424);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (853, 'Philomena', 'Magson', 'Cubbin', 'Padre', 27, 'Empresario', 231);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (854, 'Nicko', 'Fenne', 'Prop', 'Hermano', 42, 'Empresario', 450);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (855, 'Ben', 'Veldman', 'Stubbins', 'Hermano', 11, 'Desconocido', 234);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (856, 'Ibbie', 'Dovermann', 'Awcock', 'Hermano', 59, 'Desconocido', 331);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (857, 'Prudence', 'Smoth', 'Mor', 'Sobrino', 56, 'Empleado', 171);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (858, 'Marianne', 'Swaite', 'Plascott', 'Hermano', 5, 'Empleado', 705);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (859, 'Katharina', 'Riccetti', 'Kurt', 'Hermano', 10, 'Empleado', 130);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (860, 'Pearce', 'Gaunter', 'Schroter', 'Hermano', 10, 'Empresario', 491);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (861, 'Walt', 'Phebey', 'Sullivan', 'Hermano', 70, 'Empresario', 368);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (862, 'Harmony', 'Ickovitz', 'Sorsbie', 'Padre', 50, 'Empresario', 154);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (863, 'Dorotea', 'Milburne', 'Hathorn', 'Hermano', 4, 'Empleado', 275);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (864, 'Lauryn', 'Pettigree', 'Yarnold', 'Hermano', 1, 'Desconocido', 693);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (865, 'Evangelia', 'Jiran', 'Esslement', 'Hermano', 53, 'Empresario', 127);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (866, 'Bel', 'Attack', 'Bleibaum', 'Hermano', 30, 'Desconocido', 662);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (867, 'Lefty', 'Margetson', 'Platfoot', 'Hermano', 55, 'Desconocido', 372);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (868, 'Margarita', 'Trollope', 'Fleeman', 'Hermano', 19, 'Empresario', 621);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (869, 'Rollo', 'MacAlpine', 'Breukelman', 'Hermano', 58, 'Empresario', 123);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (870, 'Nadean', 'Walder', 'Michie', 'Sobrino', 70, 'Empleado', 264);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (871, 'Coralie', 'Worsam', 'McDowall', 'Sobrino', 65, 'Desconocido', 628);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (872, 'Fabe', 'Brader', 'Fulk', 'Sobrino', 53, 'Desconocido', 492);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (873, 'Dory', 'Adshad', 'Boyde', 'Hermano', 29, 'Empleado', 129);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (874, 'Rosina', 'Rout', 'Schukraft', 'Sobrino', 56, 'Empleado', 507);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (875, 'Vonni', 'Vido', 'Dorling', 'Padre', 52, 'Empleado', 685);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (876, 'Bartram', 'Wayland', 'Matschke', 'Hermano', 34, 'Desconocido', 85);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (877, 'Torrie', 'Shutte', 'Entwistle', 'Padre', 65, 'Desconocido', 739);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (878, 'Marketa', 'Imrie', 'Copnar', 'Hermano', 51, 'Empleado', 61);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (879, 'Larry', 'Megarry', 'Filipic', 'Hermano', 34, 'Empresario', 21);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (880, 'Kacy', 'Goldsberry', 'Hearns', 'Padre', 15, 'Empresario', 151);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (881, 'Carla', 'Dransfield', 'Bossom', 'Padre', 67, 'Empleado', 206);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (882, 'Donaugh', 'Lawrenceson', 'Bonnaire', 'Sobrino', 66, 'Empresario', 201);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (883, 'Dominik', 'Dymott', 'Raspison', 'Sobrino', 12, 'Desconocido', 513);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (884, 'Karyn', 'Boskell', 'Glasscott', 'Hermano', 21, 'Desconocido', 688);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (885, 'Myrta', 'Cottingham', 'South', 'Sobrino', 74, 'Empleado', 602);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (886, 'Donica', 'Phaup', 'Eberts', 'Sobrino', 49, 'Empresario', 373);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (887, 'Reuben', 'Schustl', 'McCrisken', 'Hermano', 75, 'Empresario', 177);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (888, 'Gloriana', 'Render', 'Guise', 'Hermano', 75, 'Empleado', 583);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (889, 'Lily', 'Wetherick', 'Cayley', 'Hermano', 38, 'Empresario', 293);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (890, 'Kean', 'Wissbey', 'Scamerden', 'Hermano', 42, 'Empleado', 97);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (891, 'Dina', 'Makin', 'Vasichev', 'Hermano', 47, 'Empresario', 522);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (892, 'Rosita', 'Darrigrand', 'Legat', 'Hermano', 63, 'Empleado', 57);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (893, 'Eadmund', 'Witherby', 'Kynaston', 'Hermano', 25, 'Desconocido', 722);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (894, 'Renelle', 'Davidove', 'Slocombe', 'Hermano', 27, 'Empresario', 214);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (895, 'Roland', 'Loud', 'Brittian', 'Sobrino', 27, 'Empleado', 479);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (896, 'Nessi', 'Scaddon', 'Dunbar', 'Sobrino', 12, 'Desconocido', 319);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (897, 'Catharina', 'Featherstonehaugh', 'Espinho', 'Sobrino', 41, 'Empleado', 692);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (898, 'Arlin', 'Huckfield', 'Deluze', 'Hermano', 27, 'Desconocido', 414);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (899, 'Barris', 'Fairleigh', 'Mc Ilwrick', 'Padre', 36, 'Empresario', 664);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (900, 'Lucina', 'Baglow', 'Gooderick', 'Hermano', 27, 'Empleado', 704);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (901, 'Arnold', 'Borton', 'Amis', 'Sobrino', 57, 'Desconocido', 394);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (902, 'Brooke', 'Balston', 'Dron', 'Sobrino', 22, 'Empresario', 80);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (903, 'Ulrika', 'Cheng', 'Menichillo', 'Sobrino', 48, 'Empresario', 599);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (904, 'Maris', 'Spellicy', 'Fautley', 'Hermano', 8, 'Desconocido', 211);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (905, 'Selinda', 'Chree', 'Belfitt', 'Hermano', 75, 'Desconocido', 124);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (906, 'Araldo', 'Swyn', 'Summergill', 'Hermano', 54, 'Empresario', 397);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (907, 'Brod', 'Attenborough', 'Self', 'Sobrino', 31, 'Empresario', 179);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (908, 'Ferguson', 'Jannaway', 'Conford', 'Sobrino', 3, 'Empresario', 619);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (909, 'Kimble', 'Abbotson', 'Tofano', 'Hermano', 28, 'Empresario', 154);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (910, 'Sampson', 'Kareman', 'Borrel', 'Hermano', 22, 'Empleado', 402);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (911, 'Dawna', 'Draper', 'Scouler', 'Hermano', 44, 'Empleado', 639);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (912, 'Shamus', 'Rableau', 'Gerler', 'Hermano', 35, 'Desconocido', 156);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (913, 'Norean', 'Kurth', 'Croxford', 'Hermano', 26, 'Desconocido', 393);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (914, 'Catarina', 'Jest', 'Novelli', 'Padre', 67, 'Empresario', 716);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (915, 'Mireille', 'Fellenor', 'Ascraft', 'Sobrino', 54, 'Desconocido', 232);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (916, 'Filberto', 'Owers', 'Shee', 'Padre', 70, 'Empleado', 464);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (917, 'Baird', 'Muggeridge', 'Dudgeon', 'Hermano', 54, 'Desconocido', 270);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (918, 'Benoit', 'Grover', 'Vesco', 'Hermano', 29, 'Empresario', 578);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (919, 'Benedicto', 'O''Duggan', 'Jermin', 'Sobrino', 48, 'Empresario', 150);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (920, 'Justine', 'Shakespeare', 'Woodeson', 'Sobrino', 7, 'Empresario', 638);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (921, 'Heath', 'Giggs', 'Beckingham', 'Sobrino', 37, 'Desconocido', 199);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (922, 'Kayne', 'Warnock', 'Cartner', 'Hermano', 10, 'Empleado', 219);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (923, 'Virginia', 'Waber', 'Muxworthy', 'Padre', 58, 'Desconocido', 640);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (924, 'Zeke', 'Buske', 'Dadge', 'Hermano', 22, 'Desconocido', 619);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (925, 'Augustina', 'Fryatt', 'Haye', 'Padre', 22, 'Empresario', 390);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (926, 'Bogart', 'Netti', 'Cordon', 'Hermano', 25, 'Desconocido', 420);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (927, 'Benedicto', 'Drane', 'Melmar', 'Hermano', 74, 'Empresario', 587);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (928, 'Friedrick', 'Zorzenoni', 'Cogin', 'Sobrino', 10, 'Empresario', 429);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (929, 'Anneliese', 'Mullan', 'Carhart', 'Hermano', 73, 'Empleado', 5);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (930, 'Vinni', 'Wyke', 'Okenden', 'Hermano', 72, 'Empresario', 715);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (931, 'Catherin', 'Crippin', 'Mars', 'Hermano', 74, 'Empresario', 25);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (932, 'Alaine', 'Screeton', 'Sworn', 'Padre', 37, 'Desconocido', 187);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (933, 'Pepe', 'Egdale', 'Gruby', 'Hermano', 45, 'Empresario', 445);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (934, 'Clayborn', 'McGarva', 'Whittuck', 'Padre', 63, 'Empleado', 609);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (935, 'Karissa', 'Fryman', 'Sumption', 'Hermano', 54, 'Empleado', 694);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (936, 'Terza', 'Dincey', 'McCall', 'Sobrino', 39, 'Empresario', 269);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (937, 'Judas', 'Twentyman', 'Skaife d''Ingerthorpe', 'Hermano', 15, 'Desconocido', 146);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (938, 'Bobbie', 'Sulland', 'Silwood', 'Padre', 70, 'Empresario', 378);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (939, 'Merrick', 'Ellacott', 'Scullin', 'Sobrino', 74, 'Empleado', 584);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (940, 'Vivianna', 'Burgane', 'Motto', 'Padre', 44, 'Empresario', 399);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (941, 'Yulma', 'Wimms', 'Rizzello', 'Hermano', 11, 'Desconocido', 331);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (942, 'Shantee', 'Hanscombe', 'Galle', 'Hermano', 58, 'Empleado', 596);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (943, 'Hermann', 'Gommey', 'Mordie', 'Padre', 68, 'Empleado', 213);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (944, 'Dmitri', 'Lynch', 'Rispen', 'Hermano', 22, 'Empleado', 412);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (945, 'Patricio', 'Antecki', 'Hixson', 'Padre', 24, 'Empleado', 693);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (946, 'Elora', 'Legate', 'Fidelli', 'Padre', 47, 'Empleado', 425);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (947, 'Margaret', 'Champain', 'Fielding', 'Padre', 4, 'Empleado', 86);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (948, 'Eldin', 'Hyland', 'Pretor', 'Sobrino', 59, 'Empresario', 543);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (949, 'Gusta', 'Rooksby', 'Totaro', 'Sobrino', 45, 'Empleado', 698);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (950, 'Morgana', 'MacGrath', 'Oby', 'Hermano', 24, 'Desconocido', 429);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (951, 'Thekla', 'Firby', 'Hencke', 'Padre', 43, 'Empleado', 503);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (952, 'Devin', 'Sinyard', 'Kearey', 'Padre', 16, 'Desconocido', 499);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (953, 'Bernice', 'Tremonte', 'Picker', 'Sobrino', 44, 'Empleado', 375);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (954, 'Philbert', 'Leece', 'Draisey', 'Padre', 20, 'Empleado', 615);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (955, 'Georgiana', 'Bruckental', 'Bilson', 'Hermano', 47, 'Desconocido', 391);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (956, 'Trixy', 'McLinden', 'Gorghetto', 'Hermano', 73, 'Desconocido', 513);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (957, 'Fae', 'Botcherby', 'McKune', 'Hermano', 57, 'Desconocido', 141);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (958, 'Francoise', 'Kittow', 'Cogle', 'Hermano', 2, 'Desconocido', 376);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (959, 'Morgen', 'McBoyle', 'Trigg', 'Sobrino', 58, 'Empleado', 550);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (960, 'Aubrette', 'Billanie', 'Sein', 'Hermano', 11, 'Empresario', 427);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (961, 'Hamish', 'Mandeville', 'Chifney', 'Sobrino', 24, 'Empresario', 365);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (962, 'Ryun', 'Cavilla', 'Wybrew', 'Padre', 53, 'Empleado', 80);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (963, 'Dud', 'Dabnot', 'Swiggs', 'Hermano', 67, 'Empresario', 281);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (964, 'Pepe', 'Zuenelli', 'Sapsed', 'Sobrino', 43, 'Desconocido', 256);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (965, 'Greg', 'Lafay', 'Flaws', 'Padre', 40, 'Empresario', 561);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (966, 'Niles', 'Brazer', 'Elderkin', 'Hermano', 17, 'Empresario', 596);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (967, 'Marybelle', 'Unger', 'Nesbeth', 'Hermano', 24, 'Empresario', 20);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (968, 'Terrance', 'Ryle', 'Aucoate', 'Hermano', 72, 'Desconocido', 250);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (969, 'Englebert', 'Webburn', 'Drohun', 'Hermano', 3, 'Empresario', 120);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (970, 'Deloria', 'Corington', 'Teague', 'Hermano', 8, 'Empleado', 715);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (971, 'Ava', 'Turgoose', 'Markussen', 'Hermano', 63, 'Empleado', 671);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (972, 'Dudley', 'Bernardi', 'Stoneham', 'Padre', 40, 'Empresario', 451);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (973, 'Maurine', 'Dargue', 'Fowkes', 'Hermano', 59, 'Empleado', 179);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (974, 'Janenna', 'Battams', 'Mettricke', 'Hermano', 26, 'Desconocido', 179);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (975, 'Wren', 'Wilbraham', 'Crallan', 'Hermano', 72, 'Desconocido', 233);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (976, 'Bebe', 'Burrill', 'Quixley', 'Padre', 33, 'Empleado', 417);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (977, 'Burl', 'Walak', 'Dahlborg', 'Sobrino', 67, 'Empleado', 294);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (978, 'Thatch', 'Erickssen', 'Hayto', 'Hermano', 10, 'Desconocido', 496);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (979, 'Betta', 'Kingsnod', 'Howley', 'Hermano', 43, 'Empresario', 497);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (980, 'Ted', 'Carncross', 'Steedman', 'Padre', 17, 'Empresario', 720);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (981, 'Sunny', 'Wallwood', 'Aire', 'Sobrino', 32, 'Empleado', 169);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (982, 'Merry', 'Mulqueeny', 'Peinke', 'Hermano', 58, 'Empleado', 61);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (983, 'Kai', 'Curling', 'Chalk', 'Padre', 22, 'Empresario', 652);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (984, 'Winnie', 'Kira', 'Coultous', 'Hermano', 42, 'Desconocido', 238);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (985, 'Catarina', 'Pichmann', 'Anstiss', 'Padre', 46, 'Empleado', 322);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (986, 'Margret', 'Niccols', 'Finlason', 'Hermano', 4, 'Empleado', 397);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (987, 'Rhetta', 'Damarell', 'Cordingley', 'Hermano', 4, 'Desconocido', 413);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (988, 'Kent', 'Passler', 'Teall', 'Sobrino', 66, 'Empleado', 85);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (989, 'Matthias', 'Symmons', 'De Lisle', 'Padre', 50, 'Empresario', 652);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (990, 'Arnie', 'De Luna', 'Urien', 'Sobrino', 27, 'Empleado', 452);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (991, 'Perice', 'Snailham', 'Gonthier', 'Padre', 47, 'Empresario', 573);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (992, 'Quintilla', 'Abbitt', 'Perris', 'Padre', 5, 'Desconocido', 156);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (993, 'Nikoletta', 'Oldcroft', 'Livock', 'Padre', 18, 'Empresario', 67);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (994, 'Kirbie', 'Ethelston', 'Ragbourne', 'Hermano', 2, 'Empleado', 7);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (995, 'Marjy', 'Occleshaw', 'Sopper', 'Hermano', 2, 'Empleado', 458);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (996, 'Ban', 'Persitt', 'Runge', 'Padre', 73, 'Empresario', 337);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (997, 'Jaclyn', 'Dieton', 'Devo', 'Padre', 30, 'Empleado', 469);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (998, 'Fairfax', 'Sillis', 'Willmore', 'Padre', 44, 'Desconocido', 379);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (999, 'Gris', 'Fortnum', 'Gilson', 'Sobrino', 16, 'Empleado', 570);
+insert into ACOMPANIANTE (acompaniante_id, nombre, ap_paterno, ap_materno, parentesco, edad, ocupacion, visita_id) values (1000, 'Bonita', 'Ockland', 'Toon', 'Sobrino', 31, 'Empleado', 613);
+
  
 commit;

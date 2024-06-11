@@ -144,13 +144,14 @@ CREATE TABLE visita (
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
 CREATE TABLE acompaniante (
-    visita_id NUMBER NOT NULL PRIMARY KEY,
+    acompaniante_id NUMBER NOT NULL PRIMARY KEY,
     nombre VARCHAR2(30) NOT NULL,
     ap_paterno VARCHAR2(30) NOT NULL,
     ap_materno VARCHAR2(30) NOT NULL,
     parentesco VARCHAR2(15) DEFAULT 'UNKNOWN',
     edad NUMBER(3) NOT NULL,
     ocupacion VARCHAR2(15) DEFAULT 'UNKNOWN',
+     visita_id NUMBER NOT NULL,
     CONSTRAINT fk_visita_id FOREIGN KEY (visita_id) REFERENCES visita(visita_id)
 ) tablespace NEGOCIO_CLIENTE_TBS;
 
