@@ -1,11 +1,11 @@
-﻿CREATE TABLE PAGO_ACTIVIDAD 
+/*﻿CREATE TABLE PAGO_ACTIVIDAD 
 (
     id_pago	INT,
     cliente_id	INT,
     fecha_pago	VARCHAR(512),
     actividad_id	INT,
     costo_actividad	INT
-);
+);*/
 
 INSERT INTO PAGO_ACTIVIDAD (id_pago, cliente_id, fecha_pago, actividad_id, costo_actividad) VALUES ('1', '905', '05/06/2022', '11', '12000');
 INSERT INTO PAGO_ACTIVIDAD (id_pago, cliente_id, fecha_pago, actividad_id, costo_actividad) VALUES ('2', '145', '28/06/2022', '19', '12000');
