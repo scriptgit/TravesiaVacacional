@@ -92,7 +92,7 @@ fi;
 mkdir -p /travesia/disk-04/app/oracle/oradata/TRAVDIP1/
 mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/APP-CONTAINER
 mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/administracion_con
-mkdir -p /travesia/disk-01/app/oracle/oradata/TRAVDIP1/negocio_con
+mkdir -p /travesia/disk-04/app/oracle/oradata/TRAVDIP1/negocio_con
 echo "Creando carpeta en disk-03 para los controlfiles"
 mkdir -p /travesia/disk-03/app/oracle/oradata/TRAVDIP1
 echo "Directorios para los tablespaces"
