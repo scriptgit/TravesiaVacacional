@@ -244,7 +244,7 @@ CREATE TABLE juego(
     actividad_id NUMBER NOT NULL PRIMARY KEY,
     nombre_juego VARCHAR(30),
     num_participantes NUMBER(2) NOT NULL,
-    descripcion_juego VARCHAR(30),
+    descripcion_juego VARCHAR(80),
     tipo_juego_id NUMBER(3) NOT NULL,
     FOREIGN KEY(tipo_juego_id) REFERENCES tipo_juego(tipo_juego_id),
     FOREIGN KEY(actividad_id) REFERENCES actividad(actividad_id)
