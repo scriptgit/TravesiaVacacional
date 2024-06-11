@@ -3,9 +3,29 @@
 -- Ulises Eduardo Antonio García
 --@Fecha creación: 24 05 2024
 --@Descripción:
+define syslogon='sys/systemproy as sysdba'
+--define t_user='userproy'
+--define userlogon='&t_user/&t_user'
+define common_user='common_user'
+define common_user_logon='c##&common_user/&common_user'
+define app_admin='app_admin'
+define app_container='app_container'
+define pdb1_admin='admin_administracion_con'
+define pdb1_container='administracion_con'
 
+
+define pdb2_admin='admin_negocios_con'
+define pdb2_container='negocio_con'
 
 -- M Ó D U L O:  A D M I N I S T R A C I Ó N --
+conn &syslogon
+
+Prompt Cambiando sesión a &pdb1_container
+alter session set container = &pdb1_container;
+
+grant create any index to &pdb1_admin; 
+PROMPT Conectando como &pdb1_admin usando nombre de servicio travdip_adm
+conn &pdb1_admin/&pdb1_admin@travdip_adm
 
 -- TABLA: EMPLEADO
 CREATE INDEX ix_empleado_clave
@@ -24,6 +44,14 @@ TABLESPACE admin_indices_tbs;
 
 
 -- M Ó D U L O:  N E G O C I O --
+conn &syslogon
+Prompt Cambiando sesión a &pdb2_container
+alter session set container = &pdb2_container;
+
+grant create any index to &pdb2_admin;
+
+PROMPT Conectando como &pdb2_admin usando nombre de servicio travdip_neg
+conn &pdb2_admin/&pdb2_admin@travdip_neg
 
 -- TABLA: VISITA
 CREATE INDEX ix_visita_cliente
