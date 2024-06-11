@@ -202,7 +202,7 @@ CREATE TABLE campamento(
     latitud_campamento VARCHAR(15),
     longitud_campamento VARCHAR(15),
     delegacion_campamento VARCHAR(20),
-    numero_campamento NUMBER(3),
+    numero_campamento NUMBER(5),
     calle_campamento NUMBER(5),
     colonia_campamento VARCHAR(20),
     estado_campamento VARCHAR(20),
@@ -281,3 +281,13 @@ CREATE TABLE historico_estatus_membresia (
     CONSTRAINT fk_historico_estatus_membresia_id FOREIGN KEY (estatus_membresia_id) REFERENCES estatus_membresia(estatus_membresia_id),
     CONSTRAINT fk_membresia_id FOREIGN KEY (membresia_id) REFERENCES membresia(membresia_id)
 )tablespace NEGOCIO_MEMBRESIA_TBS;
+
+CREATE TABLE pago_actividad 
+(
+    id_pago	NUMBER NOT NULL PRIMARY KEY,
+    cliente_id	NUMBER NOT NULL,
+    fecha_pago	DATE,
+    actividad_id	NUMBER NOT NULL,
+    costo_actividad	NUMBER NOT NULL,
+    CONSTRAINT fk_pago_actividad_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
+) tablespace NEGOCIO_CLIENTE_TBS;
