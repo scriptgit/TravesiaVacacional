@@ -35,8 +35,12 @@ COLUMN RESTRICTED FORMAT A10
 COLUMN OPEN_TIME FORMAT A30
 SELECT NAME, OPEN_MODE, RESTRICTED, OPEN_TIME FROM V$PDBS;
 
---- combre de contenedor y sus datafiles
+--- nombre de contenedor y sus datafiles
 COLUMN container FORMAT A10
 COLUMN datafile FORMAT A80
 SELECT c.NAME CONTAINER, c.CON_ID, v.name DATAFILE 
 FROM V$CONTAINERS c, v$datafile v where c.con_id = v.con_id  order by c.CON_ID;
+
+-- buscar constraint
+select COLUMN_NAME from ALL_CONS_COLUMNS
+where constraint_name = 'SYS_C007667';

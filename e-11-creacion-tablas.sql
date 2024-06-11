@@ -76,7 +76,7 @@ CREATE TABLE empleado (
     ap_pat VARCHAR2(30) NOT NULL,
     ap_mat VARCHAR2(30) NOT NULL,
     telefono NUMBER(13),
-    encargado_id NUMBER NOT NULL,
+    encargado_id NUMBER ,
     asociacion_id NUMBER NOT NULL,
     FOREIGN KEY (encargado_id) REFERENCES empleado(empleado_id),
     FOREIGN KEY (asociacion_id) REFERENCES asociacion(asociacion_id),
@@ -126,8 +126,8 @@ CREATE TABLE cliente (
     curp VARCHAR2(20) NOT NULL,
     estado_civil VARCHAR2(15) DEFAULT 'UNKNOWN',
     telefono NUMBER(13),
-    ocupacion VARCHAR2(15) DEFAULT 'UNKNOWN',
-    nivel_educativo VARCHAR2(10) DEFAULT 'UNKNOWN',
+    ocupacion VARCHAR2(50) DEFAULT 'UNKNOWN',
+    nivel_educativo VARCHAR2(40) DEFAULT 'UNKNOWN',
     CONSTRAINT cliente_clave_UK UNIQUE (clave),
     CONSTRAINT cliente_curp_UK UNIQUE (curp)
 ) tablespace NEGOCIO_CLIENTE_TBS;

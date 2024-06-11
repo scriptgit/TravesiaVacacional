@@ -41,25 +41,22 @@ PROMPT Poblando tabla certificacion
 
 PROMPT Poblando tabla version
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/VERSION.sql
-Pause [Enter] Para continuar
 
 PROMPT Poblando tabla empleado
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/EMPLEADO.sql
-Pause [Enter] Para continuar
 
 PROMPT Poblando tabla lider
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/LIDER.sql
-Pause [Enter] Para continuar
 
 PROMPT Poblando tabla lider_centro
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/LIDER_CENTRO.sql
 
 PROMPT Poblando tabla version_lider
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/VERSION_LIDER.sql
-Pause [Enter] Para continuar
 
 conn &syslogon
 Prompt Cambiando sesión a &pdb2_container
+alter session set container = &pdb2_container;
 
 ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_CLIENTE_TBS;
 ALTER USER &pdb2_admin QUOTA UNLIMITED on NEGOCIO_MEMBRESIA_TBS;
@@ -72,25 +69,29 @@ conn &pdb2_admin/&pdb2_admin@travdip_neg
 
 PROMPT Poblando tabla cliente
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CLIENTE.sql
-Pause [Enter] Para continuar
 
 PROMPT Poblando tabla visita
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/VISITA.sql
 
 PROMPT Poblando tabla acompaniante
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACOMPANIANTE.sql
 
 PROMPT Poblando tabla auto
-@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/AUTO.sql
 Pause [Enter] Para continuar
+@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/AUTO.sql
 
 PROMPT Poblando tabla temporada
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/TEMPORADA.sql
 
 PROMPT Poblando tabla actividad
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACTIVIDAD.sql
 
 PROMPT Poblando tabla centro_actividad
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CENTRO_ACTIVIDAD.sql
 
 PROMPT Poblando tabla actividad_imagen
@@ -98,6 +99,7 @@ PROMPT Poblando tabla actividad_imagen
 Pause [Enter] Para continuar
 
 PROMPT Poblando tabla campamento
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/CAMPAMENTO.sql
 
 PROMPT Poblando tabla tipo_deporte
@@ -105,24 +107,28 @@ PROMPT Poblando tabla tipo_deporte
 
 PROMPT Poblando tabla deporte
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/DEPORTE.sql
-Pause [Enter] Para continuar
 
 PROMPT Poblando tabla accesorios
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ACCESORIOS.sql
 
 PROMPT Poblando tabla tipo_juego
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/TIPO_JUEGO.sql
 
 PROMPT Poblando tabla juego
-@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/JUEGO.sql
 Pause [Enter] Para continuar
+@/unam-diplomado-bd/modulos/TravesiaVacacional/Data/JUEGO.sql
 
 PROMPT Poblando tabla estatus_membresia
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/ESTATUS_MEMBRESIA.sql
 
 PROMPT Poblando tabla membresia
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/MEMBRESIA.sql
 
 PROMPT Poblando tabla historico_estatus_membresia
+Pause [Enter] Para continuar
 @/unam-diplomado-bd/modulos/TravesiaVacacional/Data/HISTORICO_ESTATUS_MEMBRESIA.sql
 

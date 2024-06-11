@@ -32,10 +32,7 @@ TRUNCATE TABLE auto ;
 TRUNCATE TABLE acompaniante ;
 TRUNCATE TABLE visita ;
 TRUNCATE TABLE cliente ;
-conn &syslogon
-Prompt Cambiando sesión a &pdb2_container
-alter session set container = &pdb2_container;
-TRUNCATE user app_user CASCADE;
+
 
 conn &syslogon
 PROMPT Cambiando sesión a &pdb1_container
@@ -52,7 +49,5 @@ TRUNCATE TABLE version ;
 TRUNCATE TABLE certificacion ;
 
 TRUNCATE TABLE asociacion ;
-conn &syslogon
-PROMPT Cambiando sesión a &pdb1_container
-alter session set container = &pdb1_container;
-TRUNCATE user app_user CASCADE;
+
+commit;
