@@ -69,8 +69,11 @@ hizó esa parte.
 
 Después el script 08 aquí muevan los controlfile a donde correspondan y cambien los nombres como vayan cuando la base haga el shutdown. 
 Yo use estos comandos por si quieren usarlos pero pueden proceder como mejor les convenga.
+
 mv /travesia/disk-07/fast-recovery-area/TRAVDIP1/control02.ctl /travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/control01.ctl
+
 mv /travesia/disk-01/app/oracle/oradata/TRAVDIP1/control01.ctl /travesia/disk-02/app/oracle/oradata/TRAVDIP1/control02.ctl
+
 cp /travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/control01.ctl /travesia/disk-03/app/oracle/oradata/TRAVDIP1/control03.ctl
 
-
+A partir de aquí sigan el procedimiento que se está utilizando para crear la aplicación.
