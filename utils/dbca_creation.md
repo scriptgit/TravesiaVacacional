@@ -8,7 +8,7 @@ rm  -r /travesia/disk-01/app/oracle/oradata/TRAVDIP1/PDBSEED
 Ahora en dbca se pueden modificar algunos parámetros para facilitar la creación.
 
 Paso 1 Escoger crear nueva base
-![Untitled](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/18f6de2d-056f-4562-85c4-727ea59ff374)
+![Captura de pantalla 2024-06-12 131729](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/8b009b07-e922-4cbc-9fd1-f6af136b348f)
 
 Paso 2 Escoger configuraciones avanzadas
 ![Captura de pantalla 2024-06-12 131729](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/88a5cc05-8a9b-4c6c-a3dd-310aedb62608)
