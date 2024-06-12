@@ -286,7 +286,7 @@ CREATE TABLE pago_actividad
 (
     id_pago	NUMBER NOT NULL PRIMARY KEY,
     cliente_id	NUMBER NOT NULL,
-    fecha_pago	DATE,
+    fecha_pago	VARCHAR(15),
     actividad_id	NUMBER NOT NULL,
     costo_actividad	NUMBER NOT NULL,
     CONSTRAINT fk_pago_actividad_cliente_id FOREIGN KEY (cliente_id) REFERENCES cliente(cliente_id)
