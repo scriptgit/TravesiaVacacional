@@ -61,3 +61,16 @@ Paso 12 Dejar la configuración por defecto en está parte
 
 Paso 13 Verificar que todo esté bien e instalar la base 
 ![Captura de pantalla 2024-06-12 133107](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/338440d8-4844-4040-941f-8ed8343797c1)
+
+
+
+Posterior a la creación ejecutar el script 06 para la creación de los grupos log, pueden comentar la parte de los diccionarios pues dbca ya 
+hizó esa parte.
+
+Después el script 08 aquí muevan los controlfile a donde correspondan y cambien los nombres como vayan cuando la base haga el shutdown. 
+Yo use estos comandos por si quieren usarlos pero pueden proceder como mejor les convenga.
+mv /travesia/disk-07/fast-recovery-area/TRAVDIP1/control02.ctl /travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/control01.ctl
+mv /travesia/disk-01/app/oracle/oradata/TRAVDIP1/control01.ctl /travesia/disk-02/app/oracle/oradata/TRAVDIP1/control02.ctl
+cp /travesia/disk-07/fast-recovery-area/TRAVDIP1/controlfile/control01.ctl /travesia/disk-03/app/oracle/oradata/TRAVDIP1/control03.ctl
+
+
