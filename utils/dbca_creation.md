@@ -17,6 +17,7 @@ Paso 3 Dejar configuración por defecto
 ![Captura de pantalla 2024-06-12 131806](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/7938eeed-9fec-40da-85fc-cef487483ca3)
 
 En caso de salir está advertencia decir que si
+
 ![Captura de pantalla 2024-06-12 131837](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/0a8617e0-da8f-42d2-854c-7dcb4230b0c4)
 
 Paso 4 Configurar nombre del dominio de la base y el SID, así como establecer que se crea un contenedor vacío
@@ -32,6 +33,7 @@ Paso 6 Lo mismo que en el paso anterior pero ahora para la FRA
 
 Paso 7 Verificar que el listener está activo, sino activarlo con oracle usando la instrucción
 lsnrctl start
+
 ![Captura de pantalla 2024-06-12 132358](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/95dd1709-f7e7-4cac-b180-a05229c0c8e4)
 
 Paso 8 Mantener las opciones por defecto(deshabilitar las opciones que se presentan)
