@@ -23,7 +23,9 @@ En caso de salir está advertencia decir que si
 Paso 4 Configurar nombre del dominio de la base y el SID, así como establecer que se crea un contenedor vacío
 ![Captura de pantalla 2024-06-12 131933](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/cceed0f5-f985-4b8c-bf00-3b6ca653e646)
 
-Paso 5 Si usaron la opción de la creación de los directorios buscar la ruta y establecerla en la opción de Data file locations, aquí se creara todo lo necesario para la base
+Paso 5 Si usaron la opción de la creación de los directorios buscar la ruta y establecerla en la opción de Data file locations,
+aquí se creara todo lo necesario para la base
+
 ![Captura de pantalla 2024-06-12 132055](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/f3ed670b-377f-49fa-a27a-a7589b45952f)
 
 En caso de no ejecutar el script dejar la configuración por defecto, pero se tendrán que hacer movimientos de los archivos generados después para que coincidan con el esquema que estamos trabajando.
@@ -39,7 +41,9 @@ lsnrctl start
 Paso 8 Mantener las opciones por defecto(deshabilitar las opciones que se presentan)
 ![Captura de pantalla 2024-06-12 132501](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/0ca1a332-4ead-4740-9347-3e8a13c0eeaa)
 
-Paso 9 Configurar las opciones como crea conveniente, pero por defecto las que aparecen se pueden usar. En mi caso modifique el tamaño de la SGA y la PGA
+Paso 9 Configurar las opciones como crea conveniente, pero por defecto las que aparecen se pueden usar.
+En mi caso modifique el tamaño de la SGA y la PGA
+
 ![Captura de pantalla 2024-06-12 132559](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/f6ad1f4f-b322-43c4-8e02-f9cc3107c5bc)
 
 Paso 10 Dejar la configuración por defecto con el puerto 5500
@@ -49,6 +53,7 @@ Paso 11 Configurar la contraseña para sys, recordar que es systemproy
 ![Captura de pantalla 2024-06-12 132830](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/26550e6a-bcb6-45a8-9d32-1f833013abe2)
 
 Saltar se la advertencia con si
+
 ![Captura de pantalla 2024-06-12 132941](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/e23fa40b-ebb8-4478-8863-d62655a0961b)
 
 Paso 12 Dejar la configuración por defecto en está parte
