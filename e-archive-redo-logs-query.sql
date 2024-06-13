@@ -13,7 +13,7 @@ linesize window
 Prompt inicio sesion en root
 conn &syslogon
 alter session set container = cdb$root;
-conn &common_user_logon
+
 
 alter pluggable database &app_container open;
 alter pluggable database &pdb1_container open;
@@ -22,7 +22,7 @@ alter pluggable database &pdb2_container open;
 Prompt inicio de sesion como app_container
 conn &syslogon
 alter session set container = &app_container;
-conn &common_user_logon
+
 
 -- v$archive_dest 
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/V-ARCHIVE_DEST.html
@@ -43,8 +43,8 @@ ORDER BY
 
 Prompt inicio de sesion como administracion pdb
 conn &syslogon
-alter session set container = &administracion_con;
-conn &common_user_logon
+alter session set container = &pdb1_container;
+
 
 -- v$archive_dest 
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/V-ARCHIVE_DEST.html
@@ -61,12 +61,12 @@ JOIN
 WHERE
     al.value IS NOT NULL
 ORDER BY
-    con.name, al.name;
+    con.name;
 
 Prompt inicio de sesion como negocio pdb
 conn &syslogon
-alter session set container = &negocio_con;
-conn &common_user_logon
+alter session set container = &pdb2_container;
+
 
 -- v$archive_dest 
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/V-ARCHIVE_DEST.html

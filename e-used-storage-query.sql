@@ -13,7 +13,7 @@ linesize window
 Prompt inicio sesion en root
 conn &syslogon
 alter session set container = cdb$root;
-conn &common_user_logon
+
 
 alter pluggable database &app_container open;
 alter pluggable database &pdb1_container open;
@@ -22,11 +22,13 @@ alter pluggable database &pdb2_container open;
 Prompt inicio de sesion como app_container
 conn &syslogon
 alter session set container = &app_container;
-conn &common_user_logon
+
 
 -- DBA_SEGMENTS
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/21/refrn/DBA_SEGMENTS.html
 Prompt Mostrando el almacenamiento utilizado en app_container
+COLUMN owner FORMAT A20
+COLUMN SEGMENT_NAME FORMAT A50
 SELECT
     owner,
     segment_name,
@@ -34,21 +36,27 @@ SELECT
     ROUND(SUM(bytes) / (1024 * 1024), 2) AS size_mb
 FROM
     dba_segments
+WHERE 
+    owner not in ('XDB','SYS','SYSTEM')
 GROUP BY
     owner, segment_name, segment_type
 ORDER BY
     owner, segment_name, segment_type;
 
+PAUSE [Enter] para continuar
+
 Prompt inicio de sesion como administracion pdb
 conn &syslogon
-alter session set container = &administracion_con;
-conn &common_user_logon
+alter session set container = &pdb1_container;
+
 
 -- M Ó D U L O:  A D M I N I S T R A C I Ó N --
 
 -- DBA_SEGMENTS
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/21/refrn/DBA_SEGMENTS.html
 Prompt Mostrando el almacenamiento utilizado en administracion pdb
+COLUMN owner FORMAT A20
+COLUMN SEGMENT_NAME FORMAT A50
 SELECT
     owner,
     segment_name,
@@ -56,6 +64,8 @@ SELECT
     ROUND(SUM(bytes) / (1024 * 1024), 2) AS size_mb
 FROM
     dba_segments
+WHERE 
+    owner not in ('XDB','SYS','SYSTEM')
 GROUP BY
     owner, segment_name, segment_type
 ORDER BY
@@ -63,14 +73,16 @@ ORDER BY
 
 Prompt inicio de sesion como negocio pdb
 conn &syslogon
-alter session set container = &negocio_con;
-conn &common_user_logon
+alter session set container = &pdb2_container;
 
+PAUSE [Enter] para continuar
 -- M Ó D U L O:  N E G O C I O --
 
 -- DBA_SEGMENTS
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/21/refrn/DBA_SEGMENTS.html
 Prompt Mostrando el almacenamiento utilizado en negocio pdb
+COLUMN owner FORMAT A20
+COLUMN SEGMENT_NAME FORMAT A50
 SELECT
     owner,
     segment_name,
@@ -78,6 +90,8 @@ SELECT
     ROUND(SUM(bytes) / (1024 * 1024), 2) AS size_mb
 FROM
     dba_segments
+WHERE 
+    owner not in ('XDB','SYS','SYSTEM')
 GROUP BY
     owner, segment_name, segment_type
 ORDER BY

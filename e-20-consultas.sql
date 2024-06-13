@@ -21,6 +21,7 @@ connect &syslogon
 set linesize window
 
 PROMPT Consulta que muestre la distribución de todos sus datafiles
+PAUSE [Enter] para continuar
 COLUMN container FORMAT A10
 COLUMN datafile FORMAT A80
 
@@ -32,11 +33,13 @@ and c.CON_ID > -1
 order by c.CON_ID;
 
 PROMPT Consulta que muestre las ubicaciones de los grupos de Redo Logs
+PAUSE [Enter] para continuar
 COLUMN member FORMAT A80
 
 SELECT GROUP#, STATUS, MEMBER FROM V$LOGFILE order by GROUP#;
 
 PROMPT Consulta que muestre las ubicaciones de los archive Redo logs
+PAUSE [Enter] para continuar
 --REVISAR
 col name format a70
 
