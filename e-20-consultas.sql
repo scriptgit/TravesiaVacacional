@@ -29,7 +29,7 @@ SELECT c.NAME CONTAINER, c.CON_ID,
 v.name DATAFILE, v.bytes/(1024*1024) bytes_mb 
 FROM V$CONTAINERS c, v$datafile v 
 where c.con_id = v.con_id  
-and c.CON_ID > -1
+and c.CON_ID > 2
 order by c.CON_ID;
 
 PROMPT Consulta que muestre las ubicaciones de los grupos de Redo Logs
@@ -41,13 +41,13 @@ SELECT GROUP#, STATUS, MEMBER FROM V$LOGFILE order by GROUP#;
 PROMPT Consulta que muestre las ubicaciones de los archive Redo logs
 PAUSE [Enter] para continuar
 --REVISAR
-col name format a70
+/*col name format a70
 
 select recid,name,dest_id,sequence#,
   to_char(first_time,'dd/mm/yyyy hh24:mi:ss') first_time,
   status,to_char(completion_time,'dd/mm/yyyy hh24:mi:ss') completion_time
 from v$archived_log;
-
+*/
 
 PROMPT consulta que muestre la configuración y uso de la FRA
 COLUMN name FORMAT A50
