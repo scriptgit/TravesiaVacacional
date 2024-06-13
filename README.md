@@ -14,7 +14,9 @@ ADMINISTRACIÓN
 │   ├── LIDER
 │   └── LIDER_CENTRO
 └── ADMIN_INDICES_TBS
-    └── # TODO: añadir índices creados
+    └── ix_empleado_clave
+    ├── ix_asociacion_clave
+    └── ix_certificacion_clave
 COMUN 
 └── DEFAULT
     └── CENTRO
@@ -41,7 +43,11 @@ NEGOCIO
 ├── NEGOCIO_MEDIA_TBS
 │   └── ACTIVIDAD_IMAGEN
 └── NEGOCIO_INDICES_TBS
-    └── # TODO: añadir índices creados
+    ├── ix_visita_cliente
+    ├── ix_cliente_clave_curp
+    ├── ix_membresia_cliente_numero_membresia
+    ├── ix_historico_estatus_membresia_membresia_id
+    └── ix_actividad_clave
 ```
 
 ### Organización de discos
