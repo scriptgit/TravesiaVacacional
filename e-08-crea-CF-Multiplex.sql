@@ -1,8 +1,8 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
 -- Ulises Eduardo Antonio García
---@Fecha creación: 24 05 2024
---@Descripción:
+--@Descripción: Multiplexación de control files
+
 !echo "mostrando valor de ORACLE_SID: ${ORACLE_SID}"
 pause ¿Es correcto?  Enter para continuar 
 

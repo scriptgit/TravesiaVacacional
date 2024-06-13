@@ -1,4 +1,13 @@
 #!/bin/bash
+# Este script crea un archivo de passwords para una instancia de Oracle.
+# 
+# Pasos del script:
+# 1. Establece el valor de ORACLE_SID a "travdip1".
+# 2. Define la ruta del archivo de passwords basado en ORACLE_SID.
+# 3. Verifica si el archivo de passwords ya existe.
+# 4. Solicita confirmación del usuario para sobreescribir el archivo existente.
+# 5. Crea el archivo de passwords con el comando orapwd.
+# 6. Verifica y muestra los detalles del archivo creado.
 
 echo "creando archivo de passwords"
 

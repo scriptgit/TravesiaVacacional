@@ -1,3 +1,9 @@
+# Este script configura y ejecuta un backup incremental de nivel 0 de la base de datos Oracle utilizando RMAN.
+#
+# Pasos del script:
+# 1. Realiza un backup incremental de nivel 0 de la base de datos.
+# 2. Etiqueta el backup con 'BkI_0' para identificarlo fácilmente.
+
 RUN {
     BACKUP INCREMENTAL LEVEL 0 DATABASE TAG BkI_0;
 }

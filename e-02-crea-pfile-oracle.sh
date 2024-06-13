@@ -1,4 +1,12 @@
 #!/bin/bash
+# Este script crea un archivo pfile para una instancia de Oracle.
+#
+# Pasos del script:
+# 1. Establece el valor de ORACLE_SID a "travdip1".
+# 2. Define la ruta del archivo pfile basado en ORACLE_SID.
+# 3. Genera el contenido del archivo pfile con parámetros de configuración.
+# 4. Escribe el contenido en el archivo pfile.
+# 5. Verifica y muestra los detalles del archivo creado.
 
 echo "creando archivo pfile"
 echo ""

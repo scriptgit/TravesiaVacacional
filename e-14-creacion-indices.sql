@@ -1,8 +1,8 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
 -- Ulises Eduardo Antonio García
---@Fecha creación: 24 05 2024
---@Descripción:
+--@Descripción: Creación de índices
+
 define syslogon='sys/systemproy as sysdba'
 --define t_user='userproy'
 --define userlogon='&t_user/&t_user'

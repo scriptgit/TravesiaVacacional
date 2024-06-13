@@ -1,9 +1,7 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
 -- Ulises Eduardo Antonio García
---@Fecha creación: 24 05 2024
---@Descripción: secuencias y triggers
-
+--@Descripción: Creación de secuencias y triggers
 
 define syslogon='sys/systemproy as sysdba'
 --define t_user='userproy'

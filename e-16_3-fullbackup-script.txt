@@ -1,3 +1,10 @@
+# Este script configura y ejecuta un backup completo de la base de datos Oracle, incluyendo los archivos de redo logs archivados, utilizando RMAN.
+#
+# Pasos del script:
+# 1. Realiza un backup completo de la base de datos.
+# 2. Incluye los archivos de redo logs archivados en el backup.
+# 3. Etiqueta el backup con 'inicial_full_bk1' para identificarlo fácilmente.
+
 RUN {
     BACKUP DATABASE PLUS ARCHIVELOG TAG inicial_full_bk1;
 }

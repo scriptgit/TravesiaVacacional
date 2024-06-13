@@ -1,8 +1,6 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
--- Ulises Eduardo Antonio García
---@Fecha creación: 
---@Descripción:
+-- Ulises Eduardo Antonio García--@Descripción: Creación de pdbs
 !echo "mostrando valor de ORACLE_SID: ${ORACLE_SID}"
 pause ¿Es correcto?  Enter para continuar 
 

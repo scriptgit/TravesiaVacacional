@@ -1,8 +1,6 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
--- Ulises Eduardo Antonio García
---@Fecha creación: 
---@Descripción: creacion directorio
+-- Ulises Eduardo Antonio García--@Descripción: creacion directorio
 
 !echo "mostrando valor de ORACLE_SID: ${ORACLE_SID}"
 pause ¿Es correcto?  Enter para continuar 

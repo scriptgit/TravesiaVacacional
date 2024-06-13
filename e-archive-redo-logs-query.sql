@@ -1,3 +1,8 @@
+--@Autor: Jorge Octaviop Barcenas Avelar
+-- Angel Eduardo Oropeza Castañeda
+-- Ulises Eduardo Antonio García
+--@Descripción: Consulta de archive redo logs
+
 define syslogon='sys/systemproy as sysdba'
 define common_user='common_user'
 define common_user_logon='c##&common_user/&common_user'

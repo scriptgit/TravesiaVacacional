@@ -1,18 +1,16 @@
+# Este script configura y ejecuta un backup de la base de datos Oracle utilizando RMAN.
+#
+# Pasos del script:
+# 1. Establece el tipo de almacenamiento para el backup como DISK.
+# 2. Asigna un canal para realizar el backup en el área de recuperación rápida (FRA).
+# 3. Realiza un backup de la base de datos en el FRA como una copia.
+# 4. Asigna un canal para realizar el backup fuera del FRA, con un formato específico para los archivos.
+# 5. Realiza un backup de la base de datos fuera del FRA como una copia en la ubicación especificada.
+
 RUN {
-
-  # Establecer tipo de almacenamiento
   BACKUP DEVICE TYPE DISK DATABASE;
-
-  # Canal para FRA
   ALLOCATE CHANNEL fra_channel DEVICE TYPE DISK;
-
-  # Backup en FRA
   BACKUP AS COPY DATABASE;
-
-   # Canal para backup fuera de FRA
   ALLOCATE CHANNEL external_channel DEVICE TYPE DISK FORMAT '/travesia/disk-05/backups/data-D-%d_id-%I_TS-%N_FNO-%f_%u';
-
-  # Backup fuera de FRA
   BACKUP AS COPY DATABASE;
-
 }

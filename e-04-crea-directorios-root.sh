@@ -1,4 +1,17 @@
 #!/bin/bash
+# Este script crea los directorios necesarios para la creación de una base de datos Oracle.
+#
+# Pasos del script:
+# 1. Establece el valor de ORACLE_SID a "travdip1".
+# 2. Verifica si el directorio para los datafiles ya existe y elimina los archivos .dbf si es necesario.
+# 3. Crea los directorios necesarios en la carpeta oradata.
+# 4. Cambia el propietario y los permisos de los directorios de datafiles.
+# 5. Crea la carpeta raíz del proyecto "/travesia" y establece los permisos.
+# 6. Crea directorios que simulan puntos de montaje de discos.
+# 7. Verifica y elimina los archivos de redo logs existentes.
+# 8. Crea directorios específicos para datafiles, redo logs, controlfiles y tablespaces.
+# 9. Cambia el propietario y los permisos de los nuevos directorios creados.
+
 echo "Creando directorios para crear la BD"
 export ORACLE_SID=travdip1
 
