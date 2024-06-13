@@ -30,7 +30,7 @@ conn &common_user_logon
 Prompt Mostrando las rutas de los redo logs
 SELECT * FROM V$LOGFILE;
 
-Prompt inicio de sesion como app_container
+Prompt inicio de sesion como administracion pdb
 conn &syslogon
 alter session set container = &administracion_con;
 conn &common_user_logon
@@ -38,7 +38,7 @@ conn &common_user_logon
 Prompt Mostrando las rutas de los redo logs
 SELECT * FROM V$LOGFILE;
 
-Prompt inicio de sesion como app_container
+Prompt inicio de sesion como negocio pdb
 conn &syslogon
 alter session set container = &negocio_con;
 conn &common_user_logon
