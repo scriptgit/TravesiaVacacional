@@ -1,7 +1,7 @@
 --@Autor: Jorge Octaviop Barcenas Avelar
 -- Angel Eduardo Oropeza Castañeda
 -- Ulises Eduardo Antonio García
---@Descripción: Consultas de datos generales de la base de datos
+--@Descripción: Consultas de FRA
 
 !echo "mostrando valor de ORACLE_SID: ${ORACLE_SID}"
 pause ¿Es correcto?  Enter para continuar 
