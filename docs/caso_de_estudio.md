@@ -133,6 +133,6 @@ Posteriormente, nos enfocamos en el área de negocio, obteniendo insights del ti
 * Las actividades que más generan ingresos
 * Afinidad de actividades
 
-Éstas últimas dos, fueron de nuestro máximo interés, debido a que nos permiten identificar las actividades cuyos clientes tienen mayor preferencia y de qué manera podemos optimizar el uso de nuestros recursos en invertir en aquellas cuyo interés sean nulo o inclusive mantener/mejorar la calidad de aquellas actividades cuyo margen de ganancias resulta conveniente.
+Éstas últimas dos, fueron de nuestro máximo interés, debido a que nos permiten identificar las actividades cuyos clientes tienen mayor preferencia y de qué manera podemos optimizar el uso de nuestros recursos e invertir en aquellas cuyo interés sean nulo o inclusive mantener/mejorar la calidad de aquellas actividades cuyo margen de ganancias resulta conveniente.
 
 A ello, sumamos que podemos iterar sobre nuestro modelado de datos y negocio, sumando variables como los costos operacionales y así tener una percepción más clara e informada del negocio.
