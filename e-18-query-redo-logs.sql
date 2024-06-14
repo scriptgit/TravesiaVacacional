@@ -4,8 +4,6 @@
 --@Descripción: Consulta de redo logs
 
 define syslogon='sys/systemproy as sysdba'
-define common_user='common_user'
-define common_user_logon='c##&common_user/&common_user'
 define app_admin='app_admin'
 define app_container='app_container'
 define pdb1_admin='admin_administracion_con'
@@ -18,37 +16,31 @@ linesize window
 Prompt inicio sesion en root
 conn &syslogon
 alter session set container = cdb$root;
-conn &common_user_logon
 
-Prompt Mostrando las rutas de los redo logs
+Prompt Mostrando las rutas de los redo logs en cdb$root
 SELECT * FROM V$LOGFILE;
 
+Promp Abriendo las pdbs
 alter pluggable database &app_container open;
 alter pluggable database &pdb1_container open;
 alter pluggable database &pdb2_container open;
 
-Prompt inicio de sesion como app_container
-conn &syslogon
+Prompt cambio de sesion como app_container
 alter session set container = &app_container;
-conn &common_user_logon
 
-Prompt Mostrando las rutas de los redo logs
+Prompt Mostrando las rutas de los redo logs en app_container
 SELECT * FROM V$LOGFILE;
 
-Prompt inicio de sesion como administracion pdb
-conn &syslogon
-alter session set container = &administracion_con;
-conn &common_user_logon
+Prompt cambio de sesion como administracion pdb
+alter session set container = &pdb1_container;
 
-Prompt Mostrando las rutas de los redo logs
+Prompt Mostrando las rutas de los redo logs en administracion_con
 SELECT * FROM V$LOGFILE;
 
-Prompt inicio de sesion como negocio pdb
-conn &syslogon
-alter session set container = &negocio_con;
-conn &common_user_logon
+Prompt cambio de sesion como negocio pdb
+alter session set container = &pdb2_container;
 
-Prompt Mostrando las rutas de los redo logs
+Prompt Mostrando las rutas de los redo logs en negocio_con
 SELECT * FROM V$LOGFILE;
 
 
