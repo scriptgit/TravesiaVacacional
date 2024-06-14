@@ -82,17 +82,7 @@ Durante el análisis de los registros de inscripción y retroalimentación de lo
 ---
 # Procedimiento de visualizaciones
 
-Tenemos en el looker las siguientes opciones que nos permiten agregar datos y métodos para procesar la información.
-
-Con añadir datos buscamos datos de la base que tenemos en la nube como se trata del caso de estudio usamos
-la zona gold donde está la tabla de hechos y dimensiones.
-
-Con la opción añadir un gráfico procesamos los datos para mostrarlos en base a determinados parametros y
-representaciones gráficas que mejor nos convengan.
-
-La opción añadir un control es de utilidad para filtrar datos por ejemplo por año o actividad para que 
-solo nos muestren datos relacionados a algún campo en particular.
-![Captura de pantalla 2024-06-13 104110](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/ed73db5e-26ce-4c57-a7b5-1613d4d2be26)
+Tenemos en el looker los siguientes datos:
 
 En está primera pantalla para la parte del Dashboard se muestran algunas métricas
 
@@ -107,7 +97,7 @@ Para la parte de Análisis
 Tenemos tres graficos que combinando los datos de las tablas ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM nos 
 presentan una evaluación visual de que actividades tienen más clientes, cuales generan más 
 ingresos y una comparativa entre estos aspectos para las 10 más importantes.
-![Captura de pantalla 2024-06-13 112645](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/22ed0d93-e4a1-4ae5-88f2-f00fae2c9f84)
+![Captura de pantalla 2024-06-13 202711](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/e36eb254-d404-48db-af84-899dea4bc789)
 
 Por último para la fase de Reporte
 
