@@ -1,6 +1,9 @@
 #Autor: Jorge Octaviop Barcenas Avelar
+
 #Angel Eduardo Oropeza Castañeda
+
 #Ulises Eduardo Antonio García
+
 #Descripción: Consultas de datos generales de la base de datos
 
 
