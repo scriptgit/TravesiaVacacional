@@ -90,7 +90,7 @@ La de KPI #asistencias es el número de registro en la tabla de hechos CENTRO_FA
 
 La métrica del monto acumulado mide la ganancia por pago de actividades usando la tabla 
 de dimensiones PAGO_ACTIVIDAD_DIM, se puede controlar la métrica con la lista desplegable actividad_id
-![Captura de pantalla 2024-06-13 110007](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/f26ad41b-fa2c-4f82-839e-a345352216ef)
+![Captura de pantalla 2024-06-13 203025](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/1d3f005f-4e54-42fc-a50f-d1bb4c9e0c55)
 
 Para la parte de Análisis
 
