@@ -21,9 +21,9 @@ Acompáñanos en este recorrido técnico y estratégico, donde la ciencia de dat
 
 En el proceso de automatización y mejora de la gestión de información en Travesía Vacacional S.A. de C.V., surge una pregunta clave que puede proporcionar valiosos insights para la optimización de las ofertas de actividades y la personalización de servicios: 
 
-**¿Cuál es la afinidad de las actividades ofrecidas por Travesía Vacacional y el ingreso mensual de los clientes?**
+**¿Cuál es la afinidad de las actividades ofrecidas por Travesía Vacacional y en cuáles tenemos un mayor margen de ganancia?**
 
-Esta pregunta busca entender la relación entre las preferencias de actividades de los clientes y su nivel de ingreso mensual. Al analizar esta afinidad, Travesía Vacacional puede:
+Esta pregunta busca entender la relación entre las preferencias de actividades de los clientes y la relación de ganancias de las mismas. Al analizar esta afinidad, Travesía Vacacional puede:
 
 1. **Personalizar Ofertas:** Desarrollar programas de actividades que se alineen mejor con las expectativas y capacidades económicas de diferentes segmentos de clientes.
 2. **Optimizar Recursos:** Asignar recursos de manera más eficiente, enfocándose en actividades que atraen a los segmentos más lucrativos.
@@ -118,3 +118,21 @@ Por otra parte usando los datos de las tablas ACTIVIDAD_DIM, CENTRO_FACT y TEMPO
 se puede obtener en que centros no se puede pagar por ciertas actividades y en que temporadas están activas.
 ![Captura de pantalla 2024-06-13 113409](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/720cb919-cc0f-459c-99b8-f35b401c4b47)
 
+# Presentación de resultados
+
+Primero, hicimos un análisis exploratorio de los datos que tenemos, de éste obtuvimos insights de los clientes, mismos que nos permitieron conocer más el segmento poblacional y así tener una mejor comprensión del tipo de clientes que hay en travesia vacacional.
+
+* De los clientes, comprendimos que hay una distribución binaria casi igual respecto al tipo de membresía que adquirieron.
+* También pudimos representar gráficamente la distribución de los datos respecto al nivel educativo de los clientes.
+
+Estos datos sobre los **clientes** nos permiten tomar decisiones informadas directamente sobre nuestros usuarios.
+
+Posteriormente, nos enfocamos en el área de negocio, obteniendo insights del tipo:
+* Ingresos mensuales por pago de membresías
+* Membresías registradas por año
+* Las actividades que más generan ingresos
+* Afinidad de actividades
+
+Éstas últimas dos, fueron de nuestro máximo interés, debido a que nos permiten identificar las actividades cuyos clientes tienen mayor preferencia y de qué manera podemos optimizar el uso de nuestros recursos en invertir en aquellas cuyo interés sean nulo o inclusive mantener/mejorar la calidad de aquellas actividades cuyo margen de ganancias resulta conveniente.
+
+A ello, sumamos que podemos iterar sobre nuestro modelado de datos y negocio, sumando variables como los costos operacionales y así tener una percepción más clara e informada del negocio.
