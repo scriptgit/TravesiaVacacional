@@ -90,7 +90,7 @@ La de KPI #asistencias es el número de registro en la tabla de hechos CENTRO_FA
 
 La métrica del monto acumulado mide la ganancia por pago de actividades usando la tabla 
 de dimensiones PAGO_ACTIVIDAD_DIM, se puede controlar la métrica con la lista desplegable actividad_id
-![Captura de pantalla 2024-06-13 110007](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/6378dedd-3bba-4be1-b0a0-1195079db514)
+![image](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/8fe07b44-afb1-43ca-bb48-ac1b21efc3ee)
 
 
 Para la parte de Análisis
@@ -98,7 +98,8 @@ Para la parte de Análisis
 Tenemos tres graficos que combinando los datos de las tablas ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM nos 
 presentan una evaluación visual de que actividades tienen más clientes, cuales generan más 
 ingresos y una comparativa entre estos aspectos para las 10 más importantes.
-![Captura de pantalla 2024-06-13 112645](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/09a6ba10-3038-4d93-8bd2-e20ffa9f77c8)
+![image (1)](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/f2083ece-cdc1-4314-93fe-29aace8cb82d)
+
 
 Por último para la fase de Reporte
 
@@ -107,7 +108,7 @@ los datos que corresponden con las ganancias obtenidas por actividad.
 
 Por otra parte usando los datos de las tablas ACTIVIDAD_DIM, CENTRO_FACT y TEMPORADA_DIM, por ejemplo,
 se puede obtener en que centros no se puede pagar por ciertas actividades y en que temporadas están activas.
-![Captura de pantalla 2024-06-13 113409](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/66e1c92e-1de5-4aa1-a274-a5e4cfbb8d05)
+![image (2)](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/922f1292-191f-43e2-bad8-d1d994eb1946)
 
 
 # Presentación de resultados
