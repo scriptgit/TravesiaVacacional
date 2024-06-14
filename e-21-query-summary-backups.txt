@@ -1,0 +1,5 @@
+  #Listar backups con mayor detalle
+  LIST BACKUP OF DATABASE;
+  
+  #Listar backups realizados simple
+  LIST BACKUP SUMMARY;
