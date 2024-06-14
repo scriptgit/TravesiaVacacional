@@ -116,7 +116,7 @@ los datos que corresponden con las ganancias obtenidas por actividad.
 
 Por otra parte usando los datos de las tablas ACTIVIDAD_DIM, CENTRO_FACT y TEMPORADA_DIM, por ejemplo,
 se puede obtener en que centros no se puede pagar por ciertas actividades y en que temporadas están activas.
-![Captura de pantalla 2024-06-13 113409](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/720cb919-cc0f-459c-99b8-f35b401c4b47)
+![Captura de pantalla 2024-06-13 202544](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/78356872-6b18-4a4b-8a53-8c2e9c9012f5)
 
 # Presentación de resultados
 
