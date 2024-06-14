@@ -96,9 +96,11 @@ tablas de ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM.
 
 Para la parte de Análisis
 
-Tenemos tres graficos que combinando los datos de las tablas ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM nos 
-presentan una evaluación visual de que actividades tienen más clientes, cuales generan más 
-ingresos y una comparativa entre estos aspectos para las 10 más importantes.
+Aplicando un join a las tablas CLIENTE_DIM, MEMBRESIA_DIM y CENTRO_FACT se obtuvieron el número de clientes que tienen membresía y cuál es la que solicitaron.
+También se obtuvo el ingreso mensual que se obtiene por las membresías dividiéndolas en los dos tipos BASIC y PREMIUM.
+La gráfica de barras doble nos presenta una comparativa entre la popularidad de las actividades más importantes y los ingresos obtenidos por ellas. Está se genero con un join entre las tablas ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM.
+Por último el gráfico de rectángulos analiza el nivel educativo de los clientes utilizando la tabla CLIENTE_DIM.
+
 ![image (1)](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/f2083ece-cdc1-4314-93fe-29aace8cb82d)
 
 
