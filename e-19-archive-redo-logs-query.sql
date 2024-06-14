@@ -34,17 +34,10 @@ alter session set container = &app_container;
 -- v$pdbs
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/V-PDBS.html
 Prompt Mostrando las ubicaciones de los archive redo logs
-SELECT
-    con.name AS pdb_name,
-    al.destination
-FROM
-    v$archive_dest al
-JOIN
-    v$pdbs con ON al.con_id = con.con_id
-WHERE
-    al.value IS NOT NULL
-ORDER BY
-    con.name, al.name;
+select recid,name,dest_id,sequence#, CON_ID,
+  to_char(first_time,'dd/mm/yyyy hh24:mi:ss') first_time,
+  status,to_char(completion_time,'dd/mm/yyyy hh24:mi:ss') completion_time
+from v$archived_log;
 
 Prompt inicio de sesion como administracion pdb
 conn &syslogon
@@ -56,17 +49,10 @@ alter session set container = &pdb1_container;
 -- v$pdbs
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/V-PDBS.html
 Prompt Mostrando las ubicaciones de los archive redo logs
-SELECT
-    con.name AS pdb_name,
-    al.destination
-FROM
-    v$archive_dest al
-JOIN
-    v$pdbs con ON al.con_id = con.con_id
-WHERE
-    al.value IS NOT NULL
-ORDER BY
-    con.name;
+select recid,name,dest_id,sequence#, CON_ID,
+  to_char(first_time,'dd/mm/yyyy hh24:mi:ss') first_time,
+  status,to_char(completion_time,'dd/mm/yyyy hh24:mi:ss') completion_time
+from v$archived_log;
 
 Prompt inicio de sesion como negocio pdb
 conn &syslogon
@@ -78,14 +64,7 @@ alter session set container = &pdb2_container;
 -- v$pdbs
 -- DOC https://docs.oracle.com/en/database/oracle/oracle-database/19/refrn/V-PDBS.html
 Prompt Mostrando las ubicaciones de los archive redo logs
-SELECT
-    con.name AS pdb_name,
-    al.destination
-FROM
-    v$archive_dest al
-JOIN
-    v$pdbs con ON al.con_id = con.con_id
-WHERE
-    al.value IS NOT NULL
-ORDER BY
-    con.name, al.name;
+select recid,name,dest_id,sequence#, CON_ID,
+  to_char(first_time,'dd/mm/yyyy hh24:mi:ss') first_time,
+  status,to_char(completion_time,'dd/mm/yyyy hh24:mi:ss') completion_time
+from v$archived_log;
