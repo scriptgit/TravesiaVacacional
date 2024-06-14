@@ -86,10 +86,11 @@ Tenemos en el looker los siguientes datos:
 
 En está primera pantalla para la parte del Dashboard se muestran algunas métricas
 
-La de KPI #asistencias es el número de registro en la tabla de hechos CENTRO_FACT
+Algunos KPI se usan de referencia para saber el número de actividades por las cuales pueden pagar los
+clientes. El número de clientes que hemmos registrado. El monto acumulado por el pago de actividades.
+Por último tenemos una lista desplegable para acotar por actividad. Estos obtenidos por el join de las
+tablas de ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM.
 
-La métrica del monto acumulado mide la ganancia por pago de actividades usando la tabla 
-de dimensiones PAGO_ACTIVIDAD_DIM, se puede controlar la métrica con la lista desplegable actividad_id
 ![image](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/8fe07b44-afb1-43ca-bb48-ac1b21efc3ee)
 
 
