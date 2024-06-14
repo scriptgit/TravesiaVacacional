@@ -104,13 +104,14 @@ Por último el gráfico de rectángulos analiza el nivel educativo de los client
 ![image (1)](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/f2083ece-cdc1-4314-93fe-29aace8cb82d)
 
 
-Por último para la fase de Reporte
+Para la fase de Reporte
 
-Haciendo join entre las tablas ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM podemos ver en formato de tabla
-los datos que corresponden con las ganancias obtenidas por actividad.
+En está fase primero se analizan, con un gráfico de anillo, las actividades que existen por temporada para determinar cuantas se ofrecen en algún centro de acuerdo al periodo del año. Se realizó con un join entre las tablas CENTRO_FACT, ACTIVIDAD_DIM y TEMPORADA_DIM.
+También mediante un join entre las tablas ACTIVIDAD_DIM y PAGO_ACTIVIDAD_DIM, se presenta la distribución entre el número de clientes que pagaron por cierta actividad en base a su costo.
+La siguiente gráfica circular hace otro análisis, pero ahora para determinar el número de clientes que pagaron por actividad de su preferencia.
+La serie de tiempo presenta el nivel de crecimiento en la adquisición de membresías por parte de los clientes desde 2018 hasta principios de 2024. Está se realizó mediante una consulta sobre la tabla de MEMBRESIA_DIM.
+Por último la tabla haciendo uso de las tablas ACTIVIDAD_DIM, CENTRO_FACT, TEMPORADA_DIM y PAGO_ACTIVIDAD_DIM se obtuvieron los datos sobre los estados en donde están ubicados los centros, las actividades que se imparten en ellos y el número de visitas por actividad. 
 
-Por otra parte usando los datos de las tablas ACTIVIDAD_DIM, CENTRO_FACT y TEMPORADA_DIM, por ejemplo,
-se puede obtener en que centros no se puede pagar por ciertas actividades y en que temporadas están activas.
 ![image (2)](https://github.com/scriptgit/TravesiaVacacional/assets/38197638/922f1292-191f-43e2-bad8-d1d994eb1946)
 
 
